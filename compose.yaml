@@ -1,0 +1,24 @@
+name: hamroh
+
+# Local development only: Postgres in a container, web and API run on the host with `pnpm dev`.
+# Host port 5433 (not 5432) so this can run next to other local Postgres stacks.
+services:
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: hamroh
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-hamroh}
+      POSTGRES_DB: hamroh
+    ports:
+      - '5433:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U hamroh -d hamroh']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres-data:

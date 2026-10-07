@@ -1,0 +1,1335 @@
+{
+  "collectedAt": "2026-09-23",
+  "organizations": [
+    {
+      "slug": "ona-fondi",
+      "officialName": "Ona Foundation (ONA fondi)",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "Official site onafoundation.uz exists (© 2025-2026) but programme descriptions are placeholder 'Lorem ipsum'; only the beneficiary application form and contacts are substantive. Description comes from a sponsored gazeta.uz article (marked 'Reklama huquqlari asosida'). Address: Tashkent, Bobur ko'chasi 83.",
+      "website": "https://onafoundation.uz",
+      "phone": "+998 93 801 27 77",
+      "email": "info@onafoundation.uz",
+      "description": {
+        "en": "ONA Foundation is a non-governmental non-profit organization in Tashkent that helps women and children in difficult life situations obtain quality medical care, education and social protection.",
+        "uz": "ONA Foundation — Toshkentdagi nodavlat notijorat tashkilot bo‘lib, og‘ir hayotiy vaziyatga tushib qolgan ayollar va bolalarga sifatli tibbiy yordam, ta’lim va ijtimoiy himoya olishda yordam beradi.",
+        "ru": "ONA Foundation — негосударственная некоммерческая организация в Ташкенте, которая помогает женщинам и детям в трудной жизненной ситуации получить качественную медицинскую помощь, образование и социальную защиту."
+      },
+      "sourceUrl": "https://www.gazeta.uz/oz/2026/03/04/yandex/",
+      "excludedPrograms": "Yandex Go couriers pilot: sponsored article, narrow eligibility, status unknown.",
+      "couldNotConfirm": [
+        "Eligibility criteria, required documents and decision timelines for the general assistance form",
+        "Details of the listed programme pages (Health, Educational grants and scholarships, Breast cancer, etc.) - programme pages contain placeholder text",
+        "Scholarship application rounds/deadlines"
+      ],
+      "programs": [
+        {
+          "id": "ona-fondi-assistance",
+          "title": {
+            "en": "Apply for social, medical, education or housing help",
+            "uz": "Ijtimoiy, tibbiy, ta’lim yoki uy-joy yordami uchun ariza berish",
+            "ru": "Заявка на социальную, медицинскую, образовательную или жилищную помощь"
+          },
+          "summary": {
+            "en": "Individuals can submit an online request to the foundation for one of several assistance types: social assistance, medical treatment/surgery in Uzbekistan or abroad, an educational grant, or housing assistance.",
+            "uz": "Jismoniy shaxslar jamg‘armaga bir necha turdagi yordamdan biri uchun onlayn ariza yuborishi mumkin: ijtimoiy yordam, O‘zbekistonda yoki xorijda davolanish/jarrohlik amaliyoti, ta’lim granti yoki uy-joy bo‘yicha yordam.",
+            "ru": "Частные лица могут подать в фонд онлайн-заявку на один из нескольких видов помощи: социальная помощь, лечение/операция в Узбекистане или за рубежом, образовательный грант или помощь с жильём."
+          },
+          "howToApply": {
+            "en": "Fill out the 'Apply for assistance' form on onafoundation.uz/uz/beneficiaries (phone, type of assistance, subject's full name, date of birth, phone, address, who needs help, description). Office: Tashkent, Bobur ko'chasi 83, Mon-Fri 10:00-18:00, +998 93 801 27 77.",
+            "uz": "onafoundation.uz/uz/beneficiaries sahifasidagi «Yordam uchun ariza berish» shaklini to‘ldiring (telefon, yordam turi, yordam so‘ralayotgan shaxsning F.I.Sh., tug‘ilgan sanasi, telefoni, manzili, kimga yordam kerakligi, tavsif). Ofis: Toshkent, Bobur ko'chasi 83, dushanba–juma 10:00-18:00, +998 93 801 27 77.",
+            "ru": "Заполните форму «Подать заявку на помощь» на onafoundation.uz/uz/beneficiaries (телефон, вид помощи, Ф. И. О. человека, для которого запрашивается помощь, дата рождения, телефон, адрес, кому нужна помощь, описание). Офис: Ташкент, Bobur ko'chasi 83, пн–пт 10:00-18:00, +998 93 801 27 77."
+          },
+          "supportTypes": [
+            "financial",
+            "health",
+            "education",
+            "housing"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [],
+          "requiredCircumstances": [],
+          "requiredDocuments": [],
+          "incomeTested": false,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://onafoundation.uz/uz/beneficiaries",
+          "evidenceQuote": "To submit an application for assistance, please fill out this form",
+          "titleOriginal": "Become a beneficiary / Apply for assistance",
+          "statusNote": null
+        }
+      ]
+    },
+    {
+      "slug": "soglom-avlod",
+      "officialName": "\"Sog'lom avlod uchun\" hukumatga qarashli bo'lmagan xalqaro xayriya fondi",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "sau.uz has an invalid/incomplete TLS certificate (http works). Homepage header shows another number +998 71 233-21-75; contacts page lists (0371) 232-00-82, 232-00-83 and regional branch phones for all regions. Address: Toshkent, Yashnobod tumani, Istiqbol ko'chasi 15-uy, 100047.",
+      "website": "http://sau.uz",
+      "phone": "+998 71 232-00-82",
+      "email": "fondsau@yahoo.com",
+      "description": {
+        "en": "A non-governmental international charitable fund (est. 1993) working on mother and child health and a healthy generation; its tasks include charitable aid to needy groups such as large families, women, people with disabilities and children in care institutions, and support for screening, perinatal and paediatric institutions.",
+        "uz": "Nodavlat xalqaro xayriya jamg‘armasi (1993-yilda tashkil etilgan) ona va bola salomatligi hamda sog‘lom avlod yo‘lida faoliyat yuritadi; uning vazifalariga ko‘p bolali oilalar, ayollar, nogironligi bo‘lgan shaxslar va bolalar muassasalarida tarbiyalanayotgan bolalar kabi muhtoj guruhlarga xayriya yordami ko‘rsatish hamda skrining, perinatal va pediatriya muassasalarini qo‘llab-quvvatlash kiradi.",
+        "ru": "Негосударственный международный благотворительный фонд (основан в 1993 году), работающий в сфере здоровья матери и ребёнка и здорового поколения; в его задачи входят благотворительная помощь нуждающимся группам, таким как многодетные семьи, женщины, люди с инвалидностью и дети в детских учреждениях, а также поддержка скрининговых, перинатальных и педиатрических учреждений."
+      },
+      "sourceUrl": "http://sau.uz/uz/pages/view/vazifalar",
+      "excludedPrograms": null,
+      "couldNotConfirm": [
+        "An application procedure for individuals (the 'Yordam kerak' button just links to the contacts page)",
+        "Eligibility criteria and required documents for any assistance"
+      ],
+      "programs": [
+        {
+          "id": "soglom-avlod-child-surgery",
+          "title": {
+            "en": "Surgery and treatment for children with congenital conditions",
+            "uz": "Tug‘ma kasalliklari bo‘lgan bolalar uchun jarrohlik va davolash",
+            "ru": "Операции и лечение для детей с врождёнными заболеваниями"
+          },
+          "summary": {
+            "en": "Visiting German doctors examine children from all regions and select some for surgery in German clinics (children up to 12). The fund also arranges grant-funded operations in Uzbek clinics for congenital heart, face, lip/palate and orthopaedic conditions.",
+            "uz": "Tashrif buyuradigan germaniyalik shifokorlar barcha viloyatlardan kelgan bolalarni ko‘rikdan o‘tkazadi va ulardan ayrimlarini Germaniya klinikalarida jarrohlik amaliyoti uchun tanlab oladi (12 yoshgacha bo‘lgan bolalar). Jamg‘arma, shuningdek, O‘zbekiston klinikalarida tug‘ma yurak, yuz, lab/tanglay va ortopedik kasalliklar bo‘yicha grant hisobidan operatsiyalar tashkil etadi.",
+            "ru": "Приезжающие немецкие врачи осматривают детей из всех регионов и отбирают некоторых из них для операций в клиниках Германии (дети до 12 лет). Фонд также организует операции за счёт грантов в клиниках Узбекистана при врождённых заболеваниях сердца, лица, губы/нёба и ортопедических заболеваниях."
+          },
+          "howToApply": {
+            "en": "No application procedure is published. Contact the fund directly.",
+            "uz": "Ariza berish tartibi e’lon qilinmagan. Jamg‘armaga bevosita murojaat qiling.",
+            "ru": "Порядок подачи заявки не опубликован. Обращайтесь напрямую в фонд."
+          },
+          "supportTypes": [
+            "health",
+            "children_family"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "has_children"
+          ],
+          "requiredCircumstances": [],
+          "requiredDocuments": [],
+          "incomeTested": false,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "http://sau.uz/uz/pages/view/german_clinic",
+          "evidenceQuote": "Германиялик шифокорлар ҳар йили Ўзбекистонга ташриф буюриб, республикамизнинг барча вилоятларидан бемор болаларни тиббий кўрикдан ўтказишади ва Германия клиникаларида даволаниши учун танлаб олишади",
+          "titleOriginal": "Germaniya klinikalarida sog‘lomlashtirish",
+          "statusNote": "Page reports activity through 9 months of 2025 (8 children sent to Germany in October 2025). Age limit 'up to 12' refers to treatment in Germany. No application procedure stated."
+        },
+        {
+          "id": "soglom-avlod-mobile-brigades",
+          "title": {
+            "en": "Mobile medical and social assistance teams",
+            "uz": "Ko‘chma tibbiy va ijtimoiy yordam guruhlari",
+            "ru": "Мобильные бригады медицинской и социальной помощи"
+          },
+          "summary": {
+            "en": "The fund's 14 mobile medical-social brigades visit families, especially in remote rural areas, to assess medical and social needs and deliver charitable assistance to people in need of social protection.",
+            "uz": "Jamg‘armaning 14 ta ko‘chma tibbiy-ijtimoiy brigadasi, ayniqsa, chekka qishloq hududlarida oilalarga tashrif buyurib, tibbiy va ijtimoiy ehtiyojlarni baholaydi hamda ijtimoiy himoyaga muhtoj aholiga xayriya yordamini yetkazadi.",
+            "ru": "14 мобильных медико-социальных бригад фонда посещают семьи, особенно в отдалённых сельских районах, чтобы оценить медицинские и социальные потребности и оказать благотворительную помощь людям, нуждающимся в социальной защите."
+          },
+          "howToApply": {
+            "en": "No application procedure is published. Contact the fund or its regional branch.",
+            "uz": "Ariza berish tartibi e’lon qilinmagan. Jamg‘armaga yoki uning hududiy bo‘limiga murojaat qiling.",
+            "ru": "Порядок подачи заявки не опубликован. Обращайтесь в фонд или его региональное отделение."
+          },
+          "supportTypes": [
+            "health",
+            "children_family"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "low_income"
+          ],
+          "requiredCircumstances": [],
+          "requiredDocuments": [],
+          "incomeTested": false,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "http://sau.uz/uz/pages/view/tibbiy_dasturlar",
+          "evidenceQuote": "ijtimoiy himoyaga muhtoj aholiga xayriya yordami ko‘rsatish maqsadlarida faoliyat ko‘rsatib",
+          "titleOriginal": "Ko‘chma tibbiy-ijtimoiy yordam brigadalari",
+          "statusNote": "Programme page describes 2023 activity; homepage news dated 2026-09-23 reports ongoing brigade activity and medical check-ups for needy families."
+        }
+      ]
+    },
+    {
+      "slug": "un-women-uz",
+      "officialName": "UN Women (office in Uzbekistan, Tashkent)",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "Website given is the UN Women Europe & Central Asia regional site (no Uzbekistan country page found). The phone +998 78 120 34 50 on the uzbekistan.un.org page belongs to the UN Resident Coordinator Office, not UN Women, so it was not used. UN Women's small grants for Uzbekistan are for civil society organizations, not individuals; the 2026 Women's Entrepreneurship EXPO (5 businesses per country incl. Uzbekistan, mentoring from Feb 2026) had no business application details, so neither was listed as a programme.",
+      "website": "https://eca.unwomen.org",
+      "phone": null,
+      "email": null,
+      "description": {
+        "en": "UN Women opened an office in Tashkent on 29 May 2025 to support partners and national institutions, promote gender-sensitive policies and advance women's rights; its first initiative is an EU-funded gender-responsive budgeting project with the Ministry of Economy and Finance.",
+        "uz": "BMT Xotin-qizlar tuzilmasi (UN Women) 2025-yil 29-mayda hamkorlar va milliy institutlarni qo‘llab-quvvatlash, gender jihatdan sezgir siyosatni targ‘ib qilish va ayollar huquqlarini ilgari surish maqsadida Toshkentda ofis ochdi; uning birinchi tashabbusi — Iqtisodiyot va moliya vazirligi bilan birgalikda amalga oshiriladigan, Yevropa Ittifoqi tomonidan moliyalashtiriladigan gender jihatdan sezgir byudjetlashtirish loyihasi.",
+        "ru": "Структура «ООН-женщины» (UN Women) 29 мая 2025 года открыла офис в Ташкенте, чтобы поддерживать партнёров и национальные институты, продвигать гендерно-чувствительную политику и права женщин; её первая инициатива — финансируемый Европейским союзом проект по гендерно-ориентированному бюджетированию совместно с Министерством экономики и финансов."
+      },
+      "sourceUrl": "https://uzbekistan.un.org/en/295230-un-women-opened-office-uzbekistan-making-new-era-gender-equality",
+      "excludedPrograms": null,
+      "couldNotConfirm": [
+        "Uzbekistan-specific phone, email or address for the UN Women office",
+        "A dedicated Uzbekistan country page (eca.unwomen.org/en/where-we-are/uzbekistan returns 404)",
+        "Any programme individuals can apply to directly"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "istiqbolli-avlod",
+      "officialName": "Respublika \"Istiqbolli avlod\" ijtimoiy-axborot markazi",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "istiqbolliavlod.uz returns 403 to plain HTTP clients; content was read via WebFetch, so quotes passed through an extraction step and may differ slightly in spelling (site mixes 'konsultatsiya'/'konsultaciya'). ombudsman.uz lists the organization but its contact block belongs to the Ombudsman.",
+      "website": "https://istiqbolliavlod.uz",
+      "phone": "+998 71 254 12 87",
+      "email": "iarepublic.uz@gmail.com",
+      "description": {
+        "en": "A Tashkent-based NGO (founded 2001, now with republican status and regional branches) that works to end human trafficking and other forms of violence, providing consultation, direct assistance, rehabilitation and reintegration to victims, migrants and vulnerable groups.",
+        "uz": "Toshkentda joylashgan nodavlat notijorat tashkilot (2001-yilda tashkil etilgan, hozirda respublika maqomiga va hududiy bo‘limlarga ega) odam savdosi va zo‘ravonlikning boshqa shakllariga barham berish uchun ishlaydi, jabrlanuvchilar, migrantlar va zaif guruhlarga maslahat, bevosita yordam, reabilitatsiya va reintegratsiya xizmatlarini ko‘rsatadi.",
+        "ru": "Ташкентская негосударственная некоммерческая организация (основана в 2001 году, сейчас имеет республиканский статус и региональные отделения), которая работает над искоренением торговли людьми и других форм насилия и предоставляет консультации, непосредственную помощь, реабилитацию и реинтеграцию пострадавшим, мигрантам и уязвимым группам."
+      },
+      "sourceUrl": "https://istiqbolliavlod.uz/uz/about",
+      "excludedPrograms": null,
+      "couldNotConfirm": [
+        "Whether a shelter is operated and its conditions",
+        "Hotline hours / free-of-charge status",
+        "Eligibility criteria or documents for assistance",
+        "Current vocational training courses (only a 2018 daryo.uz report mentions ~10 skill-training circles)"
+      ],
+      "programs": [
+        {
+          "id": "istiqbolli-hotline",
+          "title": {
+            "en": "Hotline for people at risk of trafficking or exploitation",
+            "uz": "Odam savdosi yoki ekspluatatsiya xavfi ostidagilar uchun qaynoq liniya",
+            "ru": "Горячая линия для людей, которым грозит торговля людьми или эксплуатация"
+          },
+          "summary": {
+            "en": "Hotline network (since 2003) for people at risk of or affected by human trafficking and vulnerable migrants: identification, referral, warning/prevention and assistance, including help with repatriation and reintegration.",
+            "uz": "Odam savdosi xavfi ostida bo‘lgan yoki undan jabrlangan shaxslar hamda zaif ahvoldagi migrantlar uchun qaynoq liniyalar tarmog‘i (2003-yildan beri): aniqlash, yo‘naltirish, ogohlantirish/profilaktika va yordam, jumladan, vataniga qaytish (repatriatsiya) va reintegratsiyada ko‘maklashish.",
+            "ru": "Сеть горячих линий (с 2003 года) для людей, которым грозит торговля людьми или которые от неё пострадали, и для уязвимых мигрантов: выявление, перенаправление, предупреждение/профилактика и помощь, включая содействие в репатриации и реинтеграции."
+          },
+          "howToApply": {
+            "en": "Call +998 95 143 94 94 or +998 94 143 94 94 (Tashkent). The organization’s website lists hotline numbers for 13 cities and regions.",
+            "uz": "+998 95 143 94 94 yoki +998 94 143 94 94 raqamlariga qo‘ng‘iroq qiling (Toshkent). Tashkilot saytida 13 ta shahar va viloyat uchun qaynoq liniya raqamlari keltirilgan.",
+            "ru": "Звоните по номерам +998 95 143 94 94 или +998 94 143 94 94 (Ташкент). На сайте организации указаны номера горячих линий для 13 городов и регионов."
+          },
+          "supportTypes": [
+            "safety",
+            "emergency",
+            "legal"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "survivor"
+          ],
+          "requiredCircumstances": [],
+          "requiredDocuments": [],
+          "incomeTested": false,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://istiqbolliavlod.uz/uz/hotline",
+          "evidenceQuote": "2003 yilda \"Istiqbolli Avlod\" NNT qoshida odam savdosiga qarshi kurashish bo'yicha \"Dolzarb aloqa tarmog'I\" tashkil etildi.",
+          "titleOriginal": "Dolzarb aloqa tarmog'i",
+          "statusNote": "Hours, cost and confidentiality not stated."
+        },
+        {
+          "id": "istiqbolli-survivor-support",
+          "title": {
+            "en": "Consultation, rehabilitation and reintegration for survivors of violence or trafficking",
+            "uz": "Zo‘ravonlik yoki odam savdosidan jabrlanganlar uchun maslahat, reabilitatsiya va reintegratsiya",
+            "ru": "Консультации, реабилитация и реинтеграция для пострадавших от насилия или торговли людьми"
+          },
+          "summary": {
+            "en": "Beneficiaries receive consultation, direct assistance, rehabilitation and reintegration support; the site also lists legal assistance.",
+            "uz": "Yordam oluvchilarga maslahat, bevosita yordam, reabilitatsiya va reintegratsiya bo‘yicha ko‘mak ko‘rsatiladi; saytda huquqiy yordam ham qayd etilgan.",
+            "ru": "Получатели помощи получают консультации, непосредственную помощь, поддержку в реабилитации и реинтеграции; на сайте также указана юридическая помощь."
+          },
+          "howToApply": {
+            "en": "Call the hotline (+998 95 143 94 94) or contact the office in Tashkent: Katta Mirobod street 4/22, +998 71 254 12 87.",
+            "uz": "Qaynoq liniyaga (+998 95 143 94 94) qo‘ng‘iroq qiling yoki Toshkentdagi ofisga murojaat qiling: Katta Mirobod ko‘chasi 4/22, +998 71 254 12 87.",
+            "ru": "Позвоните на горячую линию (+998 95 143 94 94) или обратитесь в офис в Ташкенте: улица Katta Mirobod, 4/22, +998 71 254 12 87."
+          },
+          "supportTypes": [
+            "safety",
+            "legal",
+            "mental_wellbeing"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "survivor"
+          ],
+          "requiredCircumstances": [],
+          "requiredDocuments": [],
+          "incomeTested": false,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://istiqbolliavlod.uz/uz/about",
+          "evidenceQuote": "konsultaciya, bevosita ko'maklashish, reabilitaciya va reintegraciya yordamini kompleks tarzda ko'rsatishga",
+          "titleOriginal": null,
+          "statusNote": null
+        }
+      ]
+    },
+    {
+      "slug": "tadbirkor-ayol",
+      "officialName": "\"Tadbirkor ayol\" xalqaro ishbilarmon ayollar assotsiatsiyasi (Association of Business Women of Uzbekistan \"Tadbirkor ayol\")",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "Name varies across sources: 'Tadbirkor ayol' O'zbekiston ishbilarmon ayollari assotsiatsiyasi (nbu.uz, 2014), 'Tadbirkor ayol' xalqaro ishbilarmon ayollar assotsiatsiyasi (gazeta 2023), Association of Business Women of Uzbekistan 'Tadbirkor ayol' (assembly.uz). Head per kun.uz (2022): Gulnora Mahmudova. Facebook page facebook.com/adj.uzb exists but its official status/content could not be verified. A free seminar with Ipoteka-bank/EBRD on 12 June 2024 was a one-off event (excluded). Note: the government 'Hamroh' women-entrepreneur support programme (2025) is unrelated to this association.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "description": {
+        "en": "A women's business association and member of the Uzbekistan Economy Assembly that unites organisations and professionals and protects its members' interests; it runs training projects on financial and business literacy for women entrepreneurs, including rural women.",
+        "uz": "Ishbilarmon ayollar assotsiatsiyasi, O‘zbekiston Iqtisodiyot assambleyasi a’zosi; tashkilotlar va mutaxassislarni birlashtiradi hamda a’zolarining manfaatlarini himoya qiladi; tadbirkor ayollar, jumladan, qishloq ayollari uchun moliyaviy va biznes savodxonligi bo‘yicha o‘quv loyihalarini amalga oshiradi.",
+        "ru": "Ассоциация деловых женщин, член Экономической ассамблеи Узбекистана, которая объединяет организации и специалистов и защищает интересы своих членов; проводит обучающие проекты по финансовой и предпринимательской грамотности для женщин-предпринимателей, в том числе сельских женщин."
+      },
+      "sourceUrl": "https://assembly.uz/en/uyushmalar/association-of-business-women-of-uzbekistan-tadbirkor-ayol",
+      "excludedPrograms": "2023 rural-women training: no application route or current status.",
+      "couldNotConfirm": [
+        "An official website (none found)",
+        "Official phone/email - assembly.uz page only shows the Assembly's own contacts; phone 71 227 44 18 / Sairam St. 25 appear only in directories (yellowpages/goldenpages), not verified",
+        "Any currently open individual-facing programme"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "gender-tengligi-markazi",
+      "officialName": "Not found",
+      "existenceConfirmed": false,
+      "hidden": true,
+      "reviewNote": "No body with this exact name could be found.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "description": null,
+      "sourceUrl": null,
+      "excludedPrograms": null,
+      "couldNotConfirm": [
+        "Any organization officially named 'Gender tengligi markazi' / 'Центр гендерного равенства' in Uzbekistan (searched Uzbek Latin/Cyrillic, Russian, English)"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "zamin",
+      "officialName": "\"Zamin\" International Public Foundation",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "Project pages on zaminfoundation.ngo load dynamically and could not be read. Most Zamin projects are institutional (air monitoring, eco-schools, boarding-school infrastructure). Cochlear-implant evidence is from 2020; treat as unverified for current intake.",
+      "website": "https://zaminfoundation.ngo",
+      "phone": null,
+      "email": "info@zaminfoundation.uz",
+      "description": {
+        "en": "A non-governmental, non-profit foundation (Board of Trustees chaired by Ziroat Mirziyoyeva) that runs long-term projects in the environmental and social spheres and charitable activities, aiming to contribute to sustainable development and higher living standards in Uzbekistan.",
+        "uz": "Nodavlat notijorat jamg‘arma (Vasiylik kengashi raisi — Ziroat Mirziyoyeva) ekologik va ijtimoiy sohalarda uzoq muddatli loyihalar hamda xayriya faoliyatini amalga oshiradi; O‘zbekistonda barqaror rivojlanish va turmush darajasini oshirishga hissa qo‘shishni maqsad qilgan.",
+        "ru": "Негосударственный некоммерческий фонд (Попечительский совет возглавляет Зироат Мирзиёева), который реализует долгосрочные проекты в экологической и социальной сферах и ведёт благотворительную деятельность, стремясь внести вклад в устойчивое развитие и повышение уровня жизни в Узбекистане."
+      },
+      "sourceUrl": "https://zaminfoundation.ngo/en/about",
+      "excludedPrograms": "Cochlear implant programme: only 2020 evidence, no application route.",
+      "couldNotConfirm": [
+        "phone number on an official page",
+        "any application procedure for individuals",
+        "current individual-facing programmes (projects list loads via client-side API and could not be read)",
+        "2020 one-off aid to 5,000 women (kun.uz, April 2020) was a COVID-era action, excluded as a current programme"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "mehr-nuri",
+      "officialName": "Фонд «Мехр нури» (Mehr Nuri charitable foundation)",
+      "existenceConfirmed": false,
+      "hidden": true,
+      "reviewNote": "No evidence the foundation has operated since about 2013; its website no longer resolves.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "description": null,
+      "sourceUrl": "https://www.afisha.uz/ru/places/fond-mekhr-nuri",
+      "excludedPrograms": null,
+      "couldNotConfirm": [
+        "whether the foundation still operates",
+        "current contacts (catalogue lists mehrnuri.uz and phones, but the domain no longer resolves and the listing is undated/unofficial)",
+        "any current programme for individuals"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "sen-yolgiz-emassan-jamgarmasi",
+      "officialName": "\"Sen Yolgʻiz Emassan\" Respublika jamoatchilik bolalar fondi (Республиканский общественный детский фонд)",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "Fund was led by Lola Karimova-Tillyaeva. Latest sources found: daryo.uz (Dec 2017, 15th anniversary) and Sputnik (Nov 2016). Current status uncertain; directory addresses conflict (afisha: H.Oripov ko'ch. 24; yellowpages: Kh.Alimjan sq. 13A). Recommend not publishing contacts without re-verification.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "description": {
+        "en": "A non-governmental, non-profit children's charity founded on 22 November 2002 whose main task is comprehensive assistance to orphans and children with disabilities, including funding treatment and surgery for seriously ill children.",
+        "uz": "2002-yil 22-noyabrda tashkil etilgan nodavlat notijorat bolalar xayriya tashkiloti; uning asosiy vazifasi yetim bolalar va nogironligi bo‘lgan bolalarga har tomonlama yordam ko‘rsatish, jumladan, og‘ir kasal bolalarni davolash va jarrohlik amaliyotlarini moliyalashtirishdir.",
+        "ru": "Негосударственный некоммерческий детский благотворительный фонд, основанный 22 ноября 2002 года; его главная задача — комплексная помощь детям-сиротам и детям с инвалидностью, включая финансирование лечения и операций для тяжелобольных детей."
+      },
+      "sourceUrl": "https://oz.sputniknews.uz/20161125/Sen-yolgiz-emassan-fondi-oz-faoliyatini-boshlaganiga-shu-hafta-14-yil-boldi-4219854.html",
+      "excludedPrograms": "Treatment funding: only 2016 evidence; website does not resolve.",
+      "couldNotConfirm": [
+        "official website (afisha.uz lists sen.uz, but the domain does not resolve — DNS refused, Sept 2026)",
+        "phone/email on an official page (only directory listings: afisha.uz (+998) 71-237-3403, goldenpages/yellowpages)",
+        "any activity after 2017",
+        "application procedure"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "sos-ozbekiston-bolalar-mahallalari",
+      "officialName": "SOS O'zbekiston Bolalar Mahallalari uyushmasi / SOS Children's Villages of Uzbekistan",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "sos-kd.uz is a JavaScript single-page app; texts were read from its published JS bundle (the content rendered on the cited routes). The Contacts page also lists branches: Tashkent (100187, Temur Malik 2B), Samarkand (140160, S. Bukhory 1A), Khorezm (220100, Urgench, Uzbekistan Str. 31/1); English and Russian versions show different Tashkent/Samarkand branch phone numbers, so branch phones were not recorded. Site footer also shows info@sos-kduz.uz (likely a typo) — the contacts page value info@sos-kd.uz was used.",
+      "website": "https://www.sos-kd.uz",
+      "phone": "+998 78 140 97 27",
+      "email": "info@sos-kd.uz",
+      "description": {
+        "en": "An NGO providing family-based alternative care for children who have lost parental care, plus family strengthening and youth care services, with programmes in Tashkent, Samarkand and Khorezm (Urgench).",
+        "uz": "Ota-ona qaramog‘idan mahrum bo‘lgan bolalar uchun oilaviy muhitdagi muqobil g‘amxo‘rlikni, shuningdek, oilani mustahkamlash va yoshlarni qo‘llab-quvvatlash xizmatlarini ko‘rsatuvchi nodavlat notijorat tashkilot; dasturlari Toshkent, Samarqand va Xorazmda (Urganch) amalga oshiriladi.",
+        "ru": "Негосударственная некоммерческая организация, которая обеспечивает альтернативный уход семейного типа для детей, оставшихся без попечения родителей, а также услуги по укреплению семьи и поддержке молодёжи; программы работают в Ташкенте, Самарканде и Хорезме (Ургенч)."
+      },
+      "sourceUrl": "https://www.sos-kd.uz/en/what-we-do/alternative-care",
+      "excludedPrograms": null,
+      "couldNotConfirm": [
+        "eligibility criteria and application steps for Family Strengthening",
+        "whether the Khorezm branch runs Family Strengthening today",
+        "a single public hotline (only office numbers)"
+      ],
+      "programs": [
+        {
+          "id": "sos-family-strengthening",
+          "title": {
+            "en": "Family strengthening programme",
+            "uz": "Oilani mustahkamlash dasturi",
+            "ru": "Программа укрепления семьи"
+          },
+          "summary": {
+            "en": "Comprehensive help for families in difficult situations: educational, medical, psychological and social assistance for children, parenting-skills support, help obtaining qualifications, employment and starting small businesses, legal support, and children's day care centres.",
+            "uz": "Og‘ir vaziyatdagi oilalarga har tomonlama yordam: bolalar uchun ta’limiy, tibbiy, psixologik va ijtimoiy yordam, ota-onalik ko‘nikmalarini rivojlantirishda ko‘mak, malaka olish, ishga joylashish va kichik biznes boshlashda yordam, huquqiy ko‘mak hamda bolalar kunduzgi parvarish markazlari.",
+            "ru": "Комплексная помощь семьям в трудной ситуации: образовательная, медицинская, психологическая и социальная помощь детям, поддержка в развитии родительских навыков, помощь в получении квалификации, трудоустройстве и открытии малого бизнеса, юридическая поддержка и детские центры дневного пребывания."
+          },
+          "howToApply": {
+            "en": "No application procedure is published. Contact the national office (+998 78 140 97 27) or the branch in Tashkent, Samarkand or Khorezm.",
+            "uz": "Ariza berish tartibi e’lon qilinmagan. Milliy ofisga (+998 78 140 97 27) yoki Toshkent, Samarqand yoxud Xorazmdagi bo‘limga murojaat qiling.",
+            "ru": "Порядок подачи заявки не опубликован. Обращайтесь в национальный офис (+998 78 140 97 27) или в отделение в Ташкенте, Самарканде или Хорезме."
+          },
+          "supportTypes": [
+            "children_family",
+            "education",
+            "employment",
+            "mental_wellbeing",
+            "legal"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [
+            "tashkent_city",
+            "samarkand",
+            "khorezm"
+          ],
+          "targetCircumstances": [
+            "has_children",
+            "low_income"
+          ],
+          "requiredCircumstances": [],
+          "requiredDocuments": [],
+          "incomeTested": false,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://www.sos-kd.uz/en/what-we-do/family-strengthening",
+          "evidenceQuote": "the Family Strengthening program, which provides comprehensive assistance to families in difficult situations",
+          "titleOriginal": "Family Strengthening",
+          "statusNote": "Programme running since 2007 per the site; impact figures shown are for 2007–2016."
+        },
+        {
+          "id": "sos-youth-care",
+          "title": {
+            "en": "Support for young people leaving care",
+            "uz": "Muqobil g‘amxo‘rlikdan chiqqan yoshlarni qo‘llab-quvvatlash",
+            "ru": "Поддержка молодых людей после выхода из системы опеки"
+          },
+          "summary": {
+            "en": "Continuous support for young people who have left alternative care or come from families in difficult situations: supervised living at 16–18, partial financial support for own/rented housing at 18–22, and psychological/pedagogical crisis support after 22.",
+            "uz": "Muqobil g‘amxo‘rlikdan chiqqan yoki og‘ir vaziyatdagi oilalardan bo‘lgan yoshlarni doimiy qo‘llab-quvvatlash: 16–18 yoshda nazorat ostida yashash, 18–22 yoshda o‘z yoki ijaradagi uy-joy uchun qisman moliyaviy yordam, 22 yoshdan keyin esa inqirozli vaziyatlarda psixologik/pedagogik yordam.",
+            "ru": "Постоянное сопровождение молодых людей, покинувших альтернативный уход или выросших в семьях в трудной ситуации: проживание под присмотром в 16–18 лет, частичная финансовая поддержка при собственном/арендованном жилье в 18–22 года и психологическая/педагогическая помощь в кризисных ситуациях после 22 лет."
+          },
+          "howToApply": {
+            "en": "No application procedure is published. Contact SOS Children’s Villages Uzbekistan (+998 78 140 97 27).",
+            "uz": "Ariza berish tartibi e’lon qilinmagan. SOS O‘zbekiston Bolalar Mahallalari (SOS Children’s Villages Uzbekistan) tashkilotiga murojaat qiling (+998 78 140 97 27).",
+            "ru": "Порядок подачи заявки не опубликован. Обращайтесь в «SOS Детские деревни Узбекистана» (SOS Children’s Villages Uzbekistan) (+998 78 140 97 27)."
+          },
+          "supportTypes": [
+            "housing",
+            "financial",
+            "mental_wellbeing",
+            "children_family"
+          ],
+          "genders": [],
+          "ageMin": 16,
+          "ageMax": null,
+          "regions": [
+            "tashkent_city",
+            "samarkand"
+          ],
+          "targetCircumstances": [],
+          "requiredCircumstances": [
+            "care_leaver"
+          ],
+          "requiredDocuments": [],
+          "incomeTested": false,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://www.sos-kd.uz/en/what-we-do/youth-care",
+          "evidenceQuote": "aimed at providing continuous services to accompany young people who have left alternative care or from families in difficult situations",
+          "titleOriginal": "Youth Care",
+          "statusNote": "Achievement figures shown are for 2009–2016; current intake not stated."
+        }
+      ]
+    },
+    {
+      "slug": "mehribonlik-jamgarmasi",
+      "officialName": "No foundation of this name found; \"Mehribonlik uylari\" are state children's homes",
+      "existenceConfirmed": false,
+      "hidden": true,
+      "reviewNote": "No fund with this name could be found; “Mehribonlik uylari” are state children’s homes.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "description": null,
+      "sourceUrl": null,
+      "excludedPrograms": null,
+      "couldNotConfirm": [
+        "any NGO or fund officially named \"Mehribonlik\" jamg'armasi",
+        "contacts",
+        "programmes for individuals"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "ezgu-amal-jamgarmasi",
+      "officialName": "«EZGU AMAL» Public Foundation (Общественный Фонд «EZGU AMAL»)",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "In December 2024 a governance dispute between founders and the supervisory board was reported (repost.uz, 25 Dec 2024, https://repost.uz/daje-minyustu-prishlos-vmeshatsa); the Ministry of Justice gave both sides one month and warned activity could be suspended up to six months. The website was live with 2026 copyright when checked. The slug's 'ijtimoiy fondi' wording was not found; official name is 'EZGU AMAL' Public Foundation. Do not confuse with the state 'Ezgu maqsad' fund. FAQ also lists selection criteria: medical need, family income, social status (e.g. single parent), citizenship.",
+      "website": "https://ezgu-amal.uz",
+      "phone": "+998 95 888 87 47",
+      "email": "info@ezgu-amal.uz",
+      "description": {
+        "en": "A public charitable foundation that helps children with oncological and haematological illnesses in Uzbekistan by paying for medicines, surgery and diagnostics, supporting pediatric oncology clinics and the Taskin Children's Hospice.",
+        "uz": "O‘zbekistonda onkologik va gematologik kasalliklarga chalingan bolalarga dori-darmonlar, jarrohlik amaliyotlari va diagnostika xarajatlarini to‘lash orqali yordam beradigan, bolalar onkologiya klinikalari va «Taskin» bolalar xospisini qo‘llab-quvvatlaydigan jamoat xayriya jamg‘armasi.",
+        "ru": "Общественный благотворительный фонд, который помогает детям с онкологическими и гематологическими заболеваниями в Узбекистане, оплачивая лекарства, операции и диагностику, и поддерживает детские онкологические клиники и детский хоспис «Taskin»."
+      },
+      "sourceUrl": "https://ezgu-amal.uz/en",
+      "excludedPrograms": null,
+      "couldNotConfirm": [
+        "how a family registers for the 'From Hand to Hand' list",
+        "admission criteria for the Taskin Children's Hospice (palliative programme page is institution-focused)"
+      ],
+      "programs": [
+        {
+          "id": "ezgu-amal-child-treatment",
+          "title": {
+            "en": "Help paying for a child’s cancer or blood-disease treatment",
+            "uz": "Bolaning saraton yoki qon kasalligini davolash xarajatlarini to‘lashda yordam",
+            "ru": "Помощь в оплате лечения рака или заболевания крови у ребёнка"
+          },
+          "summary": {
+            "en": "Pays for medicines, medical supplies, surgery, diagnostics (PET, MRI, immunohistochemistry) and prostheses in Uzbekistan for children with cancer or blood diseases. First applications are for children under 18 (repeat help up to 25); Uzbekistan citizens only. No cash payments or reimbursement of past purchases.",
+            "uz": "Saraton yoki qon kasalligiga chalingan bolalar uchun O‘zbekistonda dori-darmonlar, tibbiy buyumlar, jarrohlik amaliyoti, diagnostika (PET, MRT, immunogistokimyo) va protezlar uchun to‘lovni amalga oshiradi. Birinchi marta ariza 18 yoshga to‘lmagan bolalar uchun qabul qilinadi (takroriy yordam — 25 yoshgacha); faqat O‘zbekiston fuqarolari uchun. Naqd pul berilmaydi va avval qilingan xaridlar xarajati qoplanmaydi.",
+            "ru": "Оплачивает лекарства, медицинские расходные материалы, операции, диагностику (ПЭТ, МРТ, иммуногистохимия) и протезы в Узбекистане для детей с онкологическими заболеваниями или заболеваниями крови. Первичные заявки принимаются на детей до 18 лет (повторная помощь — до 25 лет); только для граждан Узбекистана. Наличные не выдаются, стоимость прошлых покупок не возмещается."
+          },
+          "howToApply": {
+            "en": "Call the call centre (+998 95 888 87 47) first to confirm the documents, then apply at the office in Tashkent (Arnasoy street 17/1). Applications are reviewed within 3 working days. Also needed: a mahalla certificate confirming the family’s need, and a letter from the treating clinic.",
+            "uz": "Avval hujjatlarni aniqlashtirish uchun call-markazga (+998 95 888 87 47) qo‘ng‘iroq qiling, so‘ngra Toshkentdagi ofisga (Arnasoy ko‘chasi 17/1) ariza topshiring. Arizalar 3 ish kuni ichida ko‘rib chiqiladi. Shuningdek, oilaning muhtojligini tasdiqlovchi mahalla ma’lumotnomasi va davolayotgan klinikadan xat kerak bo‘ladi.",
+            "ru": "Сначала позвоните в колл-центр (+998 95 888 87 47), чтобы уточнить документы, затем подайте заявку в офисе в Ташкенте (улица Arnasoy, 17/1). Заявки рассматриваются в течение 3 рабочих дней. Также нужны справка из махалли, подтверждающая нуждаемость семьи, и письмо от лечащей клиники."
+          },
+          "supportTypes": [
+            "health",
+            "children_family"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "has_children",
+            "low_income"
+          ],
+          "requiredCircumstances": [],
+          "requiredDocuments": [
+            "birth_certificate",
+            "id_document",
+            "medical_report"
+          ],
+          "incomeTested": true,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://ezgu-amal.uz/en/programs/help-child-for-treatment",
+          "evidenceQuote": "Initial applications are accepted for children under the age of 18.",
+          "titleOriginal": "Assistance for a Child’s Medical Treatment",
+          "statusNote": "Ongoing programme per the foundation's site (2026)."
+        },
+        {
+          "id": "ezgu-amal-hand-to-hand",
+          "title": {
+            "en": "“From Hand to Hand”: donors helping registered families",
+            "uz": "«Qo‘ldan qo‘lga»: ro‘yxatdagi oilalarga homiylar yordami",
+            "ru": "«Из рук в руки»: благотворители помогают зарегистрированным семьям"
+          },
+          "summary": {
+            "en": "The foundation keeps a list of registered families in need and connects them with donors, who give food, consumer goods or cash directly to the recipient; priority goes to families with a child who has cancer.",
+            "uz": "Jamg‘arma ro‘yxatga olingan muhtoj oilalar ro‘yxatini yuritadi va ularni homiylar bilan bog‘laydi; homiylar oziq-ovqat, iste’mol tovarlari yoki naqd pulni bevosita oluvchiga beradi. Saraton kasalligiga chalingan bolasi bor oilalarga ustuvorlik beriladi.",
+            "ru": "Фонд ведёт список зарегистрированных нуждающихся семей и связывает их с благотворителями, которые передают продукты питания, потребительские товары или наличные деньги непосредственно получателю. Приоритет отдаётся семьям, в которых у ребёнка онкологическое заболевание."
+          },
+          "howToApply": {
+            "en": "Families must be registered with the foundation; contact it by phone (+998 95 888 87 47). Help depends on donors choosing recipients and is not guaranteed.",
+            "uz": "Oila jamg‘armada ro‘yxatdan o‘tgan bo‘lishi kerak; jamg‘arma bilan telefon orqali bog‘laning (+998 95 888 87 47). Yordam homiylar oluvchilarni tanlashiga bog‘liq va kafolatlanmagan.",
+            "ru": "Семья должна быть зарегистрирована в фонде; свяжитесь с ним по телефону (+998 95 888 87 47). Помощь зависит от того, каких получателей выберут благотворители, и не гарантирована."
+          },
+          "supportTypes": [
+            "food",
+            "financial",
+            "children_family"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "low_income",
+            "has_children",
+            "disability"
+          ],
+          "requiredCircumstances": [],
+          "requiredDocuments": [
+            "id_document"
+          ],
+          "incomeTested": false,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://ezgu-amal.uz/en/programs/hands-to-hands",
+          "evidenceQuote": "The Program is intended to support children from families in need, low-income and large families, persons with disabilities, and elderly persons living alone.",
+          "titleOriginal": "“FROM HAND TO HAND” Assistance Program",
+          "statusNote": "Assistance depends on donors choosing recipients; not a guaranteed benefit."
+        }
+      ]
+    },
+    {
+      "slug": "red-crescent-uz",
+      "officialName": "O‘zbekiston Qizil Yarim Oy jamiyati",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "All data from the Society's own site (redcrescent.uz), which is live (footer © 2026) but service pages are undated. Regional organization phone numbers are listed on the contacts page. Main phone also has fax +998 71 256-18-01. Address: Tashkent, Yusuf Xos Hojib ko‘chasi 30.",
+      "website": "https://redcrescent.uz",
+      "phone": "+998 78 150-81-11",
+      "email": "secretariat@redcrescent.uz",
+      "description": {
+        "en": "The Red Crescent Society of Uzbekistan is a national humanitarian society with regional organizations across the country, reporting over 1.5 million members and 38,000 active volunteers. Its activities include home-based medical-social care, first aid training, emergency preparedness and a family tracing service.",
+        "uz": "O‘zbekiston Qizil Yarim Oy jamiyati — butun mamlakat bo‘ylab hududiy tashkilotlarga ega milliy gumanitar jamiyat; o‘z ma’lumotlariga ko‘ra, uning 1,5 milliondan ortiq a’zosi va 38 000 faol ko‘ngillisi bor. Jamiyat faoliyatiga uyda tibbiy-ijtimoiy parvarish, birinchi yordamga o‘qitish, favqulodda vaziyatlarga tayyorgarlik va oila a’zolarini qidirish xizmati kiradi.",
+        "ru": "Общество Красного Полумесяца Узбекистана — национальное гуманитарное общество с региональными организациями по всей стране; по его данным, в нём более 1,5 миллиона членов и 38 000 активных добровольцев. Его деятельность включает медико-социальный уход на дому, обучение первой помощи, подготовку к чрезвычайным ситуациям и службу розыска членов семьи."
+      },
+      "sourceUrl": "https://redcrescent.uz/uz/",
+      "excludedPrograms": "Paid first-aid course: a paid course, not support.",
+      "couldNotConfirm": [
+        "How to apply for Mehr-shafqat home care or material assistance (no procedure or eligibility criteria on site)",
+        "Fee for first aid courses",
+        "Any dated (2023+) information on the service pages; pages are undated",
+        "IFRC directory page (403 blocked)"
+      ],
+      "programs": [
+        {
+          "id": "red-crescent-mehr-shafqat",
+          "title": {
+            "en": "“Mehr-shafqat” home care and medical-social help",
+            "uz": "«Mehr-shafqat»: uyda parvarish va tibbiy-ijtimoiy yordam",
+            "ru": "«Мехр-шафкат»: уход на дому и медико-социальная помощь"
+          },
+          "summary": {
+            "en": "Free targeted medical-social and psychological help for vulnerable people, including home care by patronage nurses for lonely elderly people, people with disabilities and people with illnesses. The page also states the Society provides material assistance to people in need each year.",
+            "uz": "Aholining zaif qatlamlariga bepul manzilli tibbiy-ijtimoiy va psixologik yordam, jumladan, yolg‘iz keksalar, nogironligi bo‘lgan shaxslar va kasal odamlarni patronaj hamshiralari tomonidan uyda parvarish qilish. Sahifada, shuningdek, Jamiyat har yili muhtojlarga moddiy yordam ko‘rsatishi qayd etilgan.",
+            "ru": "Бесплатная адресная медико-социальная и психологическая помощь уязвимым людям, включая уход на дому патронажными медсёстрами за одинокими пожилыми людьми, людьми с инвалидностью и больными людьми. На странице также указано, что Общество ежегодно оказывает материальную помощь нуждающимся."
+          },
+          "howToApply": {
+            "en": "The page doesn’t describe how to apply. Contact the Society or its regional organization (contacts on redcrescent.uz).",
+            "uz": "Sahifada ariza berish tartibi yoritilmagan. Jamiyatga yoki uning hududiy tashkilotiga murojaat qiling (kontaktlar redcrescent.uz saytida).",
+            "ru": "На странице не описано, как подать заявку. Обращайтесь в Общество или его региональную организацию (контакты на redcrescent.uz)."
+          },
+          "supportTypes": [
+            "health",
+            "disability",
+            "mental_wellbeing"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "disability"
+          ],
+          "requiredCircumstances": [],
+          "requiredDocuments": [],
+          "incomeTested": false,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://redcrescent.uz/uz/activities/medic-social-service/sluzhba-miloserdiya-mehr-shafkat/",
+          "evidenceQuote": "aholining zaif qatlamlariga bepul manzilli tibbiy-ijtimoiy va psixologik yordam ko’rsatish hamda yolg’iz keksalar, nogironlar ... uyda ... parvarish qilish",
+          "titleOriginal": "“Mehr-shafqat” mehribonlik xizmati",
+          "statusNote": "Page is undated; figures (168 nurses, 340,000+ services per year) are as stated on the current site"
+        },
+        {
+          "id": "red-crescent-family-tracing",
+          "title": {
+            "en": "Finding lost family members",
+            "uz": "Yo‘qolgan oila a’zolarini qidirish",
+            "ru": "Поиск потерянных членов семьи"
+          },
+          "summary": {
+            "en": "Helps people search for close relatives in Uzbekistan or abroad with whom contact has been lost, and handles Red Cross messages, especially in emergencies. It does not accept searches for non-relatives, biological parents/children, inheritance/alimony/housing matters, or family-conflict cases.",
+            "uz": "O‘zbekistonda yoki xorijda aloqa uzilib qolgan yaqin qarindoshlarni qidirishda yordam beradi va, ayniqsa, favqulodda vaziyatlarda Qizil Xoch xabarlari bilan ishlaydi. Qarindosh bo‘lmagan shaxslarni, biologik ota-onalar/bolalarni qidirish, meros/aliment/uy-joy masalalari yoki oilaviy nizolar bo‘yicha murojaatlar qabul qilinmaydi.",
+            "ru": "Помогает искать близких родственников в Узбекистане или за рубежом, с которыми потеряна связь, и занимается сообщениями Красного Креста, особенно в чрезвычайных ситуациях. Не принимаются запросы на поиск лиц, не являющихся родственниками, биологических родителей/детей, а также обращения по вопросам наследства/алиментов/жилья или семейных конфликтов."
+          },
+          "howToApply": {
+            "en": "Contact the Society: +998 78 150-81-11, secretariat@redcrescent.uz.",
+            "uz": "Jamiyatga murojaat qiling: +998 78 150-81-11, secretariat@redcrescent.uz.",
+            "ru": "Обращайтесь в Общество: +998 78 150-81-11, secretariat@redcrescent.uz."
+          },
+          "supportTypes": [
+            "children_family",
+            "emergency"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [],
+          "requiredCircumstances": [],
+          "requiredDocuments": [],
+          "incomeTested": false,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://redcrescent.uz/uz/activities/family-tracing-and-restoration-service/",
+          "evidenceQuote": "O’zbekiston hududida va chet elda yaqin qarindoshlari haqida hech qanday xabar bo’lmaganlarni ... qidirish",
+          "titleOriginal": "Oilaviy rishtalarni tiklash va qidiruv xizmati",
+          "statusNote": "Service established in 1993 per the page; page undated"
+        }
+      ]
+    },
+    {
+      "slug": "disability-society-uz",
+      "officialName": "Ўзбекистон Ногиронлар жамияти (Общество инвалидов Узбекистана)",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "Official site uznj.uz is marked 'Сайт синов жараёнида' (site in test mode) and partly contains placeholder content. Do not confuse with the separate 'Association of Disabled People of Uzbekistan' (ozna.uz, founded 2018). A saylov.uz item (28/10/2024) references a briefing with the Society's chairman, suggesting it is active, but that page was only seen in search results, not fetched.",
+      "website": "http://www.uznj.uz/",
+      "phone": "+998 71 234-97-10",
+      "email": null,
+      "description": {
+        "en": "The Society of Persons with Disabilities of Uzbekistan is a non-governmental public association founded under a 1991 Cabinet of Ministers resolution, with branches in all regions, cities and districts. It works to create equal opportunities for people with disabilities, help them participate in social life and employment, assist with everyday issues and protect their rights.",
+        "uz": "O‘zbekiston Nogironlar jamiyati — 1991-yilgi Vazirlar Mahkamasi qaroriga asosan tashkil etilgan nodavlat jamoat birlashmasi bo‘lib, barcha viloyatlar, shaharlar va tumanlarda bo‘limlariga ega. U nogironligi bo‘lgan shaxslar uchun teng imkoniyatlar yaratish, ularning ijtimoiy hayotda ishtirok etishi va ishga joylashishiga ko‘maklashish, maishiy masalalarni hal qilishda yordam berish va huquqlarini himoya qilish yo‘lida ishlaydi.",
+        "ru": "Общество инвалидов Узбекистана — негосударственное общественное объединение, созданное на основании постановления Кабинета Министров 1991 года, с отделениями во всех областях, городах и районах. Оно работает над созданием равных возможностей для людей с инвалидностью, помогает им участвовать в общественной жизни и трудоустраиваться, содействует в решении бытовых вопросов и защищает их права."
+      },
+      "sourceUrl": "http://www.uznj.uz/uz/menu/obschaja-informatsija.php",
+      "excludedPrograms": null,
+      "couldNotConfirm": [
+        "Any concrete individual benefit, service or course offered by the Society (site's 'programs' page contains placeholder 'LOREM' content)",
+        "Official organizational email (contacts page lists boturiy@list.ru and botiruznj@exat.uz, which look like personal/staff addresses; not recorded as org email)",
+        "Current address consistency: contacts page says Yunusobod district, Xiyobontepa ko‘chasi; charter page says Sharofobod ko‘chasi 5"
+      ],
+      "programs": [
+        {
+          "id": "disability-society-trust-line",
+          "title": {
+            "en": "Information and trust line for people with disabilities",
+            "uz": "Nogironligi bo‘lgan shaxslar uchun ma’lumot va ishonch telefoni",
+            "ru": "Справочная линия и телефон доверия для людей с инвалидностью"
+          },
+          "summary": {
+            "en": "A single phone and trust line (+998 71 234-97-10 / 234-97-11) answered by the Society's responsible staff, Monday–Friday 9:00–13:00 and 14:00–18:00; regional branch phone numbers are also listed. In-person reception is on Fridays 13:00–15:00.",
+            "uz": "Jamiyatning mas’ul xodimlari javob beradigan yagona telefon va ishonch telefoni (+998 71 234-97-10 / 234-97-11), dushanba–juma 9:00–13:00 va 14:00–18:00; hududiy bo‘limlarning telefon raqamlari ham keltirilgan. Shaxsiy qabul juma kunlari 13:00–15:00 da.",
+            "ru": "Единый телефон и телефон доверия (+998 71 234-97-10 / 234-97-11), на звонки отвечают ответственные сотрудники Общества, понедельник–пятница 9:00–13:00 и 14:00–18:00; также указаны телефоны региональных отделений. Личный приём — по пятницам 13:00–15:00."
+          },
+          "howToApply": {
+            "en": "Call +998 71 234-97-10 or 234-97-11 on weekdays, or visit the central office reception on Fridays 13:00–15:00.",
+            "uz": "Ish kunlari +998 71 234-97-10 yoki 234-97-11 raqamiga qo‘ng‘iroq qiling yoki juma kunlari 13:00–15:00 da markaziy ofisdagi qabulga boring.",
+            "ru": "Звоните по будням по номерам +998 71 234-97-10 или 234-97-11 либо приходите на приём в центральный офис по пятницам 13:00–15:00."
+          },
+          "supportTypes": [
+            "disability",
+            "legal"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "disability"
+          ],
+          "requiredCircumstances": [],
+          "requiredDocuments": [],
+          "incomeTested": false,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "http://www.uznj.uz/uz/contacts.php",
+          "evidenceQuote": "Жамият фаолияти буйича ягона телефон хамда ишонч телефони Ўзбекистон Ногиронлар жамияти Марказий бошқаруви +998 (71) 234-97-10",
+          "titleOriginal": "Жамият фаолияти буйича ягона телефон хамда ишонч телефони",
+          "statusNote": "Contacts page undated; site banner says the site is in test mode"
+        }
+      ]
+    },
+    {
+      "slug": "unicef-uz",
+      "officialName": "UNICEF Uzbekistan",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "Email on the contact page is Cloudflare-obfuscated; decoded value is tashkent@unicef.org. Contact page address: 51 Istiqlol Street, Yashnabad District, Tashkent (page also shows an alternative address Istikbol Street 15). The original 2021 Bebbo launch press release URL now returns 404.",
+      "website": "https://www.unicef.org/uzbekistan/en",
+      "phone": "+998 78 1480200",
+      "email": "tashkent@unicef.org",
+      "description": {
+        "en": "UNICEF has worked in Uzbekistan for over 30 years to improve the lives of children and their families, focusing on the most vulnerable. It works with the Government of Uzbekistan at national and local levels and with civil society and partners on children's rights and well-being.",
+        "uz": "UNICEF 30 yildan ortiq vaqtdan beri O‘zbekistonda bolalar va ularning oilalari hayotini yaxshilash uchun, eng zaif qatlamlarga alohida e’tibor qaratgan holda ishlab kelmoqda. U bolalar huquqlari va farovonligi masalalarida O‘zbekiston hukumati bilan milliy va mahalliy darajada, shuningdek, fuqarolik jamiyati va hamkorlar bilan hamkorlik qiladi.",
+        "ru": "ЮНИСЕФ (UNICEF) более 30 лет работает в Узбекистане, чтобы улучшить жизнь детей и их семей, уделяя особое внимание наиболее уязвимым. Он сотрудничает с Правительством Узбекистана на национальном и местном уровнях, а также с гражданским обществом и партнёрами в вопросах прав и благополучия детей."
+      },
+      "sourceUrl": "https://www.unicef.org/uzbekistan/en/about-us",
+      "excludedPrograms": null,
+      "couldNotConfirm": [
+        "Any UNICEF-run hotline, cash assistance or direct service for individuals in Uzbekistan (UNICEF works mainly through government programs)"
+      ],
+      "programs": [
+        {
+          "id": "unicef-bebbo",
+          "title": {
+            "en": "Bebbo: free parenting app",
+            "uz": "Bebbo: ota-onalar uchun bepul ilova",
+            "ru": "Bebbo: бесплатное приложение для родителей"
+          },
+          "summary": {
+            "en": "Free mobile app in Uzbek and Russian giving parents and caregivers science-based guidance on child development, health, nutrition, pregnancy and parenting, with tools to track a child's development. Launched in Uzbekistan in 2021 with the Ministries of Health and Education.",
+            "uz": "O‘zbek va rus tillaridagi bepul mobil ilova: ota-onalar va bolaga qarovchilarga bola rivojlanishi, salomatlik, ovqatlanish, homiladorlik va farzand tarbiyasi bo‘yicha ilmiy asoslangan tavsiyalar beradi, unda bolaning rivojlanishini kuzatib borish vositalari ham bor. O‘zbekistonda 2021-yilda Sog‘liqni saqlash va Ta’lim vazirliklari bilan birgalikda ishga tushirilgan.",
+            "ru": "Бесплатное мобильное приложение на узбекском и русском языках с научно обоснованными рекомендациями для родителей и тех, кто ухаживает за детьми, о развитии ребёнка, здоровье, питании, беременности и воспитании, а также с инструментами для отслеживания развития ребёнка. Запущено в Узбекистане в 2021 году совместно с министерствами здравоохранения и образования."
+          },
+          "howToApply": {
+            "en": "Download the Bebbo app from Google Play or the App Store.",
+            "uz": "Bebbo ilovasini Google Play yoki App Store orqali yuklab oling.",
+            "ru": "Скачайте приложение Bebbo в Google Play или App Store."
+          },
+          "supportTypes": [
+            "children_family",
+            "maternity",
+            "health"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "has_children",
+            "pregnant"
+          ],
+          "requiredCircumstances": [],
+          "requiredDocuments": [],
+          "incomeTested": false,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://www.unicef.org/uzbekistan/en/stories/umids-story-my-first-baby-and-helping-hand-bebbo",
+          "evidenceQuote": "The Bebbo parenting app is free and available in Russian and Uzbek. It can be downloaded from Google Play and the App Store",
+          "titleOriginal": "Bebbo",
+          "statusNote": "Available as of UNICEF Uzbekistan story dated 17 February 2025 (480,000+ downloads in Uzbekistan)"
+        }
+      ]
+    },
+    {
+      "slug": "el-yurt-umidi-jamgarmasi",
+      "officialName": "Prezident huzuridagi Istiqbolli kadrlarni tayyorlash bo‘yicha El-yurt umidi jamg‘armasi",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "Official site el-yurt.uz is a single-page app; website meta description reads \"El-Yurt Umidi jamg'armasi — O'zbekiston yoshlarini xorijda tahsil olishga yo'naltiruvchi davlat stipendiya dasturi.\" The email info@eyuf.uz was taken from the site's footer (in its JavaScript bundle), not visible as static HTML. Scholarship details come from news (spot.uz, 6 April 2026), which cites the foundation's announcement. The documents list in the source ends with 'va boshqalar' (and others), so it is not exhaustive.",
+      "website": "https://el-yurt.uz",
+      "phone": null,
+      "email": "info@eyuf.uz",
+      "description": {
+        "en": "A state foundation under the President that funds scholarships for citizens of Uzbekistan to study bachelor's, master's and doctoral programs at foreign universities and research institutions.",
+        "uz": "Prezident huzuridagi davlat jamg‘armasi bo‘lib, O‘zbekiston fuqarolarining xorijiy universitetlar va ilmiy-tadqiqot muassasalarida bakalavriat, magistratura va doktorantura dasturlarida o‘qishi uchun stipendiyalarni moliyalashtiradi.",
+        "ru": "Государственный фонд при Президенте, финансирующий стипендии для граждан Узбекистана на обучение по программам бакалавриата, магистратуры и докторантуры в зарубежных университетах и научно-исследовательских учреждениях."
+      },
+      "sourceUrl": "https://www.spot.uz/oz/2026/04/06/el-yurt-umidi/",
+      "excludedPrograms": null,
+      "couldNotConfirm": [
+        "Foundation phone number (official site is a JS app; no phone found)",
+        "Whether a 2nd 2026 round has been announced",
+        "Quotas reserved for children from low-income families (reported for Nov 2025 round in search snippets only, not fetched)",
+        "Content of eyuf.uz (returns only a placeholder page)"
+      ],
+      "programs": [
+        {
+          "id": "el-yurt-scholarship-2026",
+          "title": {
+            "en": "Fully funded scholarships to study abroad (2026, round 1)",
+            "uz": "Xorijda o‘qish uchun to‘liq moliyalashtiriladigan stipendiyalar (2026-yil, 1-bosqich)",
+            "ru": "Полностью оплачиваемые стипендии на обучение за рубежом (2026 год, 1-й этап)"
+          },
+          "summary": {
+            "en": "Fully funded scholarships for bachelor's (up to 3–4 years), master's (1–2 years) and doctoral (3–4 years) study abroad, covering tuition, visa, medical insurance, annual travel, living and accommodation costs and study materials. 500 quotas for 2026/2027.",
+            "uz": "Xorijda bakalavriat (3–4 yilgacha), magistratura (1–2 yil) va doktorantura (3–4 yil) bo‘yicha o‘qish uchun to‘liq moliyalashtiriladigan stipendiyalar: o‘qish to‘lovi, viza, tibbiy sug‘urta, har yillik yo‘l xarajatlari, yashash va turar joy xarajatlari hamda o‘quv materiallari qoplanadi. 2026/2027 o‘quv yili uchun 500 ta kvota.",
+            "ru": "Полностью оплачиваемые стипендии на обучение за рубежом в бакалавриате (до 3–4 лет), магистратуре (1–2 года) и докторантуре (3–4 года): покрываются плата за обучение, виза, медицинская страховка, ежегодный проезд, расходы на проживание и жильё, а также учебные материалы. 500 квот на 2026/2027 год."
+          },
+          "howToApply": {
+            "en": "Apply online at el-yurt.uz. Age limits: bachelor’s up to 30, master’s 22–40, PhD 25–45; master’s needs 1+ year and PhD 2+ years of work experience. You’ll need a letter of acceptance from a foreign university, an IELTS certificate (6+ for bachelor’s, 7+ for master’s/PhD) and a motivation essay. Round 1 of 2026 closed on 24 April 2026; check el-yurt.uz for the next round.",
+            "uz": "el-yurt.uz saytida onlayn ariza bering. Yosh chegaralari: bakalavriat — 30 yoshgacha, magistratura — 22–40 yosh, PhD — 25–45 yosh; magistratura uchun kamida 1 yil, PhD uchun kamida 2 yil ish tajribasi talab qilinadi. Xorijiy universitetning qabul xati (letter of acceptance), IELTS sertifikati (bakalavriat uchun 6+, magistratura/PhD uchun 7+) va motivatsion insho kerak bo‘ladi. 2026-yilning 1-bosqichi 2026-yil 24-aprelda yakunlangan; keyingi bosqich haqida el-yurt.uz saytidan bilib oling.",
+            "ru": "Подайте заявку онлайн на el-yurt.uz. Возрастные ограничения: бакалавриат — до 30 лет, магистратура — 22–40 лет, PhD — 25–45 лет; для магистратуры нужен опыт работы не менее 1 года, для PhD — не менее 2 лет. Потребуются письмо о зачислении (letter of acceptance) из зарубежного университета, сертификат IELTS (6+ для бакалавриата, 7+ для магистратуры/PhD) и мотивационное эссе. 1-й этап 2026 года завершился 24 апреля 2026 года; о следующем этапе узнавайте на el-yurt.uz."
+          },
+          "supportTypes": [
+            "education"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": 45,
+          "regions": [],
+          "targetCircumstances": [],
+          "requiredCircumstances": [],
+          "requiredDocuments": [],
+          "incomeTested": false,
+          "applicationStatus": "CLOSED",
+          "deadline": "2026-04-24",
+          "sourceUrl": "https://www.spot.uz/oz/2026/04/06/el-yurt-umidi/",
+          "evidenceQuote": "Hujjatlar jamg‘armaning el-yurt.uz onlayn platformasi orqali joriy yilning 24-apreligacha qabul qilinadi.",
+          "titleOriginal": "2026-yil uchun birinchi ochiq stipendiya tanlovi",
+          "statusNote": "Round 1 of 2026 accepted applications until 24 April 2026 (per spot.uz, 6 April 2026); that deadline has passed. Foundation has historically run a second round later in the year (e.g. Nov 2025) — check el-yurt.uz"
+        }
+      ]
+    },
+    {
+      "slug": "saxovat-va-komak-jamgarmasi",
+      "officialName": "“Saxovat va koʻmak” jamgʻarmasi",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "The fund was created by government order of 22 April 2020 as a COVID-era charity fund under the 'Mahalla' charity fund (gazeta.uz, 23.04.2020). Current rules come from the regulation annexed to CM Resolution No. 313 of 31.05.2024 (lex.uz), amended in 2025–2026; it says the fund is set up under the Agency's regional departments. The regulation lists 13 types of help, including business grants, home repair/adaptation, coal/fuel, disaster home repair, ID-document costs, land purchase for disabled people and ramps/lifts; only 5 are included here. A 2025 resolution (lex.uz -7645251) introduced vouchers as a pilot from 15.08.2025 in Tashkent city and Andijan region. Contact for applicants: Agency call center 1140 / 'Inson' centers (see ijtimoiy-himoya-milliy-agentligi).",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "description": {
+        "en": "A state social-assistance fund, set up in 2020 and now operating under the regional departments of the National Agency for Social Protection, that funds one-off and periodic help for people and families in need. Help is decided through case assessment by social workers and the 'Mahalla yettiligi'.",
+        "uz": "2020-yilda tashkil etilgan va hozirda Ijtimoiy himoya milliy agentligining hududiy boshqarmalari huzurida faoliyat yuritayotgan davlat ijtimoiy yordam jamg‘armasi; muhtoj shaxslar va oilalarga bir martalik va davriy yordamni moliyalashtiradi. Yordam ijtimoiy xodimlar va «Mahalla yettiligi» tomonidan holatni baholash orqali belgilanadi.",
+        "ru": "Государственный фонд социальной помощи, созданный в 2020 году и сейчас действующий при региональных управлениях Национального агентства социальной защиты; финансирует единовременную и периодическую помощь нуждающимся людям и семьям. Решение о помощи принимается по итогам оценки случая социальными работниками и «Махалла еттилиги» («махаллинской семёркой»)."
+      },
+      "sourceUrl": "https://lex.uz/uz/docs/-6973951",
+      "excludedPrograms": null,
+      "couldNotConfirm": [
+        "Separate website, phone or email for the fund (it has no legal-entity status; it operates under the Agency's regional departments)",
+        "Current monetary value of BHM (base calculation amount) — not recorded here"
+      ],
+      "programs": [
+        {
+          "id": "saxovat-food-voucher",
+          "title": {
+            "en": "Food, clothing and essentials voucher",
+            "uz": "Oziq-ovqat, kiyim-kechak va zarur tovarlar uchun vaucher",
+            "ru": "Ваучер на продукты, одежду и товары первой необходимости"
+          },
+          "summary": {
+            "en": "Help with food (1 base calculation amount, once a quarter) and clothing or essentials (5 base amounts, every six months), usually as an electronic voucher for online shops. For families in the Social Register.",
+            "uz": "Oziq-ovqat uchun (1 bazaviy hisoblash miqdori (BHM), har chorakda bir marta) hamda kiyim-kechak yoki eng zarur tovarlar uchun (5 BHM, har olti oyda bir marta) yordam, odatda onlayn do‘konlar uchun elektron vaucher shaklida. Ijtimoiy reyestrga kiritilgan oilalar uchun.",
+            "ru": "Помощь на продукты питания (1 базовая расчётная величина (БРВ), раз в квартал) и на одежду или товары первой необходимости (5 БРВ, раз в полгода), как правило, в виде электронного ваучера для онлайн-магазинов. Для семей, включённых в Единый реестр социальной защиты."
+          },
+          "howToApply": {
+            "en": "Apply to (or be identified by) a social worker at an 'Inson' social services center; case assessment, then decision by the 'Mahalla yettiligi', then funds allocated by the Agency's regional department.",
+            "uz": "«Inson» ijtimoiy xizmatlar markazining ijtimoiy xodimiga murojaat qiling (yoki ijtimoiy xodim sizning holatingizni o‘zi aniqlaydi); avval holat baholanadi, so‘ng «Mahalla yettiligi» qaror qabul qiladi, keyin mablag‘ Agentlikning hududiy boshqarmasi tomonidan ajratiladi.",
+            "ru": "Обратитесь к социальному работнику центра социальных услуг «Inson» (или он сам выявит вашу ситуацию); сначала проводится оценка случая, затем решение принимает «Махалла еттилиги», после чего средства выделяет региональное управление Агентства."
+          },
+          "supportTypes": [
+            "food",
+            "financial"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "low_income"
+          ],
+          "requiredCircumstances": [
+            "low_income"
+          ],
+          "requiredDocuments": [],
+          "incomeTested": true,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://lex.uz/uz/docs/-6973951",
+          "evidenceQuote": "Oziq-ovqat mahsulotlari uchun — har chorakda bir marotaba; Kiyim-kechak va boshqa eng zarur tovarlar uchun — har yarim yilda bir marotaba.",
+          "titleOriginal": "Oziq-ovqat, kiyim-kechak va boshqa eng zarur tovarlar bilan bogʻliq xarajatlarni qoplash",
+          "statusNote": "Regulation (CM Resolution No. 313 of 31.05.2024) in force with amendments through 2026"
+        },
+        {
+          "id": "saxovat-rent-compensation",
+          "title": {
+            "en": "Rent compensation for families in the Social Register",
+            "uz": "Ijtimoiy reyestrdagi oilalar uchun ijara kompensatsiyasi",
+            "ru": "Компенсация аренды жилья для семей из социального реестра"
+          },
+          "summary": {
+            "en": "Pays 50% of monthly rent for six months, extendable by six more (capped at 2 base amounts; 4 in Tashkent city, 3 in Nukus and regional centres). Not paid for leases between close relatives.",
+            "uz": "Oylik ijara to‘lovining 50 foizini olti oy davomida to‘laydi, muddat yana olti oyga uzaytirilishi mumkin (ko‘pi bilan 2 bazaviy hisoblash miqdori (BHM); Toshkent shahrida 4 BHM, Nukus va viloyat markazlarida 3 BHM). Yaqin qarindoshlar o‘rtasidagi ijara shartnomalari uchun to‘lanmaydi.",
+            "ru": "Оплачивает 50% ежемесячной арендной платы в течение шести месяцев с возможностью продления ещё на шесть (не более 2 базовых расчётных величин (БРВ); в городе Ташкенте — 4 БРВ, в Нукусе и областных центрах — 3 БРВ). Не выплачивается при аренде между близкими родственниками."
+          },
+          "howToApply": {
+            "en": "Through a social worker at an “Inson” social services centre. You’ll need a copy of the lease and proof it is registered with the tax authorities.",
+            "uz": "«Inson» ijtimoiy xizmatlar markazining ijtimoiy xodimi orqali. Ijara shartnomasining nusxasi va shartnoma soliq organlarida ro‘yxatdan o‘tkazilganini tasdiqlovchi hujjat kerak bo‘ladi.",
+            "ru": "Через социального работника центра социальных услуг «Inson». Понадобятся копия договора аренды и подтверждение его регистрации в налоговых органах."
+          },
+          "supportTypes": [
+            "housing",
+            "financial"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "low_income"
+          ],
+          "requiredCircumstances": [
+            "low_income"
+          ],
+          "requiredDocuments": [],
+          "incomeTested": true,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://lex.uz/uz/docs/-6973951",
+          "evidenceQuote": "Ijara toʻlovining 50 foizi, biroq BHMning 2 baravarigacha (Toshkent shahrida BHMning 4 baravarigacha ...)",
+          "titleOriginal": "Turar joy ijarasi uchun kompensatsiya",
+          "statusNote": "Passport amended by CM Resolution No. 271 of 21.05.2026"
+        },
+        {
+          "id": "saxovat-rent-women-centres",
+          "title": {
+            "en": "Full rent compensation for women leaving a women’s rehabilitation centre",
+            "uz": "Ayollarni reabilitatsiya qilish markazidan chiqqan ayollar uchun ijara to‘lovini to‘liq qoplash",
+            "ru": "Полная компенсация аренды для женщин, покинувших центр реабилитации женщин"
+          },
+          "summary": {
+            "en": "Pays 100% of rent (capped at 4 base amounts; 8 in Tashkent city, 6 in Nukus and regional centres) for women who stayed three months at a regional women’s rehabilitation and adaptation centre and left within the last month, if family income per person is up to twice the minimum consumption level.",
+            "uz": "Ayollarni reabilitatsiya qilish va moslashtirish hududiy markazida uch oy bo‘lgan va so‘nggi bir oy ichida u yerdan chiqqan ayollarga, agar oiladagi har bir kishiga to‘g‘ri keladigan daromad eng kam iste’mol xarajatlari qiymatining ikki baravarigacha bo‘lsa, ijara to‘lovining 100 foizini to‘laydi (ko‘pi bilan 4 bazaviy hisoblash miqdori (BHM); Toshkent shahrida 8 BHM, Nukus va viloyat markazlarida 6 BHM).",
+            "ru": "Оплачивает 100% аренды (не более 4 базовых расчётных величин (БРВ); в городе Ташкенте — 8 БРВ, в Нукусе и областных центрах — 6 БРВ) женщинам, которые находились три месяца в региональном центре реабилитации и адаптации женщин и покинули его в течение последнего месяца, если доход семьи на одного человека не превышает двукратную минимальную стоимость потребительских расходов."
+          },
+          "howToApply": {
+            "en": "Through a social worker at an “Inson” social services centre. You’ll need a copy of the lease and proof it is registered with the tax authorities.",
+            "uz": "«Inson» ijtimoiy xizmatlar markazining ijtimoiy xodimi orqali. Ijara shartnomasining nusxasi va shartnoma soliq organlarida ro‘yxatdan o‘tkazilganini tasdiqlovchi hujjat kerak bo‘ladi.",
+            "ru": "Через социального работника центра социальных услуг «Inson». Понадобятся копия договора аренды и подтверждение его регистрации в налоговых органах."
+          },
+          "supportTypes": [
+            "housing",
+            "safety",
+            "financial"
+          ],
+          "genders": [
+            "female"
+          ],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "survivor",
+            "low_income"
+          ],
+          "requiredCircumstances": [
+            "survivor"
+          ],
+          "requiredDocuments": [],
+          "incomeTested": true,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://lex.uz/uz/docs/-6973951",
+          "evidenceQuote": "Ijara toʻlovining 100 foizi, biroq BHMning 4 baravarigacha (Toshkent shahrida BHMning 8 baravarigacha ...)",
+          "titleOriginal": "Ayollarni reabilitatsiya qilish va moslashtirish respublika markazining hududiy markazlaridan chiqarilgan xotin-qizlarning turar joy ijarasi uchun kompensatsiya",
+          "statusNote": "Regulation text as in force in 2026"
+        },
+        {
+          "id": "saxovat-medical-costs",
+          "title": {
+            "en": "Help with medical treatment and surgery costs",
+            "uz": "Davolanish va jarrohlik amaliyoti xarajatlarida yordam",
+            "ru": "Помощь в оплате лечения и операций"
+          },
+          "summary": {
+            "en": "Once a year, covers non-surgical treatment up to 50 base amounts, or surgery at State Health Insurance Fund prices, paid directly to the clinic. For Social Register families or families with income per person up to twice the minimum consumption level.",
+            "uz": "Yiliga bir marta jarrohlik amaliyotisiz davolanish xarajatini 50 bazaviy hisoblash miqdorigacha (BHM) yoki jarrohlik amaliyotini Davlat tibbiy sug‘urta jamg‘armasi narxlarida qoplaydi; mablag‘ bevosita klinikaga to‘lanadi. Ijtimoiy reyestrdagi oilalar yoki har bir kishiga to‘g‘ri keladigan daromadi eng kam iste’mol xarajatlari qiymatining ikki baravarigacha bo‘lgan oilalar uchun.",
+            "ru": "Раз в год покрывает лечение без операции на сумму до 50 базовых расчётных величин (БРВ) или операцию по ценам Государственного фонда медицинского страхования; оплата производится напрямую клинике. Для семей из социального реестра или семей с доходом на одного человека не выше двукратной минимальной стоимости потребительских расходов."
+          },
+          "howToApply": {
+            "en": "Through a social worker / 'Inson' social services center; referral handled via the State Health Insurance Fund.",
+            "uz": "Ijtimoiy xodim / «Inson» ijtimoiy xizmatlar markazi orqali; yo‘llanma Davlat tibbiy sug‘urta jamg‘armasi orqali rasmiylashtiriladi.",
+            "ru": "Через социального работника / центр социальных услуг «Inson»; направление оформляется через Государственный фонд медицинского страхования."
+          },
+          "supportTypes": [
+            "health",
+            "financial"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "low_income"
+          ],
+          "requiredCircumstances": [
+            "low_income"
+          ],
+          "requiredDocuments": [],
+          "incomeTested": true,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://lex.uz/uz/docs/-6973951",
+          "evidenceQuote": "Jarrohlik amaliyotisiz davolanish uchun — BHMning 50 baravarigacha",
+          "titleOriginal": "Jarrohlik amaliyotisiz davolanish va jarrohlik amaliyoti xarajatlari qoplash",
+          "statusNote": "Regulation text as in force in 2026"
+        },
+        {
+          "id": "saxovat-utilities",
+          "title": {
+            "en": "Help with utility bills and utility debt",
+            "uz": "Kommunal to‘lovlar va kommunal qarzdorlik bo‘yicha yordam",
+            "ru": "Помощь с коммунальными платежами и долгами за коммунальные услуги"
+          },
+          "summary": {
+            "en": "Covers utility costs (up to 1 base amount) and utility debt (up to 5 base amounts) for families in the Social Register.",
+            "uz": "Ijtimoiy reyestrga kiritilgan oilalar uchun kommunal xarajatlarni (1 bazaviy hisoblash miqdorigacha (BHM)) va kommunal xizmatlar bo‘yicha qarzdorlikni (5 BHMgacha) qoplaydi.",
+            "ru": "Покрывает расходы на коммунальные услуги (до 1 базовой расчётной величины (БРВ)) и задолженность за коммунальные услуги (до 5 БРВ) для семей, включённых в социальный реестр."
+          },
+          "howToApply": {
+            "en": "Through a social worker / 'Inson' social services center.",
+            "uz": "Ijtimoiy xodim / «Inson» ijtimoiy xizmatlar markazi orqali.",
+            "ru": "Через социального работника / центр социальных услуг «Inson»."
+          },
+          "supportTypes": [
+            "financial",
+            "housing"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "low_income"
+          ],
+          "requiredCircumstances": [
+            "low_income"
+          ],
+          "requiredDocuments": [],
+          "incomeTested": true,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://lex.uz/uz/docs/-6973951",
+          "evidenceQuote": "Kommunal xarajatlarni qoplash 2. Ijtimoiy yordam miqdori: BHMning 1 baravarigacha boʻlgan miqdorda 3. Ijtimoiy yordam oluvchining toifasi: Ijtimoiy reyestrga kiritilgan oilalar.",
+          "titleOriginal": "Kommunal xarajatlarni qoplash / Kommunal xizmatlar boʻyicha qarzdorlikni qoplash",
+          "statusNote": "Regulation text as in force in 2026"
+        }
+      ]
+    },
+    {
+      "slug": "ijtimoiy-himoya-milliy-agentligi",
+      "officialName": "O‘zbekiston Respublikasi Prezidenti huzuridagi Ijtimoiy himoya milliy agentligi",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "Other numbers per advice.uz (a legal-advice portal, not an official agency page): 1070 social card questions, 71 202-06-00 general trust line. gov.uz lists the Agency's areas of activity (shelters and rehabilitation centres for women affected by violence, support for pregnant women in difficult situations, single parents and young families, home care for elderly/disabled, prosthetics) but not as applicable services with procedures. A 'Social Register' inclusion service also exists (oldmy.gov.uz/oz/service/587). Saxovat va ko‘mak fund help is administered by this Agency (see that entry).",
+      "website": "https://ihma.uz",
+      "phone": "1140",
+      "email": null,
+      "description": {
+        "en": "The National Agency for Social Protection under the President runs social assistance and social services in Uzbekistan, including child benefits and material assistance for low-income families, services for people with disabilities, the elderly, children and women affected by violence, delivered through regional 'Inson' social services centres.",
+        "uz": "Prezident huzuridagi Ijtimoiy himoya milliy agentligi O‘zbekistonda ijtimoiy yordam va ijtimoiy xizmatlarni amalga oshiradi, jumladan, kam ta’minlangan oilalarga bolalar nafaqasi va moddiy yordam, nogironligi bo‘lgan shaxslar, keksalar, bolalar hamda zo‘ravonlikdan jabrlangan ayollar uchun xizmatlar; ular hududiy «Inson» ijtimoiy xizmatlar markazlari orqali ko‘rsatiladi.",
+        "ru": "Национальное агентство социальной защиты при Президенте отвечает за социальную помощь и социальные услуги в Узбекистане, включая пособия на детей и материальную помощь малообеспеченным семьям, услуги для людей с инвалидностью, пожилых людей, детей и женщин, пострадавших от насилия; они оказываются через региональные центры социальных услуг «Inson»."
+      },
+      "sourceUrl": "https://gov.uz/oz/advice/720/document/3126",
+      "excludedPrograms": null,
+      "couldNotConfirm": [
+        "Content of the official site ihma.uz (blocked by Cloudflare, HTTP 403) — no contacts/services taken from it",
+        "Agency email address",
+        "Benefit amounts in so'm",
+        "my.gov.uz service pages for disability pension, prosthetics vouchers or home care (not fetched)",
+        "Concrete application procedures for shelters and 'Inson' centre services (only listed as agency activity areas on gov.uz)"
+      ],
+      "programs": [
+        {
+          "id": "ihma-child-benefit",
+          "title": {
+            "en": "Child benefit or material assistance for low-income families",
+            "uz": "Kam ta’minlangan oilalarga bolalar nafaqasi yoki moddiy yordam",
+            "ru": "Пособие на детей или материальная помощь малообеспеченным семьям"
+          },
+          "summary": {
+            "en": "Monthly child benefit or material assistance for families in the Social Register. Under 2026 rules, eligible families receive it for 6 months; near-poverty families get 75% or 50% depending on income.",
+            "uz": "Ijtimoiy reyestrga kiritilgan oilalar uchun har oylik bolalar nafaqasi yoki moddiy yordam. 2026-yilgi qoidalarga ko‘ra, huquqi bor oilalar uni 6 oy davomida oladi; kambag‘allik chegarasiga yaqin oilalar daromadiga qarab 75 foiz yoki 50 foiz oladi.",
+            "ru": "Ежемесячное пособие на детей или материальная помощь для семей, включённых в социальный реестр. По правилам 2026 года семьи, имеющие право, получают её в течение 6 месяцев; семьи, близкие к черте бедности, получают 75% или 50% в зависимости от дохода."
+          },
+          "howToApply": {
+            "en": "Apply online on my.gov.uz (service “Bolalar nafaqasi yoki moddiy yordam tayinlash”): log in and fill in the questionnaire. It’s free, no documents are needed, and a decision comes within one month. Call centre: 1140.",
+            "uz": "my.gov.uz portalida onlayn ariza bering («Bolalar nafaqasi yoki moddiy yordam tayinlash» xizmati): tizimga kiring va so‘rovnomani to‘ldiring. Xizmat bepul, hujjatlar talab qilinmaydi, qaror bir oy ichida chiqariladi. Call-markaz: 1140.",
+            "ru": "Подайте заявку онлайн на my.gov.uz (услуга «Bolalar nafaqasi yoki moddiy yordam tayinlash» — назначение пособия на детей или материальной помощи): войдите в систему и заполните анкету. Это бесплатно, документы не нужны, решение принимается в течение одного месяца. Колл-центр: 1140."
+          },
+          "supportTypes": [
+            "financial",
+            "children_family"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "low_income",
+            "has_children"
+          ],
+          "requiredCircumstances": [
+            "low_income"
+          ],
+          "requiredDocuments": [],
+          "incomeTested": true,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://my.gov.uz/uz/service/1017",
+          "evidenceQuote": "Xizmatni olish uchun kerakli hujjatlar Talab etilmaydi Xizmat foydalanuvchilari Jismoniy shaxslar Aloqa Call markaz: 1140",
+          "titleOriginal": "Bolalar nafaqasi yoki moddiy yordam tayinlash",
+          "statusNote": "Legal basis on my.gov.uz: CM Resolution No. 35 of 29 January 2026; eligibility rules per spot.uz 27 Dec 2025"
+        },
+        {
+          "id": "ihma-sanatorium",
+          "title": {
+            "en": "Free sanatorium treatment for older people and people with disabilities",
+            "uz": "Keksalar va nogironligi bo‘lgan shaxslar uchun bepul sanatoriyda davolanish",
+            "ru": "Бесплатное санаторное лечение для пожилых людей и людей с инвалидностью"
+          },
+          "summary": {
+            "en": "Free electronic referral (putyovka) for sanatorium treatment for eligible elderly people and people with disabilities; queues are formed automatically and a referral is issued when the applicant's turn comes.",
+            "uz": "Huquqi bor keksalar va nogironligi bo‘lgan shaxslarga sanatoriyda davolanish uchun bepul elektron yo‘llanma (putyovka); navbat avtomatik shakllanadi va arizachining navbati kelganda yo‘llanma beriladi.",
+            "ru": "Бесплатная электронная путёвка на санаторное лечение для пожилых людей и людей с инвалидностью, имеющих на это право; очередь формируется автоматически, и путёвка выдаётся, когда подходит очередь заявителя."
+          },
+          "howToApply": {
+            "en": "Apply on my.gov.uz; a referral is issued electronically when your turn in the queue comes. Free. You’ll need a document confirming your right to the benefit. Call centre: 1140.",
+            "uz": "my.gov.uz portalida ariza bering; navbatingiz kelganda yo‘llanma elektron shaklda beriladi. Bepul. Imtiyozga huquqingizni tasdiqlovchi hujjat kerak bo‘ladi. Call-markaz: 1140.",
+            "ru": "Подайте заявку на my.gov.uz; путёвка выдаётся в электронном виде, когда подойдёт ваша очередь. Бесплатно. Понадобится документ, подтверждающий ваше право на льготу. Колл-центр: 1140."
+          },
+          "supportTypes": [
+            "health",
+            "disability"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "disability"
+          ],
+          "requiredCircumstances": [],
+          "requiredDocuments": [
+            "medical_report"
+          ],
+          "incomeTested": false,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://my.gov.uz/uz/service/588",
+          "evidenceQuote": "tibbiy ma’lumotnoma (davolovchi shifokor tomonidan beriladigan sanatoriy-sog‘lomlashtirish tavsiya etiladigan ma’lumotnoma)",
+          "titleOriginal": "Keksalar va nogironligi bo‘lgan shaxslarga sanatoriylarda davolanish uchun yo‘llanmalar berish",
+          "statusNote": "Legal basis: CM Resolution No. 693 of 19 November 2021 (service still listed on my.gov.uz in 2026)"
+        },
+        {
+          "id": "ihma-1146-women-line",
+          "title": {
+            "en": "1146: trust line for women facing pressure or violence",
+            "uz": "1146: tazyiq yoki zo‘ravonlikka duch kelgan ayollar uchun ishonch telefoni",
+            "ru": "1146: телефон доверия для женщин, столкнувшихся с притеснением или насилием"
+          },
+          "summary": {
+            "en": "A short-number trust line where specialists give women social, psychological and legal advice in cases of pressure and violence.",
+            "uz": "Qisqa raqamli ishonch telefoni: tazyiq va zo‘ravonlik holatlarida mutaxassislar ayollarga ijtimoiy, psixologik va huquqiy maslahat beradi.",
+            "ru": "Телефон доверия с коротким номером, по которому специалисты дают женщинам социальные, психологические и юридические консультации в случаях притеснения и насилия."
+          },
+          "howToApply": {
+            "en": "Call 1146. In an emergency, call 112.",
+            "uz": "1146 raqamiga qo‘ng‘iroq qiling. Favqulodda vaziyatda 112 raqamiga qo‘ng‘iroq qiling.",
+            "ru": "Звоните по номеру 1146. В экстренной ситуации звоните 112."
+          },
+          "supportTypes": [
+            "safety",
+            "legal",
+            "mental_wellbeing"
+          ],
+          "genders": [
+            "female"
+          ],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [
+            "survivor"
+          ],
+          "requiredCircumstances": [],
+          "requiredDocuments": [],
+          "incomeTested": false,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://gov.uz/oz/advice/733/document/3440",
+          "evidenceQuote": "«1146» qisqa raqamli “ishonch telefoni”ga tazyiq va zo‘ravonlik holatlari bo‘yicha murojaatlar kelib tushganda, mutaxassislar tomonidan xotin-qizlarga ... maslahat berish",
+          "titleOriginal": "«1146» qisqa raqamli “ishonch telefoni”",
+          "statusNote": "gov.uz page undated; advice.uz lists 1146 as an Agency number for 'tazyiq va zo‘ravonlik holatlari'"
+        },
+        {
+          "id": "ihma-1246-child-line",
+          "title": {
+            "en": "1246: report violence against a child",
+            "uz": "1246: bolaga nisbatan zo‘ravonlik haqida xabar berish",
+            "ru": "1246: сообщить о насилии в отношении ребёнка"
+          },
+          "summary": {
+            "en": "An anonymous line to report physical, psychological or sexual violence, neglect or cruel treatment of children; the caller’s identity is kept confidential. Launched in July 2026 and still in a test phase at launch.",
+            "uz": "Bolalarga nisbatan jismoniy, psixologik yoki jinsiy zo‘ravonlik, qarovsiz qoldirish yoki shafqatsiz munosabat haqida xabar berish uchun anonim liniya; qo‘ng‘iroq qiluvchining shaxsi sir saqlanadi. 2026-yil iyulida ishga tushirilgan va ishga tushirilgan paytda hali sinov rejimida ishlagan.",
+            "ru": "Анонимная линия, чтобы сообщить о физическом, психологическом или сексуальном насилии, пренебрежении нуждами детей или жестоком обращении с ними; личность звонящего сохраняется в тайне. Запущена в июле 2026 года и на момент запуска работала в тестовом режиме."
+          },
+          "howToApply": {
+            "en": "Call 1246. If a child is in immediate danger, call 112.",
+            "uz": "1246 raqamiga qo‘ng‘iroq qiling. Agar bola bevosita xavf ostida bo‘lsa, 112 raqamiga qo‘ng‘iroq qiling.",
+            "ru": "Звоните по номеру 1246. Если ребёнку угрожает непосредственная опасность, звоните 112."
+          },
+          "supportTypes": [
+            "safety",
+            "children_family"
+          ],
+          "genders": [],
+          "ageMin": null,
+          "ageMax": null,
+          "regions": [],
+          "targetCircumstances": [],
+          "requiredCircumstances": [],
+          "requiredDocuments": [],
+          "incomeTested": false,
+          "applicationStatus": "UNKNOWN",
+          "deadline": null,
+          "sourceUrl": "https://www.gazeta.uz/oz/2026/07/28/children/",
+          "evidenceQuote": "Prezident huzuridagi Ijtimoiy himoya milliy agentligi bolalarga nisbatan zo‘ravonlik holatlari haqida xabar berish uchun 1246 qisqa raqamli ishonch telefonini ishga tushirdi.",
+          "titleOriginal": "1246 qisqa raqamli ishonch telefoni",
+          "statusNote": "Launched July 2026; call center was in test mode as of 28 July 2026"
+        }
+      ]
+    }
+  ]
+}

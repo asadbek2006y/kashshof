@@ -1,0 +1,976 @@
+{
+  "meta": {
+    "title": "Kashshof — vaziyatingizga mos kelishi mumkin bo‘lgan yordamni toping",
+    "description": "Kashshofga nima bo‘layotganini ayting. U O‘zbekistondagi ayollar va oilalarga moliyaviy, oilaviy, nogironlik, huquqiy va boshqa yordamni topishga ko‘maklashadi — va har bir dastur nega mos kelishi mumkinligini tushuntiradi."
+  },
+  "common": {
+    "close": "Yopish",
+    "cancel": "Bekor qilish",
+    "optional": "ixtiyoriy"
+  },
+  "shell": {
+    "skipToContent": "Asosiy qismga o‘tish",
+    "homeLabel": "Kashshof — bosh sahifa",
+    "language": "Til",
+    "quickExit": "Tezkor chiqish",
+    "quickExitHint": "Saytdan darhol chiqadi va bu suhbatni o‘chiradi. Esc tugmasini ikki marta bosish ham mumkin."
+  },
+  "nav": {
+    "label": "Asosiy",
+    "mobileLabel": "Asosiy (mobil)",
+    "home": "Asosiy",
+    "findSupport": "Yordam topish",
+    "browse": "Dasturlar ro‘yxati",
+    "browseShort": "Dasturlar",
+    "saved": "Saqlangan",
+    "organizations": "Tashkilotlar",
+    "howItWorks": "Qanday ishlaydi",
+    "urgentHelp": "Shoshilinch yordam",
+    "urgentShort": "SOS",
+    "forOrganizations": "Tashkilotlar uchun",
+    "findShort": "Topish",
+    "savedShort": "Saqlangan"
+  },
+  "footer": {
+    "label": "Qo‘shimcha",
+    "tagline": "Kashshof — O‘zbekistondagi ayollar va oilalar uchun yordam",
+    "prototype": "Universitet bitiruv loyihasi prototipi. Dasturlar haqidagi ma’lumot ochiq manbalardan olingan va hali inson tomonidan tekshirilmagan.",
+    "notOfficial": "Kashshof davlat xizmati emas va kim yordam olishga haqli ekanini hal qilmaydi.",
+    "howItWorks": "Qanday ishlaydi",
+    "browse": "Dasturlar ro‘yxati",
+    "urgentHelp": "Shoshilinch yordam",
+    "forOrganizations": "Tashkilotlar uchun",
+    "demoAccount": "Namunaviy hisob",
+    "credits": "Surat mualliflari"
+  },
+  "home": {
+    "title": "Qayerdan boshlashni yolg‘iz o‘zingiz izlashingiz shart emas.",
+    "lead": "Kashshofga nima bo‘layotganini o‘zbek, rus yoki ingliz tilida ayting. U o‘zi biladigan yordam dasturlarini tekshiradi va qaysilarini ko‘rib chiqishga arziydi — va nega — ko‘rsatadi.",
+    "ctaFind": "Yordam topish",
+    "ctaBrowse": "Yordam dasturlarini ko‘rish",
+    "urgent": "Menga shoshilinch yordam kerak",
+    "trustLabel": "Kashshofdan nimani kutish mumkin",
+    "trust": {
+      "noAccount": {
+        "title": "Ro‘yxatdan o‘tish shart emas",
+        "body": "Qidirish uchun ism, telefon raqami yoki pasport kerak emas."
+      },
+      "explains": {
+        "title": "Har bir natija sababini tushuntiradi",
+        "body": "Nima mos keladi, nimani tekshirish kerak va nima to‘sqinlik qilishi mumkin."
+      },
+      "sources": {
+        "title": "Rasmiy manbalar ko‘rsatilgan",
+        "body": "Har bir dastur ma’lumot olingan ochiq sahifaga havola beradi."
+      }
+    },
+    "facts": "{organizations, plural, one {# tashkilotning} other {# tashkilotning}} {programs, plural, one {# dasturi} other {# dasturi}} — ochiq manbalardan to‘plangan, hali inson tomonidan tekshirilmagan.",
+    "aiOn": "Ixtiyoriy sun’iy intellekt yordami (Google Gemini) mavjud — boshlashdan oldin o‘zingiz tanlaysiz.",
+    "aiOff": "Sun’iy intellekt yordami o‘chirilgan; Kashshof tayyor savollar bilan yo‘l ko‘rsatadi.",
+    "programsTitle": "Yordam dasturlari",
+    "programsLead": "Kashshof biladigan dasturlardan bir nechtasi. Har biri ma’lumot olingan ochiq sahifaga havola beradi.",
+    "programsAll": "Barcha dasturlar ({count})",
+    "orgsTitle": "Tashkilotlar",
+    "orgsLead": "O‘zbekistonda ayollar va oilalarga yordam beradigan xayriya tashkilotlari, jamg‘armalar va xizmatlar.",
+    "orgsAll": "Barcha tashkilotlar ({count})",
+    "howTitle": "Kashshof qanday ishlaydi",
+    "how": {
+      "tell": {
+        "title": "Vaziyatingiz haqida ayting",
+        "body": "O‘z so‘zlaringiz bilan yoki bir nechta qisqa savolga javob berib."
+      },
+      "check": {
+        "title": "Kashshof ma’lum dasturlarni tekshiradi",
+        "body": "Qat’iy qoidalar javoblaringizni har bir dastur shartlari bilan solishtiradi."
+      },
+      "why": {
+        "title": "Nega mos kelishi mumkinligini ko‘ring",
+        "body": "Har bir natijada nima mos kelishi, nimani tekshirish kerakligi va nima to‘sqinlik qilishi mumkinligi ko‘rsatiladi."
+      },
+      "next": {
+        "title": "Amaliy keyingi qadamlar",
+        "body": "Tayyorlash kerak bo‘lgan hujjatlar va ariza topshiriladigan rasmiy joy."
+      }
+    },
+    "howLink": "Moslik qanday aniqlanadi — batafsil",
+    "demoTitle": "Namunaviy vaziyatni sinab ko‘ring",
+    "demoLead": "Bu odamlar to‘qima. Har bir misol hikoya allaqachon yozilgan maxfiy yo‘naltirilgan suhbatni boshlaydi — shunda moslik qanday ishlashini ko‘rasiz.",
+    "clarifyTitle": "Muhim aniqlik",
+    "clarifyBody": "Kashshof mavjud bo‘lishi mumkin bo‘lgan yordamni topishga ko‘maklashadi. U rasmiy qaror qabul qilmaydi — buni faqat dasturni yurituvchi tashkilot qila oladi.",
+    "safetyTitle": "Hozir o‘zingizni xavfsiz his qilmayapsizmi?",
+    "safetyBody": "Shoshilinch raqamlar va maxfiy xizmatlar — hech narsani tushuntirmasdan.",
+    "safetyCta": "Shoshilinch yordam olish",
+    "hero": {
+      "pauseVideo": "Fon videosini to‘xtatish",
+      "playVideo": "Fon videosini qo‘yish"
+    }
+  },
+  "demo": {
+    "fictional": "To‘qima",
+    "try": "Shu misolni sinash",
+    "singleParent": {
+      "title": "Moliyaviy yordam izlayotgan yolg‘iz ota-ona",
+      "story": "Toshkentda ikki farzandimni yolg‘iz tarbiyalayapman, o‘tgan oy ishdan bo‘shadim. Oilamga moliyaviy yordam kerak."
+    },
+    "childDisability": {
+      "title": "Nogironligi bor bolani parvarish qilayotgan oila",
+      "story": "Samarqandda yashaymiz. Qizimiz 8 yoshda, nogironligi bor. Uni davolash va parvarish qilish uchun yordam kerak."
+    },
+    "legal": {
+      "title": "Huquqiy yordam izlayotgan inson",
+      "story": "Farg‘onada yashayman, 34 yoshdaman. Ajrashganimdan keyin aliment masalasi bo‘yicha bepul yuridik maslahat kerak."
+    }
+  },
+  "privacy": {
+    "title": "Kashshof hikoyangizdan shaxsiy profil yaratmaydi.",
+    "memory": "Aytganlaringiz faqat shu sahifa xotirasida turadi. Sahifani yangilash, varaqni yopish yoki Tezkor chiqish uni o‘chiradi.",
+    "neverStored": "U hech qachon sahifa manziliga yozilmaydi, serverimizda saqlanmaydi va analitikaga yuborilmaydi.",
+    "organizations": "O‘zingiz murojaat qilmaguningizcha hech bir tashkilot hech narsani ko‘rmaydi."
+  },
+  "modes": {
+    "legend": "Kashshof sizni qanday tinglasin?",
+    "neitherDecides": "Ikkala holatda ham qaysi dasturlar mos kelishi mumkinligini bir xil qat’iy qoidalar hal qiladi. Keyin almashtirish mumkin.",
+    "private": {
+      "name": "Maxfiy yo‘naltirilgan",
+      "description": "Javoblaringiz shu brauzer seansida qoladi. Kashshof sizni tayyor savollar orqali yo‘naltiradi.",
+      "short": "Javoblaringiz shu brauzer seansida qoladi; ularni hech qanday sun’iy intellekt xizmati ko‘rmaydi."
+    },
+    "ai": {
+      "name": "Sun’iy intellekt yordamida",
+      "description": "Vaziyatingizni tushunish uchun xabarlaringiz Google Gemini tomonidan qayta ishlanadi. Gemini qaysi yordam dasturlariga haqli ekaningizni hal qilmaydi.",
+      "short": "Xabarlaringiz tushunish uchun Google Gemini tomonidan qayta ishlanadi. Qaysi dasturlar mos kelishini Gemini hal qilmaydi."
+    },
+    "aiUnavailable": "Hozircha mavjud emas.",
+    "switchToPrivate": "Maxfiy yo‘naltirilgan rejimga o‘tish",
+    "switchToAi": "Sun’iy intellekt yordamiga o‘tish",
+    "confirmAiTitle": "Sun’iy intellekt yordamiga o‘tilsinmi?",
+    "confirmAi": "Sun’iy intellektdan foydalanish"
+  },
+  "progress": {
+    "label": "Jarayon",
+    "situation": "Vaziyatingiz",
+    "details": "Bir nechta tafsilot",
+    "support": "Mumkin bo‘lgan yordam",
+    "next": "Keyingi qadamlar",
+    "done": "(bajarildi)"
+  },
+  "ask": {
+    "metaTitle": "Yordam topish",
+    "title": "Yordam topish",
+    "startTitle": "Nima bo‘layotganini ayting",
+    "startLead": "O‘z so‘zlaringiz bilan yozing yoki bir nechta qisqa savolga javob bering. Faqat o‘zingiz xohlagan narsani ayting — istalgan savolni o‘tkazib yuborish mumkin.",
+    "storyLabel": "Nima bo‘lyapti?",
+    "storyPlaceholder": "Masalan: Andijonda ikki farzandimni yolg‘iz tarbiyalayapman, maktab xarajatlari uchun yordam kerak…",
+    "storyHint": "Ism, telefon raqami yoki hujjat raqamlari kerak emas.",
+    "startButton": "Boshlash",
+    "stepByStepLead": "Yozishni istamaysizmi?",
+    "stepByStep": "Bosqichma-bosqich javob berish",
+    "dangerLead": "Agar hozir xavf ostida bo‘lsangiz:",
+    "dangerLink": "shoshilinch yordam oling",
+    "transcriptLabel": "Suhbat",
+    "you": "Siz",
+    "assistantName": "Kashshof",
+    "busy": "Javob tayyorlanmoqda…",
+    "continue": "Davom etish",
+    "chooseOne": "Javobni tanlang",
+    "chooseMany": "Mos keladiganlarning barchasini tanlang",
+    "placeholder": "Javob bering yoki batafsilroq ayting…",
+    "send": "Yuborish",
+    "memoryNote": "Sahifani yangilash yoki yopish suhbatni o‘chiradi.",
+    "startOver": "Qaytadan boshlash",
+    "restartTitle": "Qaytadan boshlansinmi?",
+    "restartBody": "Bu suhbat va javoblaringiz shu sahifadan o‘chiriladi.",
+    "restartConfirm": "O‘chirib, qaytadan boshlash",
+    "seeAll": "Barcha natijalarni tushuntirishlari bilan ko‘rish",
+    "noDocuments": "Manbada standart hujjatlar ko‘rsatilmagan. “Qanday ariza berish” bo‘limini ko‘ring va tashkilot bilan aniqlashtiring.",
+    "errorTitle": "Kashshof hozir javob bera olmadi",
+    "errorBody": "Javoblaringiz joyida, vaziyatingiz bo‘yicha hech narsa o‘zgarmadi. Iltimos, qayta urinib ko‘ring.",
+    "retry": "Qayta urinish",
+    "aiFallbackTitle": "Tayyor savollar bilan davom etamiz",
+    "aiFallbackBody": "Sun’iy intellekt hozir javob bermayapti, shuning uchun bu javob Kashshofning tayyor savollaridan keldi. Qidiruv xuddi shunday ishlaydi."
+  },
+  "assistant": {
+    "intake": {
+      "greeting": "Assalomu alaykum. Qanday yordam izlayapsiz? Quyidan tanlashingiz yoki o‘z so‘zlaringiz bilan aytishingiz mumkin.",
+      "ack": "Quyidagi yordam turlarini topishda ko‘maklasha olaman: {needs}.",
+      "preview": "Sizga tegishli bo‘lishi mumkin bo‘lgan {count, plural, one {# ta dasturni} other {# ta dasturni}} allaqachon ko‘ryapman. Bir-ikkita qisqa savol eng mos dasturlarni topishga yordam beradi.",
+      "notUnderstood": "Sizni to‘liq tushunmadim — hechqisi yo‘q. Keling, bosqichma-bosqich boramiz."
+    },
+    "ask": {
+      "need": "Sizga qanday yordam foydali bo‘lardi? Bir nechtasini tanlashingiz mumkin.",
+      "needRetry": "Kerakli yordam turini tanlay olasizmi? Bir nechtasini tanlashingiz mumkin.",
+      "region": "Qaysi hududda yashaysiz? Ayrim dasturlar faqat ma’lum joylarda mavjud.",
+      "regionRetry": "Hududni aniqlay olmadim. Quyidan o‘z hududingizni tanlay olasizmi? Bu savolni o‘tkazib yuborishingiz ham mumkin.",
+      "age": "Yoshingiz nechada? Ayrim dasturlarda yosh chegarasi bor.",
+      "ageRetry": "Quyidan yosh oralig‘ini tanlashingiz, yoshingizni yozishingiz yoki o‘tkazib yuborishingiz mumkin.",
+      "situation": "Hozirgi vaziyatingizga quyidagilardan qaysilari to‘g‘ri keladi? Mos kelganlarining barchasini tanlang.",
+      "situationRetry": "Iltimos, mos kelganlarini tanlang — yoki “Hech biri”ni."
+    },
+    "reply": {
+      "skip": "O‘tkazib yuborish",
+      "preferNotToSay": "Aytishni istamayman"
+    },
+    "safety": {
+      "intro": "Sizga shoshilinch xavfsizlik yordami kerakka o‘xshaydi. Siz yolg‘iz emassiz va boshqa hech narsani tushuntirishingiz shart emas. Hozir sizga nima yordam beradi?",
+      "findServices": "Xavfsiz xizmatlarni topish",
+      "emergencyInfo": "Favqulodda vaziyat raqamlari",
+      "continuePrivately": "Maxfiy davom etish",
+      "servicesLead": "Mana, sizga yordam berishi mumkin bo‘lgan maxfiy xizmatlar. Ularga murojaat qilish uchun hujjat kerak emas.",
+      "continuing": "Albatta. O‘zingizga qulay sur’atda davom etamiz — “Tezkor chiqish” tugmasi doim yuqorida turadi."
+    },
+    "results": {
+      "found": "Ko‘rib chiqishga arziydigan {count, plural, one {# dastur} other {# dastur}} topdim. Har biri nega chiqqanini aytadi.",
+      "none": "Men biladigan dasturlar orasidan aniq moslik topa olmadim. Bu yordam yo‘q degani emas — boshqa yordam turini qo‘shib ko‘ring, barcha dasturlarni ko‘ring yoki qaytadan boshlang.",
+      "followUp": "Natijalarni toraytirishingiz yoki ulardan biri haqida so‘rashingiz mumkin — masalan, “Birinchisi uchun qanday hujjatlar kerak?”",
+      "updated": "Rahmat — natijalarni yangiladim.",
+      "notUnderstood": "Nimani nazarda tutganingizni tushunmadim. Quyidagi tugmalar orqali natijalarni toraytirishingiz yoki ulardan biri uchun kerakli hujjatlarni so‘rashingiz mumkin."
+    },
+    "refined": {
+      "womenOnly": "Endi faqat ayollar uchun mo‘ljallangan dasturlar ko‘rsatilmoqda.",
+      "onlyOpen": "Endi faqat hozir ariza qabul qilayotgan dasturlar ko‘rsatilmoqda."
+    },
+    "docs": {
+      "list": "“{program}” uchun kerakli hujjatlar:",
+      "none": "{position}-raqamli natija yo‘q — “birinchisi” deb yozib ko‘ring."
+    },
+    "restart": {
+      "done": "Keling, boshidan boshlaymiz."
+    },
+    "next": {
+      "onlyOpen": "Faqat hozir ochiqlari",
+      "womenOnly": "Faqat ayollar uchun",
+      "addNeed": "Yana bir ehtiyoj qo‘shish",
+      "restart": "Boshidan boshlash"
+    }
+  },
+  "summary": {
+    "title": "Men tushunganlarim",
+    "lead": "Dasturlarni tekshirishda faqat shu ma’lumotlar ishlatiladi.",
+    "aboutYou": "Siz haqingizda",
+    "age": "{age} yosh",
+    "ageRange": "Yosh: {range}",
+    "children": "{count, plural, one {# farzand} other {# farzand}}",
+    "lookingFor": "Izlayotganingiz"
+  },
+  "results": {
+    "metaTitle": "Mumkin bo‘lgan yordam",
+    "title": "{count, plural, =0 {Hozircha aniq moslik yo‘q} one {# dasturni ko‘rib chiqishga arziydi} other {# dasturni ko‘rib chiqishga arziydi}}",
+    "loadingTitle": "Dasturlar tekshirilmoqda…",
+    "lead": "Aytganlaringizga ko‘ra, bu dasturlarni ko‘rib chiqishga arziydi. Har biri nega chiqqanini va keyin nima qilish kerakligini aytadi.",
+    "basedOn": "Asos:",
+    "changeAnswers": "Javoblarni o‘zgartirish",
+    "legendTitle": "Bu belgilar nimani anglatadi?",
+    "filters": "Filtrlar",
+    "filtersLabel": "Ko‘rsatish:",
+    "onlyOpen": "Faqat hozir ochiqlari",
+    "womenOnly": "Faqat ayollar uchun",
+    "errorTitle": "Dasturlarni yuklab bo‘lmadi",
+    "errorBody": "Sizning haqingiz o‘zgarmadi — Kashshof shunchaki dasturlar ro‘yxatiga ulana olmadi. Iltimos, qayta urinib ko‘ring.",
+    "retry": "Qayta urinish",
+    "noneTitle": "Kashshof hozir biladigan dasturlar orasidan aniq moslik topa olmadik.",
+    "noneBody": "Bu yordam yo‘q degani emas. Kashshof cheklangan miqdordagi dasturlarni biladi, ayrim shartlar uchun esa qo‘shimcha ma’lumot kerak bo‘lishi mumkin.",
+    "noneFiltered": "Filtr yoqilgan — uni olib tashlasangiz, ko‘proq dastur chiqishi mumkin.",
+    "clearFilters": "Filtrlarni olib tashlash",
+    "browseAll": "Barcha dasturlarni ko‘rish",
+    "urgentHelp": "Shoshilinch yordam",
+    "emptyTitle": "Mos kelishi mumkin bo‘lgan yordamni topaylik",
+    "emptyLead": "Avval vaziyatingiz haqida ozgina ayting. Bu bir daqiqa oladi, ro‘yxatdan o‘tish shart emas.",
+    "emptyCta": "Yordam topish",
+    "emptyPrivacy": "Agar ayrim savollarga javob bergan bo‘lsangiz, sahifa yangilanganda ular o‘chgan bo‘lishi mumkin — javoblaringiz maxfiy qolishi uchun shunday qilingan.",
+    "notDecisionTitle": "Bu yordam olish huquqi bo‘yicha qaror emas",
+    "notDecisionBody": "Haqli ekaningizni faqat dasturni yurituvchi tashkilot tasdiqlay oladi. Belgilar javoblaringiz biz biladigan shartlarga qanchalik mos kelishini ko‘rsatadi.",
+    "howWeMatch": "Moslik qanday aniqlanadi"
+  },
+  "matchingProgress": {
+    "requirements": "Dastur talablari tekshirilmoqda",
+    "answers": "Javoblaringiz solishtirilmoqda",
+    "explanations": "Tushuntirishlar tayyorlanmoqda"
+  },
+  "fit": {
+    "strong": "Juda mos kelishi mumkin",
+    "possible": "Mos kelishi mumkin",
+    "needs_info": "Qo‘shimcha ma’lumot kerak"
+  },
+  "fitHelp": {
+    "strong": "Siz bergan ma’lumotlar asosiy ma’lum shartlarga mos keladi.",
+    "possible": "Ayrim shartlar mos keladi, lekin muhimlari hali noaniq.",
+    "needs_info": "Qo‘shimcha ma’lumotsiz Kashshof bu dasturni to‘g‘ri baholay olmaydi."
+  },
+  "match": {
+    "whyAppeared": "Nega chiqdi",
+    "whyFits": "Nima mos keladi",
+    "toCheck": "Nimani tekshirish kerak",
+    "mightNot": "Nima to‘sqinlik qilishi mumkin",
+    "nextTitle": "Keyin nima qilish kerak",
+    "viewDetails": "Dastur tafsilotlari",
+    "viewProgram": "Dasturni ko‘rish"
+  },
+  "nextStep": {
+    "closed": "Ariza qabul qilish yopilganga o‘xshaydi. Qachon qayta ochilishini rasmiy sahifadan bilib oling.",
+    "deadlineSoon": "Muddat yaqin ({date}). Rasmiy sahifani tezroq ko‘rib chiqing.",
+    "confirmGroup": "Dastur {group} uchun mo‘ljallanganini tashkilotdan aniqlang.",
+    "confirmAge": "Yosh chegarasini ({range}) aniq yoshingiz bilan solishtiring.",
+    "confirmRegion": "Hududingiz qatnashishini aniqlang: {regions}.",
+    "confirmIncome": "Oila daromadingizni tashkilot bilan aniqlashtiring.",
+    "confirmOpen": "Ariza qabul qilinayotganini rasmiy sahifadan tekshiring.",
+    "documents": "Hujjatlarni tekshiring: {count, plural, one {# ta hujjat} other {# ta hujjat}} kerak bo‘lishi mumkin.",
+    "officialPage": "Qanday ariza berishni bilish uchun rasmiy sahifani oching.",
+    "contact": "{org} bilan bog‘lanib, qanday ariza berishni so‘rang."
+  },
+  "review": {
+    "label": {
+      "source_collected": "Manba to‘plangan — hali qo‘lda tekshirilmagan",
+      "source_unavailable": "Manba hozircha mavjud emas",
+      "manually_reviewed": "Manba bilan qo‘lda solishtirilgan",
+      "needs_rereview": "Qayta tekshirish kerak",
+      "sample": "Namunaviy ma’lumot — haqiqiy dastur emas"
+    },
+    "body": {
+      "source_collected": "Bu ma’lumot shu yerda havolasi berilgan ochiq sahifadan olingan. Uni hali inson tekshirmagan, shuning uchun tafsilotlar o‘zgargan bo‘lishi mumkin.",
+      "source_unavailable": "Bu dastur uchun manba sahifasi yo‘q, shuning uchun ma’lumot qayerdan olinganini ko‘rsata olmaymiz. Hammasini tashkilot bilan aniqlashtiring.",
+      "manually_reviewed": "Inson bu ma’lumotni rasmiy manba bilan solishtirgan. Bu baribir yordam olish huquqi bo‘yicha qaror emas.",
+      "needs_rereview": "Bu ma’lumotni inson tekshirgan, lekin ancha oldin. U eskirgan bo‘lishi mumkin.",
+      "sample": "Bu dastur prototip uchun o‘ylab topilgan. Unga tayanmang."
+    }
+  },
+  "source": {
+    "official": "Rasmiy manba ({host})",
+    "unavailable": "Manba hozircha mavjud emas",
+    "opensNewTab": "(yangi varaqda ochiladi)"
+  },
+  "dataStatus": {
+    "sourceExists": "Manba bor",
+    "reviewed": "Inson tomonidan tekshirilgan",
+    "eligibility": "Haqingiz rasman tasdiqlangan",
+    "eligibilityValue": "Buni faqat tashkilot tasdiqlay oladi",
+    "collectedOn": "To‘plangan sana: {date}",
+    "yes": "Ha",
+    "no": "Yo‘q",
+    "notYet": "Hali yo‘q",
+    "confirmWithOrg": "Ariza berishdan oldin tafsilotlarni doim tashkilot bilan aniqlashtiring."
+  },
+  "documents": {
+    "progress": "{total} tadan {done} tasi tayyor — belgilar faqat shu sahifada saqlanadi."
+  },
+  "reasons": {
+    "need": "Yordam turi: {what}",
+    "forWomen": "Ayollar uchun mo‘ljallangan",
+    "nationwide": "Butun O‘zbekiston bo‘ylab mavjud",
+    "inRegion": "Hududingizda mavjud: {region}",
+    "regionCheck": "Faqat ayrim hududlarda: {regions}",
+    "ageFits": "Yoshingiz mos keladi ({range} yosh)",
+    "ageBorder": "Yosh chegarasi: {range} — aniq yoshingizni tekshiring",
+    "ageLimit": "Yosh chegarasi bor ({range} yosh)",
+    "hasCircumstance": "{group} uchun — siz aytgan ma’lumotlarga mos keladi",
+    "confirmCircumstance": "Faqat {group} uchun — bu sizga tegishli ekanini tasdiqlang",
+    "targetGroup": "Asosan {group} uchun mo‘ljallangan",
+    "income": "Daromad bo‘yicha shartlarni tashkilot bilan aniqlashtirish kerak",
+    "closed": "Hozir ariza qabul qilinmayapti",
+    "statusUnknown": "Ariza qabul qilish holati tekshirilmagan — murojaat qilishdan oldin rasmiy manbani ko‘rib chiqing",
+    "deadlinePassed": "Ariza topshirish muddati o‘tib ketgan",
+    "deadlineSoon": "Muddat yaqin: {date}",
+    "notRecentlyVerified": "Holati so‘nggi 60 kun ichida tekshirilmagan"
+  },
+  "status": {
+    "applications": "Arizalar",
+    "OPEN": "Ariza qabul qilinmoqda",
+    "CLOSED": "Ariza qabul qilinmaydi",
+    "UNKNOWN": "Holati noma’lum",
+    "deadline": "Muddat",
+    "lastChecked": "Holat tekshirilgan sana",
+    "notRecentlyVerified": "Yaqinda tekshirilmagan — murojaat qilishdan oldin rasmiy manbani ko‘rib chiqing",
+    "daysAgo": "{count, plural, =0 {bugun} one {# kun oldin} other {# kun oldin}}",
+    "checkedOn": "{date} tekshirilgan"
+  },
+  "saved": {
+    "title": "Saqlangan",
+    "lead": "Keyinroq ko‘rish uchun saqlagan dasturlaringiz — faqat shu qurilmada.",
+    "save": "Saqlash",
+    "savedLabel": "Saqlangan",
+    "savedToast": "Shu qurilmada saqlandi",
+    "removedToast": "Saqlanganlardan olib tashlandi",
+    "remove": "Olib tashlash",
+    "emptyTitle": "Hali hech narsa saqlanmagan",
+    "empty": "Istalgan dasturdagi “Saqlash” tugmasi bilan uni shu yerda saqlang.",
+    "emptyBrowse": "Dasturlarni ko‘rish",
+    "emptyCta": "Yordam topish",
+    "deviceOnly": "Saqlangan dasturlar faqat shu brauzerda turadi. Tezkor chiqish ularni o‘chirmaydi — agar qurilmadan boshqa odam ham foydalansa, shu yerda tozalang.",
+    "clearAll": "Saqlanganlarni tozalash",
+    "clearTitle": "Barcha saqlangan dasturlar tozalansinmi?",
+    "clearBody": "Ular shu brauzerdan o‘chiriladi.",
+    "clearConfirm": "Hammasini tozalash",
+    "clearedToast": "Saqlangan dasturlar tozalandi"
+  },
+  "explore": {
+    "title": "Yordam dasturlarini ko‘rish",
+    "lead": "Kashshof biladigan barcha dasturlar. Savollarsiz, sun’iy intellektsiz — o‘zingizga qulay tezlikda filtrlang va o‘qing.",
+    "searchLabel": "Dasturlarni qidirish",
+    "searchPlaceholder": "Dastur yoki tashkilotni qidirish…",
+    "count": "{count, plural, =0 {Dastur yo‘q} one {# dastur} other {# dastur}}",
+    "noneTitle": "Bu filtrlarga mos dastur yo‘q",
+    "noneBody": "Filtrlardan birini olib tashlang yoki kengroq so‘z bilan qidiring.",
+    "askInstead": "Buning o‘rniga vaziyatingizni tasvirlang",
+    "errorTitle": "Dasturlarni yuklab bo‘lmadi",
+    "errorBody": "Vaziyatingiz bo‘yicha hech narsa o‘zgarmadi — dasturlar ro‘yxati shunchaki yuklanmadi. Iltimos, sahifani yangilang.",
+    "filters": {
+      "title": "Filtrlar",
+      "category": "Yordam turi",
+      "region": "Hudud",
+      "regionHint": "Butun mamlakat bo‘ylab mavjud dasturlar doim ko‘rsatiladi.",
+      "provider": "Tashkilot",
+      "group": "Kim uchun mo‘ljallangan",
+      "status": "Ma’lumot holati",
+      "onlyOpen": "Faqat ariza qabul qilayotgan dasturlar",
+      "all": "Hammasi",
+      "anyRegion": "Istalgan hudud",
+      "anyone": "Hamma uchun",
+      "clear": "Filtrlarni tozalash",
+      "show": "{count, plural, =0 {Ko‘rsatadigan dastur yo‘q} one {# dasturni ko‘rsatish} other {# dasturni ko‘rsatish}}"
+    },
+    "reviewOption": {
+      "source_collected": "Manba to‘plangan, hali tekshirilmagan",
+      "source_unavailable": "Manba mavjud emas",
+      "manually_reviewed": "Qo‘lda tekshirilgan",
+      "needs_rereview": "Qayta tekshirish kerak",
+      "sample": "Namunaviy ma’lumot"
+    }
+  },
+  "program": {
+    "breadcrumb": "Navigatsiya yo‘li",
+    "providedBy": "Taqdim etuvchi:",
+    "onThisPage": "Shu sahifada",
+    "prepareApplication": "Arizaga tayyorlanish",
+    "checkFit": "Sizga mos kelishi mumkinligini tekshirish",
+    "provides": "Dastur nimani taqdim etadi",
+    "whoFor": "Kimlar uchun bo‘lishi mumkin",
+    "whyMatched": "Kashshof nega bu dasturni tanladi",
+    "basedOnAnswers": "Shu seansdagi javoblaringiz asosida.",
+    "noMatchYet": "Shu seansda Kashshofga vaziyatingiz haqida aytmagansiz, shuning uchun tushuntiradigan moslik hali yo‘q.",
+    "toConfirm": "Hali aniqlashtirish kerak bo‘lgan narsalar",
+    "nothingToConfirm": "Alohida narsa yo‘q — baribir tafsilotlarni tashkilot bilan aniqlashtiring.",
+    "mightNotQualify": "Nima sababdan mos kelmasligingiz mumkin",
+    "noKnownBlockers": "Bizga ma’lum to‘siq yo‘q — yakuniy qarorni tashkilot qabul qiladi.",
+    "documents": "Kerak bo‘lishi mumkin bo‘lgan hujjatlar",
+    "documentsLead": "Bor hujjatlarni belgilang. Hech narsa saqlanmaydi.",
+    "noDocuments": "Manbada standart hujjatlar ko‘rsatilmagan. “Qanday ariza berish” bo‘limini ko‘ring va tashkilot bilan aniqlashtiring.",
+    "howToApply": "Qanday ariza berish",
+    "officialSource": "Rasmiy manba",
+    "sourceLead": "Bu ma’lumot qayerdan olingan:",
+    "sourceMissing": "Bu dastur uchun manba sahifasi yo‘q.",
+    "dataStatus": "Ma’lumot holati",
+    "eligibility": {
+      "women": "Ayollar",
+      "age": "{range} yosh",
+      "nationwide": "O‘zbekistonning istalgan hududi",
+      "regions": "{regions}da yashovchilar",
+      "required": "Faqat {group} uchun",
+      "designedFor": "Ayniqsa {groups} uchun",
+      "income": "Oila daromadi hisobga olinadi"
+    },
+    "general": {
+      "income": "Oila daromadingiz — dastur uni hisobga oladi.",
+      "status": "Hozir ariza qabul qilinayotgani.",
+      "circumstance": "Quyidagilardan biri ekaningiz: {groups}.",
+      "details": "Rasmiy sahifadagi joriy shartlar va muddatlar.",
+      "closed": "Hozir ariza qabul qilinmayapti.",
+      "age": "Yosh chegarasidan tashqarida bo‘lish ({range}).",
+      "region": "Quyidagi hududlardan tashqarida yashash: {regions}.",
+      "women": "Dastur faqat ayollar uchun."
+    },
+    "steps": {
+      "check": "Yuqoridagi shartlar va hali aniqlashtirish kerak bo‘lgan narsalarni o‘qing.",
+      "documents": "Yuqorida ko‘rsatilgan hujjatlarni to‘plang.",
+      "follow": "Tashkilot ko‘rsatgan tartibda ariza bering: {how}",
+      "contact": "{org} bilan bog‘lanib, qanday ariza berishni so‘rang.",
+      "confirmSource": "Ariza berishdan oldin tafsilotlarni rasmiy sahifada tekshiring."
+    },
+    "toc": {
+      "provides": "Nima taqdim etadi",
+      "who": "Kimlar uchun",
+      "why": "Nega tanlandi",
+      "confirm": "Aniqlashtirish kerak",
+      "ineligible": "Nima to‘sqinlik qilishi mumkin",
+      "docs": "Hujjatlar",
+      "how": "Qanday ariza berish",
+      "source": "Rasmiy manba",
+      "status": "Ma’lumot holati"
+    }
+  },
+  "apply": {
+    "eyebrow": "Arizaga tayyorlanish",
+    "notSubmittingTitle": "Kashshof ariza topshirmaydi",
+    "notSubmittingBody": "Bu sizga tayyorlanishga yordam beradi. Arizani o‘zingiz, tashkilotning rasmiy kanali orqali berasiz. Bu yerda yozganlaringiz sahifadan chiqmaydi.",
+    "stepsLabel": "Tayyorlanish bosqichlari",
+    "stepOf": "{total} bosqichdan {current}-bosqich",
+    "steps": {
+      "requirements": "Ariza talablari",
+      "documents": "Hujjatlar ro‘yxati",
+      "statement": "Shaxsiy xat qoralamasi",
+      "apply": "Ariza beriladigan rasmiy joy"
+    },
+    "requirementsLead": "Dasturning ma’lum shartlari:",
+    "fromYourAnswers": "Shu seansdagi javoblaringizdan",
+    "documentsLead": "Har bir hujjat qo‘lingizda bo‘lgach, uni belgilang.",
+    "documentsPrivate": "Belgilar faqat shu sahifada turadi va saqlanmaydi.",
+    "noDocuments": "Manbada standart hujjatlar ko‘rsatilmagan. Nima olib borish kerakligini tashkilotdan so‘rang.",
+    "statementLead": "Bir necha so‘z bilan javob bering — Kashshof ulardan o‘zgartirish mumkin bo‘lgan birinchi qoralama tuzadi. Hech narsa hech qayerga yuborilmaydi.",
+    "optional": "ixtiyoriy",
+    "fields": {
+      "name": "Ismingiz",
+      "reason": "Nega yordam so‘rayapsiz?",
+      "reasonHint": "masalan: bu semestr kontrakt to‘lovini qoplay olmayapman",
+      "family": "Oilaviy ahvolingiz",
+      "familyHint": "masalan: o‘g‘lim va onam bilan yashayman",
+      "background": "O‘qish yoki ish",
+      "backgroundHint": "masalan: iqtisodiyot yo‘nalishi 3-kurs talabasi"
+    },
+    "errors": {
+      "reasonRequired": "Nega yordam so‘rayotganingiz haqida bir necha so‘z yozing.",
+      "answerTooLong": "Iltimos, 600 belgidan oshirmang.",
+      "nameTooLong": "Iltimos, ismni 80 belgidan oshirmang."
+    },
+    "draft": "Qoralama tuzish",
+    "redraft": "Yangi qoralama tuzish",
+    "yourStatement": "Xatingiz — istalgan joyini o‘zgartiring",
+    "statementEditable": "Bu faqat boshlang‘ich nuqta. O‘zingiz aytmoqchi bo‘lgan narsani aytadigan qilib o‘zgartiring.",
+    "template": "Hurmatli {org} jamoasi,\n\nMening ismim {name}. Men “{program}” dasturiga ariza bermoqchiman.\n\n{reason}\n\nOilam haqida: {family}\n\nO‘qishim yoki ishim haqida: {background}\n\nArizamni ko‘rib chiqqaningiz uchun rahmat. Zarur bo‘lgan qo‘shimcha hujjatlarni taqdim etishga tayyorman.\n\nHurmat bilan,\n{name}",
+    "templateNameFallback": "(ismingiz)",
+    "templateFamilyFallback": "(oilangiz haqida bir gap qo‘shing)",
+    "templateBackgroundFallback": "(o‘qishingiz yoki ishingiz haqida bir gap qo‘shing)",
+    "copy": "Matnni nusxalash",
+    "copied": "Xat nusxalandi",
+    "copyFailed": "Nusxalab bo‘lmadi — matnni belgilab, o‘zingiz nusxalang",
+    "print": "Chop etish",
+    "printSummary": "Shu sahifani chop etish",
+    "nothingSubmitted": "Hech narsa topshirilmadi.",
+    "nothingSubmittedBody": "Kashshof {org}ga hech narsa yubormadi. Ariza berish uchun quyidagi rasmiy kanaldan foydalaning.",
+    "final": {
+      "review": "Xatingizni yana bir bor o‘qing va xohlagan joyini o‘zgartiring.",
+      "official": "Rasmiy sahifani oching va undagi ariza berish bosqichlarini bajaring.",
+      "contact": "{org} bilan bog‘lanib, qanday ariza berishni so‘rang.",
+      "bring": "Ro‘yxatdagi hujjatlarni o‘zingiz bilan olib boring."
+    },
+    "orgPage": "Tashkilot sahifasi",
+    "documentsReady": "Tayyor hujjatlar: {total} tadan {done} tasi.",
+    "back": "Orqaga",
+    "backToProgram": "Dasturga qaytish",
+    "next": "Keyingisi"
+  },
+  "safety": {
+    "metaTitle": "Shoshilinch yordam",
+    "title": "Siz xavfsiz bo‘lishga haqlisiz.",
+    "lead": "Agar uyda yoki boshqa joyda o‘zingizni xavfsiz his qilmasangiz, yordam bor. Yordam so‘rash uchun hech narsani tushuntirishingiz yoki isbotlashingiz shart emas.",
+    "dangerTitle": "Hozir xavf ostidamisiz?",
+    "dangerBody": "112 ga qo‘ng‘iroq qiling. Bu bepul, istalgan telefondan va barcha hududlarda ishlaydi.",
+    "n112": "Barcha favqulodda holatlar",
+    "n1146": "Bosim yoki zo‘ravonlikka duch kelgan ayollar uchun ishonch telefoni",
+    "n102": "Politsiya",
+    "n103": "Tez tibbiy yordam",
+    "n101": "Yong‘in xavfsizligi xizmati",
+    "numbersSource": "Raqamlar tekshirilgan manba:",
+    "privateTitle": "Maxfiylikni saqlash",
+    "tipQuickExit": "Saytdan darhol chiqish uchun yuqoridagi “Tezkor chiqish” tugmasini bosing yoki Esc tugmasini ikki marta bosing. U Kashshof bilan suhbatingizni o‘chiradi va shu sahifani almashtiradi, shuning uchun “Orqaga” tugmasi bu yerga qaytarmaydi.",
+    "tipErased": "Suhbatingiz faqat shu sahifa xotirasida turadi. Sahifani yangilash yoki varaqni yopish ham uni o‘chiradi.",
+    "tipHistory": "Kashshof brauzer tarixingizni o‘chira olmaydi. Agar kimdir qurilmangizni tekshirsa, maxfiy (inkognito) oynadan foydalaning va keyin tarixni tozalang.",
+    "tipPhone": "Yuqoridagi raqamlarga qo‘ng‘iroqlar telefoningizdagi qo‘ng‘iroqlar ro‘yxatida ko‘rinishi mumkin.",
+    "servicesTitle": "Maxfiy xizmatlar",
+    "servicesLead": "Ochiq manbalardan to‘plangan. Ularga murojaat qilish uchun hujjat kerak emas."
+  },
+  "safetyPanel": {
+    "title": "Avvalo sizning xavfsizligingiz",
+    "body": "Agar hozir xavf ostida bo‘lsangiz, 112 ga qo‘ng‘iroq qiling — istalgan telefondan bepul. Bu yerda boshqa hech narsani tushuntirishingiz shart emas.",
+    "allHelp": "Barcha shoshilinch raqamlar va maxfiy xizmatlar",
+    "quickExit": "Sahifa yuqorisidagi Tezkor chiqish (yoki Esc tugmasini ikki marta bosish) saytdan darhol chiqaradi va bu suhbatni o‘chiradi."
+  },
+  "how": {
+    "title": "Kashshof qanday ishlaydi",
+    "lead": "Kashshof vaziyatingizga mos kelishi mumkin bo‘lgan yordam dasturlarini topishga ko‘maklashadi. Suhbatda til modeli yordam berishi mumkin — lekin u hech qachon qanday dasturlar borligini yoki kim haqli ekanini hal qilmaydi.",
+    "flowTitle": "Hikoyangizdan tushuntirilgan natijalargacha",
+    "flow": {
+      "story": {
+        "title": "Hikoyangiz",
+        "body": "O‘z so‘zlaringiz bilan yoki tanlanadigan javoblar orqali."
+      },
+      "assistant": {
+        "title": "Suhbat yordamchisi",
+        "body": "Gemini (agar sun’iy intellekt yordamini tanlasangiz) yoki tayyor savollar so‘zlaringizni bir nechta faktga aylantiradi."
+      },
+      "facts": {
+        "title": "Tuzilgan faktlar",
+        "body": "Yordam turi, hudud, yosh oralig‘i, sharoit — sizga “Men tushunganlarim” sifatida ko‘rsatiladi."
+      },
+      "rules": {
+        "title": "Qat’iy moslik qoidalari",
+        "body": "Hamma uchun bir xil qoidalar bu faktlarni har bir dastur shartlari bilan solishtiradi."
+      },
+      "database": {
+        "title": "Ma’lum dasturlar bazasi",
+        "body": "Ochiq manbalardan to‘plangan dasturlar, har biri o‘z manba sahifasi bilan."
+      },
+      "explanation": {
+        "title": "Tushuntirish + keyingi qadamlar",
+        "body": "Juda mos kelishi mumkin, Mos kelishi mumkin yoki Qo‘shimcha ma’lumot kerak — har bir sabab ko‘rsatilgan holda."
+      }
+    },
+    "legendDecides": "Qaysi dasturlar mos kelishini hal qiladi",
+    "legendLanguage": "Faqat til bilan yordam beradi",
+    "llmTitle": "Til modeli dastur yaratmaydi va kim haqli ekanini hal qilmaydi.",
+    "llmBody": "Dasturlar faqat bazadan olinadi. Ularning mos kelishi-kelmasligini faqat moslik qoidalari aniqlaydi. Agar Gemini ishlatilsa, u faqat faktlarni yozib, shu qoidalarni chaqira oladi — dastur qo‘sha olmaydi yoki belgini o‘zgartira olmaydi.",
+    "llmPrivate": "Xavfsizlikka oid holatlar ham har qanday model ishga tushishidan oldin qat’iy qoidalar bilan aniqlanadi. Maxfiy yo‘naltirilgan rejim so‘zlaringizni hech qachon sun’iy intellekt xizmatiga yubormaydi.",
+    "principlesTitle": "Bizning va’dalarimiz",
+    "principles": {
+      "private": {
+        "title": "Maxfiylik asosida qurilgan",
+        "body": "Hisob yo‘q, suhbatlar saqlanmaydi, sahifa manzilida hech narsa yo‘q. Tezkor chiqish shu sahifadagi hamma narsani o‘chiradi."
+      },
+      "honest": {
+        "title": "Yolg‘on ishonch yo‘q",
+        "body": "Foizlar ham, “siz haqlisiz” degan gap ham yo‘q. Har bir natija nima mos kelishini va nimani tekshirish kerakligini aytadi."
+      },
+      "sources": {
+        "title": "Ko‘rinadigan manbalar",
+        "body": "Har bir dastur ma’lumot qayerdan olinganiga havola beradi va uni inson tekshirgan-tekshirmaganini aytadi."
+      },
+      "safety": {
+        "title": "Avvalo xavfsizlik",
+        "body": "Agar so‘zlaringiz xavfni bildirsa, boshqa hamma narsadan oldin shoshilinch yordam ko‘rsatiladi."
+      }
+    },
+    "cannotTitle": "Kashshof nimalarni qila olmaydi",
+    "cannot": {
+      "decide": "Haqli ekaningizni hal qilish — buni faqat tashkilot qila oladi.",
+      "submit": "Siz uchun ariza topshirish — u tayyorlanishga yordam beradi va ariza beriladigan rasmiy joyni ko‘rsatadi.",
+      "verify": "Ma’lumot dolzarbligini kafolatlash — uning hech biri hali inson tomonidan tekshirilmagan.",
+      "history": "Brauzer tarixingizni o‘chirish — Tezkor chiqish shu sahifani almashtiradi, lekin oldingi tarix qoladi."
+    },
+    "cta": "Yordam topish",
+    "ctaBrowse": "Dasturlarni ko‘rish"
+  },
+  "organization": {
+    "about": "Tashkilot haqida",
+    "programs": "Joriy dasturlar",
+    "noDescription": "Bu tashkilot haqida tavsif hali to‘planmagan.",
+    "noPrograms": "Bu tashkilot dasturlari hali to‘planmagan. Tashkilotning o‘zidan so‘rab ko‘ring.",
+    "breadcrumb": "Yo‘l",
+    "officialWebsite": "Rasmiy veb-sayt",
+    "checkEligibility": "Menga mosligini tekshirish"
+  },
+  "trust": {
+    "title": "Ushbu ma’lumot haqida",
+    "verified": "Tasdiqlangan tashkilot",
+    "unverified": "Hali tasdiqlanmagan",
+    "source": "Ma’lumot manbasi",
+    "lastChecked": "Oxirgi tekshiruv",
+    "never": "Hech qachon",
+    "checkOfficial": "Murojaat qilishdan oldin tafsilotlarni doim tashkilotning o‘zidan aniqlang.",
+    "report": "Noto‘g‘ri ma’lumot haqida xabar berish",
+    "reportPrototype": "Rahmat. Bu prototipda xabarlar hali hech qayerga yuborilmaydi.",
+    "sampleSource": "Prototip uchun namunaviy ma’lumot — hali rasmiy manbalar bilan tekshirilmagan",
+    "listSource": "Kashshof tashkilotlar ro‘yxati (2026-yil sentabr) — faqat nomi, hali tekshirilmagan",
+    "status": "Holati",
+    "researchSource": "Ochiq manbalardan to‘plangan — hali inson tomonidan tekshirilmagan",
+    "collected": "To‘plangan sana",
+    "reviewedByPerson": "Inson tomonidan tekshirilgan"
+  },
+  "contact": {
+    "title": "Aloqa",
+    "website": "Veb-sayt",
+    "phone": "Telefon",
+    "email": "Elektron pochta",
+    "notCollected": "{what}: hali kiritilmagan",
+    "notCollectedShort": "Hali kiritilmagan"
+  },
+  "notices": {
+    "prototypeTitle": "Prototip ma’lumotlari",
+    "prototypeBody": "Tashkilotlar nomlari haqiqiy, ammo bu dasturlar, shartlar, muddatlar va holatlar prototip uchun tayyorlangan namunalardir. Ular tashkilotlar bilan tekshirilmagan.",
+    "demoTitle": "Namunaviy profil",
+    "demoBody": "Bu sahifada hisoblar qanday ishlashini ko‘rsatish uchun namunaviy shaxs — “Malika” ko‘rsatilgan. Hech qanday haqiqiy shaxsiy ma’lumot ishlatilmagan.",
+    "researchedTitle": "Ochiq manbalardan to‘plangan",
+    "researchedBody": "Bu ma’lumot tashkilot sayti yoki rasmiy portallardan olingan, havola quyida. U hali inson tomonidan tekshirilmagan, shuning uchun ariza berishdan oldin tafsilotlarni tashkilotning o‘zidan aniqlang."
+  },
+  "applications": {
+    "title": "Arizalar",
+    "lead": "Har bir ariza qay holatda va yana nimalar yetishmayapti.",
+    "progress": "Ariza jarayoni",
+    "missing": "Yetishmayapti: {documents}",
+    "start": "Ariza boshlash",
+    "continue": "Arizani davom ettirish",
+    "error": "Arizalarni yuklab bo‘lmadi.",
+    "status": {
+      "not_started": "Boshlanmagan",
+      "in_progress": "Jarayonda",
+      "submitted": "Yuborilgan"
+    },
+    "missingLabel": "Yetishmaydi:",
+    "allDocuments": "Barcha kerakli hujjatlar tayyor."
+  },
+  "dashboard": {
+    "metaTitle": "Mening sahifam",
+    "greeting": {
+      "morning": "Xayrli tong, {name}",
+      "afternoon": "Xayrli kun, {name}",
+      "evening": "Xayrli kech, {name}"
+    },
+    "attention": "{count, plural, =0 {Hozircha e’tibor talab qiladigan narsa yo‘q.} one {Bitta ariza e’tiboringizni kutmoqda.} other {# ta ariza e’tiboringizni kutmoqda.}}",
+    "deadline": "Muddat: {date}",
+    "viewProgram": "Dasturni ko‘rish",
+    "newPrograms": "{count, plural, one {Profilingizga # ta yangi dastur mos keladi.} other {Profilingizga # ta yangi dastur mos keladi.}}",
+    "basedOnProfile": "Profilingiz asosida",
+    "error": "Sahifangizni yuklab bo‘lmadi.",
+    "incomplete": "Ariza tugallanmagan",
+    "notStarted": "Hali boshlanmagan",
+    "deadlineIn": "{count, plural, =0 {Muddat bugun tugaydi} one {Muddat tugashiga # kun qoldi} other {Muddat tugashiga # kun qoldi}}",
+    "missing": "Yetishmaydi",
+    "allDocuments": "Barcha kerakli hujjatlarni tayyorlab bo‘ldingiz.",
+    "continue": "Arizani davom ettirish",
+    "review": "Arizani ko‘rib chiqish",
+    "allApplications": "Barcha arizalar"
+  },
+  "profile": {
+    "title": "Mening profilim",
+    "lead": "Kashshof sizga dasturlar topishda shu ma’lumotlardan foydalanadi. Nimani ulashishni o‘zingiz hal qilasiz.",
+    "dashboard": "Mening sahifam",
+    "personal": "Shaxsiy ma’lumotlar",
+    "name": "Ism",
+    "age": "Yosh",
+    "region": "Hudud",
+    "situation": "Hozirgi vaziyat",
+    "children": "Farzandlar",
+    "no": "Yo‘q",
+    "lookingFor": "Men izlayotgan yordam",
+    "documents": "Hujjatlar",
+    "privacyTitle": "Maxfiylik",
+    "error": "Profilni yuklab bo‘lmadi.",
+    "privacy": {
+      "shareOnlyWhenApplying": {
+        "label": "Faqat ariza topshirganda ulashish",
+        "hint": "Tashkilotlar ma’lumotlaringizni faqat siz ariza yuborganingizda ko‘radi."
+      },
+      "rememberConversations": {
+        "label": "Suhbatlarni eslab qolish",
+        "hint": "O‘chirilgan: oynani yopganingizda har bir suhbat unutiladi."
+      },
+      "deadlineReminders": {
+        "label": "Muddat eslatmalari",
+        "hint": "Saqlangan dastur yopilishidan oldin yumshoq eslatma."
+      }
+    },
+    "yes": "Ha",
+    "uploaded": "Yuklangan",
+    "notUploaded": "Yuklanmagan"
+  },
+  "org": {
+    "eyebrow": "Tashkilot paneli",
+    "title": "Dasturlaringiz",
+    "newProgram": "Yangi dastur",
+    "tabs": {
+      "programs": "Dasturlar",
+      "applicants": "Ariza beruvchilar",
+      "messages": "Xabarlar",
+      "analytics": "Tahlil",
+      "profile": "Tashkilot profili",
+      "team": "Jamoa",
+      "verification": "Tasdiqlash"
+    },
+    "draftsLead": "Siz yuborgan dasturlar qoralama sifatida saqlanadi. Qoralamalar ko‘rib chiqilmaguncha foydalanuvchilarga ko‘rsatilmaydi va tanlovda ishlatilmaydi.",
+    "noDrafts": "Hozircha qoralamalar yo‘q. Birinchi dasturingizni yarating.",
+    "draftBadge": "Qoralama — ko‘rib chiqilishi kutilmoqda",
+    "createdTitle": "Dastur qoralama sifatida saqlandi",
+    "createdBody": "U boshqalarga ko‘rsatilishidan oldin ko‘rib chiqiladi.",
+    "previewTitle": "Namuna — bu prototipga kirmaydi",
+    "preview": {
+      "applicants": "Kashshof orqali yuborilgan arizalar har bir inson ulashishni tanlagan hujjatlar bilan birga shu yerda ko‘rinadi.",
+      "messages": "Ariza beruvchilar bilan xavfsiz yozishmalar shu yerda ko‘rinadi.",
+      "analytics": "Dasturlaringizni nechta odam topgani va saqlagani — lekin ular kimligi hech qachon ko‘rsatilmaydi.",
+      "profile": "Tashkilotingiz tavsifi, aloqa ma’lumotlari va turkumlarini tahrirlang.",
+      "team": "Hamkasblaringizni taklif qiling va kim dastur e’lon qila olishini belgilang.",
+      "verification": "Foydalanuvchilar “Tasdiqlangan tashkilot” belgisini ko‘rishi uchun ro‘yxatdan o‘tganlik hujjatlarini yuklang."
+    }
+  },
+  "orgForm": {
+    "eyebrow": "Tashkilot paneli",
+    "title": "Yangi dastur",
+    "lead": "Tuzilgan javoblar Kashshofga dasturingizni kerakli insonlarga moslashtirishga yordam beradi.",
+    "basics": "Asosiy ma’lumotlar",
+    "organization": "Tashkilot",
+    "programName": "Dastur nomi",
+    "description": "Tavsif",
+    "writtenIn": "Yozilgan til: {language}",
+    "languages": {
+      "uz": "O‘zbekcha",
+      "ru": "Ruscha",
+      "en": "Inglizcha"
+    },
+    "support": "Yordam turi",
+    "supportHint": "Dastur taklif qiladigan barcha yordam turlarini tanlang.",
+    "whoCanApply": "Kim murojaat qila oladi?",
+    "gender": "Jins",
+    "genders": {
+      "female": "Ayollar",
+      "male": "Erkaklar"
+    },
+    "ageMin": "Eng kichik yosh",
+    "ageMax": "Eng katta yosh",
+    "regions": "Hududlar",
+    "regionsHint": "Agar dastur butun O‘zbekiston bo‘ylab mavjud bo‘lsa, bo‘sh qoldiring.",
+    "documents": "Kerakli hujjatlar",
+    "application": "Ariza qabul qilish",
+    "status": {
+      "OPEN": "Ochiq",
+      "CLOSED": "Yopiq"
+    },
+    "deadline": "Muddat (ixtiyoriy)",
+    "draftNote": "Dasturingiz qoralama sifatida saqlanadi va boshqalarga ko‘rsatilishidan oldin ko‘rib chiqiladi.",
+    "save": "Qoralamani saqlash",
+    "saving": "Saqlanmoqda…",
+    "errorSupport": "Kamida bitta yordam turini tanlang.",
+    "errorGeneric": "Xatolik yuz berdi. Iltimos, shaklni tekshirib, qaytadan urinib ko‘ring."
+  },
+  "notFound": {
+    "title": "Bu sahifa topilmadi",
+    "body": "U boshqa joyga ko‘chirilgan yoki dastur endi ro‘yxatda yo‘q bo‘lishi mumkin.",
+    "home": "Bosh sahifaga qaytish"
+  },
+  "need": {
+    "financial": "Moliyaviy yordam",
+    "education": "Ta’lim",
+    "food": "Oziq-ovqat va zarur buyumlar",
+    "health": "Sog‘liq",
+    "maternity": "Homiladorlik va onalik",
+    "children_family": "Bolalar va oila",
+    "employment": "Ish",
+    "business": "Kichik biznes",
+    "housing": "Uy-joy",
+    "legal": "Huquqiy yordam",
+    "safety": "Xavfsizlik",
+    "disability": "Nogironlik bo‘yicha yordam",
+    "mental_wellbeing": "Ruhiy salomatlik",
+    "emergency": "Shoshilinch yordam"
+  },
+  "region": {
+    "tashkent_city": "Toshkent shahri",
+    "tashkent_region": "Toshkent viloyati",
+    "andijan": "Andijon",
+    "bukhara": "Buxoro",
+    "fergana": "Farg‘ona",
+    "jizzakh": "Jizzax",
+    "kashkadarya": "Qashqadaryo",
+    "khorezm": "Xorazm",
+    "namangan": "Namangan",
+    "navoi": "Navoiy",
+    "samarkand": "Samarqand",
+    "surkhandarya": "Surxondaryo",
+    "syrdarya": "Sirdaryo",
+    "karakalpakstan": "Qoraqalpog‘iston"
+  },
+  "ageBand": {
+    "under_18": "18 yoshgacha",
+    "18_24": "18–24",
+    "25_34": "25–34",
+    "35_44": "35–44",
+    "45_59": "45–59",
+    "60_plus": "60 va undan katta"
+  },
+  "situation": {
+    "student": "O‘qiyman",
+    "employed": "Ishlayman",
+    "unemployed": "Ish qidiryapman",
+    "single_parent": "Farzandlarimni yolg‘iz tarbiyalayapman",
+    "pregnant": "Homiladorman",
+    "disability": "Nogironligim bor",
+    "none": "Hech biri",
+    "has_children": "Farzandlarim bor",
+    "low_income": "Daromadim kam",
+    "entrepreneur": "O‘z biznesim bor",
+    "survivor": "Xavfsizlik bo‘yicha yordam kerak",
+    "care_leaver": "Bolalar muassasasida yoki vasiylikda o‘sganman"
+  },
+  "group": {
+    "student": "talabalar va o‘quvchilar",
+    "employed": "ishlayotganlar",
+    "unemployed": "ish qidirayotganlar",
+    "single_parent": "farzandlarini yolg‘iz tarbiyalayotgan ota-onalar",
+    "has_children": "farzandli oilalar",
+    "pregnant": "homilador ayollar",
+    "disability": "nogironligi bor insonlar",
+    "low_income": "daromadi kam oilalar",
+    "entrepreneur": "tadbirkor ayollar",
+    "survivor": "zo‘ravonlikni boshdan kechirgan insonlar",
+    "care_leaver": "bolalar muassasasi yoki vasiylikdan chiqayotgan yoshlar"
+  },
+  "document": {
+    "id_document": "Pasport yoki ID-karta",
+    "income_certificate": "Daromad haqida ma’lumotnoma",
+    "enrollment_certificate": "O‘qish joyidan ma’lumotnoma",
+    "birth_certificate": "Farzandning tug‘ilganlik haqidagi guvohnomasi",
+    "medical_report": "Tibbiy xulosa",
+    "disability_certificate": "Nogironlik haqida ma’lumotnoma",
+    "residence_certificate": "Yashash joyini tasdiqlovchi hujjat",
+    "business_plan": "Qisqa biznes-reja",
+    "family_composition": "Oila tarkibi haqida ma’lumotnoma"
+  },
+  "directory": {
+    "title": "Tashkilotlar",
+    "lead": "O‘zbekistonda ayollar va oilalarga yordam beradigan xayriya tashkilotlari, jamg‘armalar va xizmatlar. Ma’lumotlar hali to‘planmoqda.",
+    "searchLabel": "Tashkilotlarni qidirish",
+    "searchPlaceholder": "Nomi bo‘yicha qidiring…",
+    "search": "Qidirish",
+    "sections": "Bo‘limlar",
+    "all": "Barchasi",
+    "count": "{count, plural, =0 {Tashkilot topilmadi} one {# ta tashkilot} other {# ta tashkilot}}",
+    "programs": "{count, plural, one {# ta dastur} other {# ta dastur}}",
+    "noPrograms": "Dasturlar hali to‘planmagan",
+    "none": "Mos tashkilot topilmadi. Boshqa nom yoki bo‘limni tanlab ko‘ring.",
+    "error": "Tashkilotlarni yuklab bo‘lmadi. Qaytadan urinib ko‘ring.",
+    "sourceNote": "O‘zbekistonda faoliyat yuritayotgan tashkilotlar ro‘yxatidan olingan. Hozircha faqat nomlar to‘plangan, hech biri hali tekshirilmagan. Insonlarga bevosita yordam bermaydigan homiylar va rivojlanish banklari ko‘rsatilmaydi."
+  },
+  "orgKind": {
+    "NGO": "Nodavlat notijorat tashkilot",
+    "INTERNATIONAL": "Xalqaro tashkilot",
+    "GOVERNMENT": "Davlat yoki jamoat tashkiloti"
+  },
+  "section": {
+    "children_family": "Bolalar va oilalar",
+    "health": "Tibbiyot va sog‘liqni saqlash",
+    "social_support": "Ijtimoiy va moliyaviy yordam",
+    "disability": "Nogironlik va inklyuziya",
+    "education_youth": "Ta’lim va yoshlar",
+    "women_girls": "Ayollar va qizlar",
+    "food_humanitarian": "Oziq-ovqat va gumanitar yordam",
+    "emergency": "Favqulodda vaziyatlar va tabiiy ofatlar",
+    "faith_zakat": "Islomiy xayriya va zakot",
+    "development": "Rivojlanish hamkorlari"
+  },
+  "signIn": {
+    "title": "Kirish",
+    "body": "Bu prototipda hisoblar hali mavjud emas. Hamma narsadan hisobsiz foydalanishingiz yoki arizalarni saqlash qanday ishlashini ko‘rish uchun namunaviy hisobni ochishingiz mumkin.",
+    "demo": "Namunaviy hisobni ochish",
+    "guest": "Hisobsiz davom etish"
+  },
+  "media": {
+    "photoBy": "Surat: {author}",
+    "navruz": {
+      "caption": "O‘zbekistonda Navro‘z bayrami"
+    },
+    "dasturkhan": {
+      "alt": "Ro‘mol o‘ragan ayol eshik oldida dasturxon — to‘yga mehmonlar sovg‘a qilib olib boradigan, mato bilan o‘ralgan non patnisini ushlab turibdi.",
+      "caption": "Dasturxon — to‘yga mehmonlar olib boradigan sovg‘a."
+    },
+    "motherChild": {
+      "alt": "Samarqandda quyoshli kunda kulib turgan ona chaqalog‘ini ko‘tarib turibdi.",
+      "caption": "Samarqandda ona va farzandi."
+    }
+  },
+  "credits": {
+    "title": "Surat va video mualliflari",
+    "lead": "Bu tasvirlardagi odamlar Kashshof foydalanuvchilari emas. Ular O‘zbekistondagi kundalik hayotni ko‘rsatadi va Creative Commons litsenziyalari asosida ishlatilgan.",
+    "by": "Muallif: {author}",
+    "source": "Asl fayl",
+    "note": "Uchala fayl ham Wikimedia Commons’dan olingan. Ular veb uchun kichraytirilgan va kesilgan, video esa sekinlashtirilgan; bu versiyalarga ham CC BY-SA litsenziyalari amal qiladi.",
+    "used": {
+      "navruz": "Bosh sahifa fon videosi va rasmi",
+      "dasturkhan": "Bosh sahifa, “Kashshof qanday ishlaydi”",
+      "motherChild": "Bosh sahifa, “Namunaviy vaziyatni sinab ko‘ring”"
+    }
+  }
+}

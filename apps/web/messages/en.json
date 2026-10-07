@@ -1,0 +1,976 @@
+{
+  "meta": {
+    "title": "Kashshof — find support that may fit your situation",
+    "description": "Tell Kashshof what is happening. It helps women and families in Uzbekistan find financial, family, disability, legal and other support — and explains why each program may fit."
+  },
+  "common": {
+    "close": "Close",
+    "cancel": "Cancel",
+    "optional": "optional"
+  },
+  "shell": {
+    "skipToContent": "Skip to content",
+    "homeLabel": "Kashshof — home",
+    "language": "Language",
+    "quickExit": "Quick exit",
+    "quickExitHint": "Leaves this site immediately and clears this conversation. You can also press Esc twice."
+  },
+  "nav": {
+    "label": "Main",
+    "mobileLabel": "Main (mobile)",
+    "home": "Home",
+    "findSupport": "Find support",
+    "browse": "Browse programs",
+    "browseShort": "Browse",
+    "saved": "Saved",
+    "organizations": "Organizations",
+    "howItWorks": "How it works",
+    "urgentHelp": "Urgent help",
+    "urgentShort": "Urgent",
+    "forOrganizations": "For organizations",
+    "findShort": "Find",
+    "savedShort": "Saved"
+  },
+  "footer": {
+    "label": "More",
+    "tagline": "Kashshof — support for women and families in Uzbekistan",
+    "prototype": "A university capstone prototype. Program information comes from public sources and hasn’t been reviewed by a person yet.",
+    "notOfficial": "Kashshof is not a government service and doesn’t make eligibility decisions.",
+    "howItWorks": "How it works",
+    "browse": "Browse programs",
+    "urgentHelp": "Urgent help",
+    "forOrganizations": "For organizations",
+    "demoAccount": "Demo account",
+    "credits": "Photo credits"
+  },
+  "home": {
+    "title": "You don’t have to figure out where to start alone.",
+    "lead": "Tell Kashshof what is happening, in Uzbek, Russian or English. It checks the support programs it knows about and shows which ones may be worth looking into — and why.",
+    "ctaFind": "Find support",
+    "ctaBrowse": "Browse support programs",
+    "urgent": "I need urgent help",
+    "trustLabel": "What you can expect from Kashshof",
+    "trust": {
+      "noAccount": {
+        "title": "No account required",
+        "body": "No name, phone number or passport needed to search."
+      },
+      "explains": {
+        "title": "Every result explains why",
+        "body": "What fits, what still needs checking, and what may rule you out."
+      },
+      "sources": {
+        "title": "Official sources included",
+        "body": "Each program links to the public page its information came from."
+      }
+    },
+    "facts": "{programs, plural, one {# program} other {# programs}} from {organizations, plural, one {# organization} other {# organizations}}, collected from public sources and not yet reviewed by a person.",
+    "aiOn": "Optional AI assistance (Google Gemini) is available — you choose before you start.",
+    "aiOff": "AI assistance is switched off; Kashshof uses guided questions.",
+    "programsTitle": "Support programs",
+    "programsLead": "A few of the programs Kashshof knows about. Each one links to the public page its information came from.",
+    "programsAll": "Browse all {count, plural, one {# program} other {# programs}}",
+    "orgsTitle": "Organizations",
+    "orgsLead": "Charities, foundations and services in Uzbekistan that help women and families.",
+    "orgsAll": "See all {count, plural, one {# organization} other {# organizations}}",
+    "howTitle": "How Kashshof works",
+    "how": {
+      "tell": {
+        "title": "Tell us about your situation",
+        "body": "In your own words, or by answering a few short questions."
+      },
+      "check": {
+        "title": "Kashshof checks known programs",
+        "body": "Fixed rules compare your answers with each program’s conditions."
+      },
+      "why": {
+        "title": "See why they may fit",
+        "body": "Each result shows what fits, what to check and what may rule you out."
+      },
+      "next": {
+        "title": "Get practical next steps",
+        "body": "Documents to prepare and the official place to apply."
+      }
+    },
+    "howLink": "How matching works, in detail",
+    "demoTitle": "Try a demo situation",
+    "demoLead": "These people are fictional. Each example starts a private guided conversation with the story already filled in, so you can see how matching works.",
+    "clarifyTitle": "An important clarification",
+    "clarifyBody": "Kashshof helps you discover support that may be available. It does not make official eligibility decisions — only the organization running a program can do that.",
+    "safetyTitle": "Do you feel unsafe right now?",
+    "safetyBody": "Urgent numbers and confidential services, without explaining anything.",
+    "safetyCta": "Get urgent help",
+    "hero": {
+      "pauseVideo": "Pause background video",
+      "playVideo": "Play background video"
+    }
+  },
+  "demo": {
+    "fictional": "Fictional",
+    "try": "Try this example",
+    "singleParent": {
+      "title": "A single parent looking for financial support",
+      "story": "I’m raising two children alone in Tashkent and I lost my job last month. I need financial support for my family."
+    },
+    "childDisability": {
+      "title": "A family caring for a child with a disability",
+      "story": "We live in Samarkand. Our daughter is 8 and has a disability. We need support for her treatment and care."
+    },
+    "legal": {
+      "title": "Someone looking for legal help",
+      "story": "I live in Fergana and I’m 34. I need free legal advice about child support after my divorce."
+    }
+  },
+  "privacy": {
+    "title": "Kashshof does not create a personal profile from your story.",
+    "memory": "What you tell us stays in this page’s memory. Refreshing, closing the tab or pressing Quick exit clears it.",
+    "neverStored": "It is never put in the web address, saved on our server, or sent to analytics.",
+    "organizations": "No organization sees anything unless you contact them yourself."
+  },
+  "modes": {
+    "legend": "How should Kashshof listen?",
+    "neitherDecides": "Either way, the same fixed rules decide which programs may fit. You can switch later.",
+    "private": {
+      "name": "Private guided",
+      "description": "Your answers stay in this browser session. Kashshof will guide you using predefined questions.",
+      "short": "Your answers stay in this browser session; no AI service sees them."
+    },
+    "ai": {
+      "name": "AI-assisted",
+      "description": "Your messages are processed by Google Gemini to help understand your situation. Gemini does not decide which support programs you qualify for.",
+      "short": "Your messages are processed by Google Gemini to understand them. Gemini doesn’t decide which programs may fit."
+    },
+    "aiUnavailable": "Not available right now.",
+    "switchToPrivate": "Switch to private guided",
+    "switchToAi": "Switch to AI-assisted",
+    "confirmAiTitle": "Switch to AI-assisted?",
+    "confirmAi": "Use AI assistance"
+  },
+  "progress": {
+    "label": "Your progress",
+    "situation": "Your situation",
+    "details": "A few details",
+    "support": "Possible support",
+    "next": "Next steps",
+    "done": "(done)"
+  },
+  "ask": {
+    "metaTitle": "Find support",
+    "title": "Find support",
+    "startTitle": "Tell us what’s happening",
+    "startLead": "Describe it in your own words, or answer a few short questions. Share only what you’re comfortable with — you can skip anything.",
+    "storyLabel": "What’s happening?",
+    "storyPlaceholder": "For example: I’m raising two children alone in Andijan and need help with school costs…",
+    "storyHint": "No names, phone numbers or ID numbers needed.",
+    "startButton": "Start",
+    "stepByStepLead": "Prefer not to write?",
+    "stepByStep": "Answer step by step",
+    "dangerLead": "If you are in danger right now:",
+    "dangerLink": "get urgent help",
+    "transcriptLabel": "Conversation",
+    "you": "You",
+    "assistantName": "Kashshof",
+    "busy": "Preparing a reply…",
+    "continue": "Continue",
+    "chooseOne": "Choose an answer",
+    "chooseMany": "Choose all that apply",
+    "placeholder": "Answer, or tell me more…",
+    "send": "Send",
+    "memoryNote": "Refreshing or closing this page clears the conversation.",
+    "startOver": "Start over",
+    "restartTitle": "Start over?",
+    "restartBody": "This clears the conversation and your answers from this page.",
+    "restartConfirm": "Clear and start over",
+    "seeAll": "See all results with explanations",
+    "noDocuments": "The source doesn’t list standard documents. Check “How to apply” and confirm with the organization.",
+    "errorTitle": "Kashshof couldn’t reply just now",
+    "errorBody": "Your answers are still here, and nothing about your situation has changed. Please try again.",
+    "retry": "Try again",
+    "aiFallbackTitle": "Continuing with guided questions",
+    "aiFallbackBody": "AI assistance isn’t responding right now, so this reply came from Kashshof’s predefined questions. Your search works the same way."
+  },
+  "assistant": {
+    "intake": {
+      "greeting": "Hello. What kind of support are you looking for? You can pick below or tell me in your own words.",
+      "ack": "I can help you look for support with: {needs}.",
+      "preview": "I can already see {count, plural, one {# program} other {# programs}} that may be relevant. A couple of quick questions will help me find the best matches.",
+      "notUnderstood": "I didn't quite catch that — that's okay. Let's go step by step."
+    },
+    "ask": {
+      "need": "What kind of support would be useful? You can choose more than one.",
+      "needRetry": "Could you pick the kind of support you need? You can choose more than one.",
+      "region": "Which region do you live in? Some programs are only available in certain places.",
+      "regionRetry": "I didn't recognise a region. Could you pick yours below? You can also skip this.",
+      "age": "How old are you? Some programs have age limits.",
+      "ageRetry": "You can pick an age range below, type your age, or skip.",
+      "situation": "Do any of these describe your situation right now? Choose all that apply.",
+      "situationRetry": "Please pick any that apply — or \"None of these\"."
+    },
+    "reply": {
+      "skip": "Skip",
+      "preferNotToSay": "Prefer not to say"
+    },
+    "safety": {
+      "intro": "It sounds like you may be looking for urgent safety support. You're not alone, and you don't have to explain anything else. What would help right now?",
+      "findServices": "Find safe services",
+      "emergencyInfo": "Emergency information",
+      "continuePrivately": "Continue privately",
+      "servicesLead": "Here are confidential services that may help. You don't need documents to contact them.",
+      "continuing": "Of course. We can continue at your pace — and the Quick exit button is always at the top."
+    },
+    "results": {
+      "found": "I found {count, plural, one {# program} other {# programs}} that may be worth checking. Each one says why it appeared.",
+      "none": "I couldn’t find a clear match from the programs I know about. That doesn’t mean no help exists — try adding another kind of support, browse all programs, or start over.",
+      "followUp": "You can narrow these down, or ask me about one — for example, \"What documents does the first one need?\"",
+      "updated": "Thanks — I've updated the results.",
+      "notUnderstood": "I'm not sure what you mean. You can narrow the results with the buttons below, or ask about documents for one of them."
+    },
+    "refined": {
+      "womenOnly": "Now showing only programs designed for women.",
+      "onlyOpen": "Now showing only programs accepting applications."
+    },
+    "docs": {
+      "list": "Documents for “{program}”:",
+      "none": "I don't have a result number {position} — try \"the first one\"."
+    },
+    "restart": {
+      "done": "Let's start fresh."
+    },
+    "next": {
+      "onlyOpen": "Only open now",
+      "womenOnly": "Only for women",
+      "addNeed": "Add another need",
+      "restart": "Start over"
+    }
+  },
+  "summary": {
+    "title": "What I understood",
+    "lead": "Only these facts are used to check programs.",
+    "aboutYou": "About you",
+    "age": "{age} years old",
+    "ageRange": "Age {range}",
+    "children": "{count, plural, one {# child} other {# children}}",
+    "lookingFor": "Looking for"
+  },
+  "results": {
+    "metaTitle": "Possible support",
+    "title": "{count, plural, =0 {No clear matches yet} one {# program may be worth checking} other {# programs may be worth checking}}",
+    "loadingTitle": "Checking programs…",
+    "lead": "Based on what you’ve told us, these programs may be worth checking. Each one says why it appeared and what to do next.",
+    "basedOn": "Based on:",
+    "changeAnswers": "Change answers",
+    "legendTitle": "What do these labels mean?",
+    "filters": "Filters",
+    "filtersLabel": "Show:",
+    "onlyOpen": "Only open now",
+    "womenOnly": "Only for women",
+    "errorTitle": "We couldn’t load programs",
+    "errorBody": "Your eligibility hasn’t changed — Kashshof just couldn’t reach its program list. Please try again.",
+    "retry": "Try again",
+    "noneTitle": "We couldn’t find a clear match from the programs Kashshof currently knows about.",
+    "noneBody": "That doesn’t mean no help exists. Kashshof knows a limited set of programs, and some conditions may simply need more information.",
+    "noneFiltered": "A filter is on — removing it may show more programs.",
+    "clearFilters": "Remove filters",
+    "browseAll": "Browse all programs",
+    "urgentHelp": "Urgent help",
+    "emptyTitle": "Let’s find support that may fit",
+    "emptyLead": "Tell us a little about your situation first. It takes a minute, and you don’t need an account.",
+    "emptyCta": "Find support",
+    "emptyPrivacy": "If you already answered some questions, a page refresh may have cleared them — that’s on purpose, to keep your answers private.",
+    "notDecisionTitle": "This is not an eligibility decision",
+    "notDecisionBody": "Only the organization running a program can confirm whether you qualify. Labels describe how well your answers fit the conditions we know about.",
+    "howWeMatch": "How matching works"
+  },
+  "matchingProgress": {
+    "requirements": "Checking program requirements",
+    "answers": "Comparing your answers",
+    "explanations": "Preparing explanations"
+  },
+  "fit": {
+    "strong": "Strong potential match",
+    "possible": "Possible match",
+    "needs_info": "More information needed"
+  },
+  "fitHelp": {
+    "strong": "The information you’ve given matches the major known conditions.",
+    "possible": "Some conditions match, but important ones are still uncertain.",
+    "needs_info": "Kashshof can’t meaningfully assess this program without more information."
+  },
+  "match": {
+    "whyAppeared": "Why this appeared",
+    "whyFits": "What fits",
+    "toCheck": "What needs checking",
+    "mightNot": "What may prevent eligibility",
+    "nextTitle": "What to do next",
+    "viewDetails": "View program details",
+    "viewProgram": "View program"
+  },
+  "nextStep": {
+    "closed": "Applications look closed. Check the official page for when they reopen.",
+    "deadlineSoon": "The deadline is close ({date}). Check the official page soon.",
+    "confirmGroup": "Confirm with the organization that the program accepts {group}.",
+    "confirmAge": "Check the age limit ({range}) against your exact age.",
+    "confirmRegion": "Confirm whether your region participates: {regions}.",
+    "confirmIncome": "Confirm your household income with the organization.",
+    "confirmOpen": "Check on the official page that applications are open.",
+    "documents": "Check these documents: {count, plural, one {# document} other {# documents}} may be needed.",
+    "officialPage": "Open the official page to see how to apply.",
+    "contact": "Contact {org} and ask how to apply."
+  },
+  "review": {
+    "label": {
+      "source_collected": "Source collected — not yet manually verified",
+      "source_unavailable": "Source currently unavailable",
+      "manually_reviewed": "Manually reviewed against the source",
+      "needs_rereview": "Needs re-review",
+      "sample": "Sample data — not real program information"
+    },
+    "body": {
+      "source_collected": "This information was copied from a public page, linked here. A person hasn’t checked it yet, so details may have changed.",
+      "source_unavailable": "We don’t have a source page for this program, so we can’t show where the information came from. Confirm everything with the organization.",
+      "manually_reviewed": "A person compared this information with the official source. It still isn’t an eligibility decision.",
+      "needs_rereview": "A person reviewed this information, but some time ago. It may be out of date.",
+      "sample": "This program was invented for the prototype. Don’t rely on it."
+    }
+  },
+  "source": {
+    "official": "Official source ({host})",
+    "unavailable": "Source currently unavailable",
+    "opensNewTab": "(opens in a new tab)"
+  },
+  "dataStatus": {
+    "sourceExists": "Source exists",
+    "reviewed": "Reviewed by a person",
+    "eligibility": "Your eligibility officially confirmed",
+    "eligibilityValue": "Only the organization can confirm this",
+    "collectedOn": "Collected {date}",
+    "yes": "Yes",
+    "no": "No",
+    "notYet": "Not yet",
+    "confirmWithOrg": "Always confirm details with the organization before applying."
+  },
+  "documents": {
+    "progress": "{done} of {total} ready — ticks are kept only on this page."
+  },
+  "reasons": {
+    "need": "Helps with: {what}",
+    "forWomen": "Designed for women",
+    "nationwide": "Available across Uzbekistan",
+    "inRegion": "Available in {region}",
+    "regionCheck": "Only in some regions: {regions}",
+    "ageFits": "Your age fits (ages {range})",
+    "ageBorder": "Age limit {range} — check your exact age",
+    "ageLimit": "Has an age limit (ages {range})",
+    "hasCircumstance": "For {group} — matches what you told us",
+    "confirmCircumstance": "Only for {group} — please confirm this applies to you",
+    "targetGroup": "Designed with {group} in mind",
+    "income": "Income criteria need to be checked with the organization",
+    "closed": "Applications are currently closed",
+    "statusUnknown": "Application status hasn’t been verified — check the official source before applying",
+    "deadlinePassed": "The deadline has passed",
+    "deadlineSoon": "Deadline soon: {date}",
+    "notRecentlyVerified": "Status hasn’t been checked in the last 60 days"
+  },
+  "status": {
+    "applications": "Applications",
+    "OPEN": "Applications open",
+    "CLOSED": "Applications closed",
+    "UNKNOWN": "Application status unknown",
+    "deadline": "Deadline",
+    "lastChecked": "Status checked",
+    "notRecentlyVerified": "Not recently checked — confirm on the official page before applying",
+    "daysAgo": "{count, plural, =0 {today} one {# day ago} other {# days ago}}",
+    "checkedOn": "Checked {date}"
+  },
+  "saved": {
+    "title": "Saved",
+    "lead": "Programs you’ve kept for later, on this device only.",
+    "save": "Save",
+    "savedLabel": "Saved",
+    "savedToast": "Saved on this device",
+    "removedToast": "Removed from saved",
+    "remove": "Remove",
+    "emptyTitle": "Nothing saved yet",
+    "empty": "Use “Save” on any program to keep it here.",
+    "emptyBrowse": "Browse programs",
+    "emptyCta": "Find support",
+    "deviceOnly": "Saved programs are stored only in this browser. Quick exit doesn’t remove them — clear them here if someone else uses this device.",
+    "clearAll": "Clear saved programs",
+    "clearTitle": "Clear all saved programs?",
+    "clearBody": "They will be removed from this browser.",
+    "clearConfirm": "Clear all",
+    "clearedToast": "Saved programs cleared"
+  },
+  "explore": {
+    "title": "Browse support programs",
+    "lead": "Every program Kashshof knows about. No questions, no AI — filter and read at your own pace.",
+    "searchLabel": "Search programs",
+    "searchPlaceholder": "Search programs, organizations…",
+    "count": "{count, plural, =0 {No programs} one {# program} other {# programs}}",
+    "noneTitle": "No programs match these filters",
+    "noneBody": "Try removing a filter or searching for something broader.",
+    "askInstead": "Describe your situation instead",
+    "errorTitle": "We couldn’t load programs",
+    "errorBody": "Nothing about your situation has changed — the program list just didn’t load. Please refresh the page.",
+    "filters": {
+      "title": "Filters",
+      "category": "Kind of support",
+      "region": "Region",
+      "regionHint": "Programs available nationwide always appear.",
+      "provider": "Provider",
+      "group": "Designed for",
+      "status": "Data status",
+      "onlyOpen": "Only programs accepting applications",
+      "all": "All",
+      "anyRegion": "Any region",
+      "anyone": "Anyone",
+      "clear": "Clear filters",
+      "show": "{count, plural, =0 {No programs to show} one {Show # program} other {Show # programs}}"
+    },
+    "reviewOption": {
+      "source_collected": "Source collected, not yet reviewed",
+      "source_unavailable": "Source unavailable",
+      "manually_reviewed": "Manually reviewed",
+      "needs_rereview": "Needs re-review",
+      "sample": "Sample data"
+    }
+  },
+  "program": {
+    "breadcrumb": "Breadcrumb",
+    "providedBy": "Provided by",
+    "onThisPage": "On this page",
+    "prepareApplication": "Prepare application",
+    "checkFit": "Check whether this may fit you",
+    "provides": "What this program provides",
+    "whoFor": "Who it may be for",
+    "whyMatched": "Why Kashshof matched this program",
+    "basedOnAnswers": "Based on your answers in this session.",
+    "noMatchYet": "You haven’t told Kashshof about your situation in this session, so there’s no match to explain yet.",
+    "toConfirm": "Things still to confirm",
+    "nothingToConfirm": "Nothing specific — still confirm the details with the organization.",
+    "mightNotQualify": "What could make you ineligible",
+    "noKnownBlockers": "Nothing we know of — the organization makes the final decision.",
+    "documents": "Documents you may need",
+    "documentsLead": "Tick what you already have. Nothing is saved.",
+    "noDocuments": "The source doesn’t list standard documents. Check “How to apply” and confirm with the organization.",
+    "howToApply": "How to apply",
+    "officialSource": "Official source",
+    "sourceLead": "Where this information was collected from:",
+    "sourceMissing": "We don’t have a source page for this program.",
+    "dataStatus": "Data status",
+    "eligibility": {
+      "women": "Women",
+      "age": "Ages {range}",
+      "nationwide": "Anywhere in Uzbekistan",
+      "regions": "Living in {regions}",
+      "required": "Only for {group}",
+      "designedFor": "Especially for {groups}",
+      "income": "Family income is taken into account"
+    },
+    "general": {
+      "income": "Your household income — the program takes it into account.",
+      "status": "Whether applications are open right now.",
+      "circumstance": "That you are one of: {groups}.",
+      "details": "Current conditions and deadlines on the official page.",
+      "closed": "Applications are currently closed.",
+      "age": "Being outside the age range ({range}).",
+      "region": "Living outside: {regions}.",
+      "women": "The program is for women only."
+    },
+    "steps": {
+      "check": "Read the conditions above and the things still to confirm.",
+      "documents": "Gather the documents listed above.",
+      "follow": "Apply the way the organization describes: {how}",
+      "contact": "Contact {org} and ask how to apply.",
+      "confirmSource": "Confirm the details on the official page before you apply."
+    },
+    "toc": {
+      "provides": "What it provides",
+      "who": "Who it may be for",
+      "why": "Why it matched",
+      "confirm": "To confirm",
+      "ineligible": "What could rule you out",
+      "docs": "Documents",
+      "how": "How to apply",
+      "source": "Official source",
+      "status": "Data status"
+    }
+  },
+  "apply": {
+    "eyebrow": "Prepare application",
+    "notSubmittingTitle": "Kashshof doesn’t submit applications",
+    "notSubmittingBody": "This helps you get ready. You apply yourself, through the organization’s official channel. Nothing you type here leaves this page.",
+    "stepsLabel": "Preparation steps",
+    "stepOf": "Step {current} of {total}",
+    "steps": {
+      "requirements": "Application requirements",
+      "documents": "Document checklist",
+      "statement": "Draft personal statement",
+      "apply": "Official place to apply"
+    },
+    "requirementsLead": "The program’s known conditions:",
+    "fromYourAnswers": "From your answers in this session",
+    "documentsLead": "Tick each document once you have it.",
+    "documentsPrivate": "Ticks stay on this page only and aren’t saved.",
+    "noDocuments": "The source doesn’t list standard documents. Ask the organization what to bring.",
+    "statementLead": "Answer in a few words, and Kashshof will turn them into a first draft you can edit. Nothing is sent anywhere.",
+    "optional": "optional",
+    "fields": {
+      "name": "Your name",
+      "reason": "Why are you asking for support?",
+      "reasonHint": "e.g. I can’t cover the tuition fee this semester",
+      "family": "Your family situation",
+      "familyHint": "e.g. I live with my son and my mother",
+      "background": "Study or work",
+      "backgroundHint": "e.g. 3rd-year student of economics"
+    },
+    "errors": {
+      "reasonRequired": "Write a few words about why you’re asking for support.",
+      "answerTooLong": "Please keep this under 600 characters.",
+      "nameTooLong": "Please keep the name under 80 characters."
+    },
+    "draft": "Create a draft",
+    "redraft": "Create a new draft",
+    "yourStatement": "Your statement — edit anything",
+    "statementEditable": "This is only a starting point. Change it so it says what you want to say.",
+    "template": "Dear {org} team,\n\nMy name is {name}. I am applying to the program \"{program}\".\n\n{reason}\n\nAbout my family: {family}\n\nAbout my studies or work: {background}\n\nThank you for considering my application. I am happy to provide any further documents you need.\n\nKind regards,\n{name}",
+    "templateNameFallback": "(your name)",
+    "templateFamilyFallback": "(add a sentence about your family)",
+    "templateBackgroundFallback": "(add a sentence about your studies or work)",
+    "copy": "Copy text",
+    "copied": "Statement copied",
+    "copyFailed": "Couldn’t copy — select the text and copy it instead",
+    "print": "Print",
+    "printSummary": "Print this page",
+    "nothingSubmitted": "Nothing has been submitted.",
+    "nothingSubmittedBody": "Kashshof hasn’t sent anything to {org}. To apply, use the organization’s official channel below.",
+    "final": {
+      "review": "Read your statement once more and change anything you like.",
+      "official": "Open the official page and follow its application steps.",
+      "contact": "Contact {org} and ask how to apply.",
+      "bring": "Take the documents from your checklist with you."
+    },
+    "orgPage": "Organization page",
+    "documentsReady": "Documents ready: {done} of {total}.",
+    "back": "Back",
+    "backToProgram": "Back to program",
+    "next": "Next"
+  },
+  "safety": {
+    "metaTitle": "Urgent help",
+    "title": "You deserve to be safe.",
+    "lead": "If you feel unsafe at home or anywhere else, help is available. You don’t need to explain or prove anything to ask for it.",
+    "dangerTitle": "In immediate danger?",
+    "dangerBody": "Call 112. It is free and works from any phone, in every region.",
+    "n112": "All emergencies",
+    "n1146": "Trust line for women facing pressure or violence",
+    "n102": "Police",
+    "n103": "Ambulance",
+    "n101": "Fire service",
+    "numbersSource": "Numbers checked against",
+    "privateTitle": "Staying private",
+    "tipQuickExit": "Press “Quick exit” at the top, or Esc twice, to leave this site at once. It clears your conversation with Kashshof and replaces this page, so Back won’t return here.",
+    "tipErased": "Your conversation is kept only in this page’s memory. Refreshing or closing the tab also clears it.",
+    "tipHistory": "Kashshof can’t delete your browser history. If someone checks your device, consider a private or incognito window, and clear your history afterwards.",
+    "tipPhone": "Calls to the numbers above may appear in your phone’s call log.",
+    "servicesTitle": "Confidential services",
+    "servicesLead": "Collected from public sources. You don’t need documents to contact them."
+  },
+  "safetyPanel": {
+    "title": "Your safety comes first",
+    "body": "If you are in danger right now, call 112 — it’s free from any phone. You don’t have to explain anything else here.",
+    "allHelp": "See all urgent numbers and confidential services",
+    "quickExit": "Quick exit, at the top of the page (or Esc twice), leaves this site immediately and clears this conversation."
+  },
+  "how": {
+    "title": "How Kashshof works",
+    "lead": "Kashshof helps you find support programs that may fit your situation. A language model may help with the conversation — but it never decides what exists or who qualifies.",
+    "flowTitle": "From your story to explained results",
+    "flow": {
+      "story": {
+        "title": "Your story",
+        "body": "In your own words, or through tappable answers."
+      },
+      "assistant": {
+        "title": "Conversation assistant",
+        "body": "Gemini (if you choose AI-assisted) or predefined questions turn your words into a few facts."
+      },
+      "facts": {
+        "title": "Structured facts",
+        "body": "Kind of support, region, age range, circumstances — shown to you as “What I understood”."
+      },
+      "rules": {
+        "title": "Deterministic matching rules",
+        "body": "The same fixed rules for everyone compare those facts with each program’s conditions."
+      },
+      "database": {
+        "title": "Known program database",
+        "body": "Programs collected from public sources, each with its source page."
+      },
+      "explanation": {
+        "title": "Explanation + next steps",
+        "body": "Strong potential match, Possible match or More information needed — with every reason shown."
+      }
+    },
+    "legendDecides": "Decides which programs may fit",
+    "legendLanguage": "Only helps with language",
+    "llmTitle": "The language model does not create programs or decide eligibility.",
+    "llmBody": "Programs come only from the database. Whether one may fit comes only from the matching rules. If Gemini is used, it can only record facts and call those rules — it can’t add a program or change a label.",
+    "llmPrivate": "Safety concerns are recognised by fixed rules too, before any model is involved. Private guided mode never sends your words to an AI service.",
+    "principlesTitle": "What we promise",
+    "principles": {
+      "private": {
+        "title": "Private by design",
+        "body": "No account, no stored conversations, nothing in the web address. Quick exit clears everything on this page."
+      },
+      "honest": {
+        "title": "No false certainty",
+        "body": "No percentages and no “you qualify”. Each result says what fits and what still needs checking."
+      },
+      "sources": {
+        "title": "Sources you can see",
+        "body": "Every program links to where its information came from, and says whether a person has reviewed it."
+      },
+      "safety": {
+        "title": "Safety first",
+        "body": "If your words suggest danger, urgent help is shown before anything else."
+      }
+    },
+    "cannotTitle": "What Kashshof can’t do",
+    "cannot": {
+      "decide": "Decide whether you qualify — only the organization can.",
+      "submit": "Submit applications for you — it helps you prepare, then points you to the official place to apply.",
+      "verify": "Guarantee information is current — none of it has been reviewed by a person yet.",
+      "history": "Erase your browser history — Quick exit replaces this page, but earlier history stays."
+    },
+    "cta": "Find support",
+    "ctaBrowse": "Browse programs"
+  },
+  "organization": {
+    "about": "About",
+    "programs": "Current programs",
+    "noDescription": "We haven't collected a description for this organization yet.",
+    "noPrograms": "We haven't collected this organization's programs yet. Check with the organization directly.",
+    "breadcrumb": "Breadcrumb",
+    "officialWebsite": "Official website",
+    "checkEligibility": "Check my eligibility"
+  },
+  "trust": {
+    "title": "About this information",
+    "verified": "Verified organization",
+    "unverified": "Not yet verified",
+    "source": "Information source",
+    "lastChecked": "Last checked",
+    "never": "Never",
+    "checkOfficial": "Always confirm details with the organization before applying.",
+    "report": "Report incorrect information",
+    "reportPrototype": "Thank you. In this prototype, reports aren't sent anywhere yet.",
+    "sampleSource": "Prototype sample data — not yet checked against official sources",
+    "listSource": "Kashshof organization list (September 2026) — name only, not yet checked",
+    "status": "Status",
+    "researchSource": "Collected from public sources — not yet reviewed by a person",
+    "collected": "Collected",
+    "reviewedByPerson": "Reviewed by a person"
+  },
+  "contact": {
+    "title": "Contact",
+    "website": "Website",
+    "phone": "Phone",
+    "email": "Email",
+    "notCollected": "{what}: not collected yet",
+    "notCollectedShort": "Not collected yet"
+  },
+  "notices": {
+    "prototypeTitle": "Prototype data",
+    "prototypeBody": "The organization names are real, but these programs, rules, deadlines and statuses are samples made for this prototype. They have not been checked with the organizations.",
+    "demoTitle": "Demo profile",
+    "demoBody": "This screen shows a sample person, \"Malika\", to demonstrate how accounts would work. No real personal data is used.",
+    "researchedTitle": "Collected from public sources",
+    "researchedBody": "This information comes from the organization's website or official portals, linked below. It hasn't been reviewed by a person yet, so confirm details with the organization before applying."
+  },
+  "applications": {
+    "title": "Applications",
+    "lead": "Where each application stands, and what's still missing.",
+    "progress": "Application progress",
+    "missing": "Missing: {documents}",
+    "start": "Start application",
+    "continue": "Continue application",
+    "error": "We couldn't load applications.",
+    "status": {
+      "not_started": "Not started",
+      "in_progress": "In progress",
+      "submitted": "Submitted"
+    },
+    "missingLabel": "Missing:",
+    "allDocuments": "All required documents are ready."
+  },
+  "dashboard": {
+    "metaTitle": "Dashboard",
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
+    },
+    "attention": "{count, plural, =0 {Nothing needs your attention right now.} one {You have one application that needs attention.} other {You have # applications that need attention.}}",
+    "deadline": "Deadline {date}",
+    "viewProgram": "View program",
+    "newPrograms": "{count, plural, one {# new program matches your profile.} other {# new programs match your profile.}}",
+    "basedOnProfile": "Based on your profile",
+    "error": "We couldn't load your dashboard.",
+    "incomplete": "Application incomplete",
+    "notStarted": "Not started yet",
+    "deadlineIn": "{count, plural, =0 {Deadline today} one {Deadline in # day} other {Deadline in # days}}",
+    "missing": "Missing",
+    "allDocuments": "You've completed all required documents.",
+    "continue": "Continue application",
+    "review": "Review application",
+    "allApplications": "All applications"
+  },
+  "profile": {
+    "title": "My support profile",
+    "lead": "What Kashshof uses to find programs for you. You decide what to share.",
+    "dashboard": "My dashboard",
+    "personal": "Personal",
+    "name": "Name",
+    "age": "Age",
+    "region": "Region",
+    "situation": "Current situation",
+    "children": "Children",
+    "no": "No",
+    "lookingFor": "I'm looking for",
+    "documents": "Documents",
+    "privacyTitle": "Privacy",
+    "error": "We couldn't load the profile.",
+    "privacy": {
+      "shareOnlyWhenApplying": {
+        "label": "Share only when applying",
+        "hint": "Organizations see your details only when you send an application."
+      },
+      "rememberConversations": {
+        "label": "Remember conversations",
+        "hint": "Off: every conversation is forgotten when you close the tab."
+      },
+      "deadlineReminders": {
+        "label": "Deadline reminders",
+        "hint": "A gentle reminder before a saved program closes."
+      }
+    },
+    "yes": "Yes",
+    "uploaded": "Uploaded",
+    "notUploaded": "Not uploaded"
+  },
+  "org": {
+    "eyebrow": "Organization dashboard",
+    "title": "Your programs",
+    "newProgram": "New program",
+    "tabs": {
+      "programs": "Programs",
+      "applicants": "Applicants",
+      "messages": "Messages",
+      "analytics": "Analytics",
+      "profile": "Organization profile",
+      "team": "Team",
+      "verification": "Verification"
+    },
+    "draftsLead": "Programs you submit are saved as drafts. Drafts are never shown to people or used in matching until they're reviewed.",
+    "noDrafts": "No drafts yet. Create your first program.",
+    "draftBadge": "Draft — awaiting review",
+    "createdTitle": "Program saved as a draft",
+    "createdBody": "It will be reviewed before anyone can see it.",
+    "previewTitle": "Preview — not part of this prototype",
+    "preview": {
+      "applicants": "Applications sent through Kashshof will appear here, with the documents each person chose to share.",
+      "messages": "Secure messages with applicants will appear here.",
+      "analytics": "How many people found and saved your programs — never who they are.",
+      "profile": "Edit your organization's description, contacts and categories.",
+      "team": "Invite colleagues and decide who can publish programs.",
+      "verification": "Upload registration documents so people see a \"Verified organization\" badge."
+    }
+  },
+  "orgForm": {
+    "eyebrow": "Organization dashboard",
+    "title": "New program",
+    "lead": "Structured answers let Kashshof match your program to the right people.",
+    "basics": "Basics",
+    "organization": "Organization",
+    "programName": "Program name",
+    "description": "Description",
+    "writtenIn": "Written in: {language}",
+    "languages": {
+      "uz": "Uzbek",
+      "ru": "Russian",
+      "en": "English"
+    },
+    "support": "Kind of support",
+    "supportHint": "Choose everything the program offers.",
+    "whoCanApply": "Who can apply?",
+    "gender": "Gender",
+    "genders": {
+      "female": "Women",
+      "male": "Men"
+    },
+    "ageMin": "Minimum age",
+    "ageMax": "Maximum age",
+    "regions": "Regions",
+    "regionsHint": "Leave empty if the program is available everywhere in Uzbekistan.",
+    "documents": "Required documents",
+    "application": "Applications",
+    "status": {
+      "OPEN": "Open",
+      "CLOSED": "Closed"
+    },
+    "deadline": "Deadline (optional)",
+    "draftNote": "Your program will be saved as a draft and reviewed before it's shown to anyone.",
+    "save": "Save draft",
+    "saving": "Saving…",
+    "errorSupport": "Choose at least one kind of support.",
+    "errorGeneric": "Something went wrong. Please check the form and try again."
+  },
+  "notFound": {
+    "title": "We couldn't find that page",
+    "body": "It may have moved, or the program is no longer listed.",
+    "home": "Back to home"
+  },
+  "need": {
+    "financial": "Financial support",
+    "education": "Education",
+    "food": "Food & essentials",
+    "health": "Health",
+    "maternity": "Pregnancy & maternity",
+    "children_family": "Children & family",
+    "employment": "Work",
+    "business": "Small business",
+    "housing": "Housing",
+    "legal": "Legal support",
+    "safety": "Safety",
+    "disability": "Disability support",
+    "mental_wellbeing": "Mental wellbeing",
+    "emergency": "Emergency help"
+  },
+  "region": {
+    "tashkent_city": "Tashkent city",
+    "tashkent_region": "Tashkent region",
+    "andijan": "Andijan",
+    "bukhara": "Bukhara",
+    "fergana": "Fergana",
+    "jizzakh": "Jizzakh",
+    "kashkadarya": "Kashkadarya",
+    "khorezm": "Khorezm",
+    "namangan": "Namangan",
+    "navoi": "Navoi",
+    "samarkand": "Samarkand",
+    "surkhandarya": "Surkhandarya",
+    "syrdarya": "Syrdarya",
+    "karakalpakstan": "Karakalpakstan"
+  },
+  "ageBand": {
+    "under_18": "Under 18",
+    "18_24": "18–24",
+    "25_34": "25–34",
+    "35_44": "35–44",
+    "45_59": "45–59",
+    "60_plus": "60 or older"
+  },
+  "situation": {
+    "student": "Studying",
+    "employed": "Working",
+    "unemployed": "Looking for work",
+    "single_parent": "Raising children alone",
+    "pregnant": "Pregnant",
+    "disability": "Living with a disability",
+    "none": "None of these",
+    "has_children": "Has children",
+    "low_income": "Limited income",
+    "entrepreneur": "Running a business",
+    "survivor": "Needs safety support",
+    "care_leaver": "Leaving or grew up in care"
+  },
+  "group": {
+    "student": "students",
+    "employed": "working people",
+    "unemployed": "people looking for work",
+    "single_parent": "single parents",
+    "has_children": "families with children",
+    "pregnant": "pregnant women",
+    "disability": "people with disabilities",
+    "low_income": "families with limited income",
+    "entrepreneur": "women running a business",
+    "survivor": "people who have experienced violence",
+    "care_leaver": "young people leaving care"
+  },
+  "document": {
+    "id_document": "Passport or ID card",
+    "income_certificate": "Income certificate",
+    "enrollment_certificate": "Certificate of enrollment",
+    "birth_certificate": "Child's birth certificate",
+    "medical_report": "Medical report",
+    "disability_certificate": "Disability certificate",
+    "residence_certificate": "Proof of address",
+    "business_plan": "Short business plan",
+    "family_composition": "Family composition certificate"
+  },
+  "directory": {
+    "title": "Organizations",
+    "lead": "Charities, foundations and services in Uzbekistan that help women and families. Details are still being collected.",
+    "searchLabel": "Search organizations",
+    "searchPlaceholder": "Search by name…",
+    "search": "Search",
+    "sections": "Sections",
+    "all": "All",
+    "count": "{count, plural, =0 {No organizations} one {# organization} other {# organizations}}",
+    "programs": "{count, plural, one {# program} other {# programs}}",
+    "noPrograms": "No programs collected yet",
+    "none": "No organizations match. Try another name or section.",
+    "error": "We couldn't load organizations. Please try again.",
+    "sourceNote": "From a list of organizations working in Uzbekistan. Only names have been collected so far; none has been verified yet. Funders and development banks that don't help people directly aren't shown."
+  },
+  "orgKind": {
+    "NGO": "Non-profit organization",
+    "INTERNATIONAL": "International organization",
+    "GOVERNMENT": "Government or public body"
+  },
+  "section": {
+    "children_family": "Children & families",
+    "health": "Health & medicine",
+    "social_support": "Social & financial support",
+    "disability": "Disability & inclusion",
+    "education_youth": "Education & youth",
+    "women_girls": "Women & girls",
+    "food_humanitarian": "Food & humanitarian aid",
+    "emergency": "Emergencies & disasters",
+    "faith_zakat": "Faith-based charity & zakat",
+    "development": "Development partners"
+  },
+  "signIn": {
+    "title": "Sign in",
+    "body": "Accounts aren't part of this prototype yet. You can use everything without an account, or look around a demo account to see how saving applications would work.",
+    "demo": "Open the demo account",
+    "guest": "Continue without an account"
+  },
+  "media": {
+    "photoBy": "Photo: {author}",
+    "navruz": {
+      "caption": "A Navruz gathering in Uzbekistan"
+    },
+    "dasturkhan": {
+      "alt": "A woman in a headscarf stands at a doorway holding a dasturkhan, a cloth-wrapped tray of bread that wedding guests bring as a gift.",
+      "caption": "A dasturkhan — the gift wedding guests bring."
+    },
+    "motherChild": {
+      "alt": "A smiling mother holds her baby outside on a sunny day in Samarkand.",
+      "caption": "A mother and her child in Samarkand."
+    }
+  },
+  "credits": {
+    "title": "Photo and video credits",
+    "lead": "The people in these images are not Kashshof users. They show everyday life in Uzbekistan and are used under Creative Commons licences.",
+    "by": "By {author}",
+    "source": "Original file",
+    "note": "All three files come from Wikimedia Commons. They were resized and cropped for the web, and the video was slowed down; the CC BY-SA licences still apply to these versions.",
+    "used": {
+      "navruz": "Home page background video and image",
+      "dasturkhan": "Home page, “How Kashshof works”",
+      "motherChild": "Home page, “Try a demo situation”"
+    }
+  }
+}

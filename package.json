@@ -1,0 +1,21 @@
+{
+  "name": "hamroh",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hamroh — AI-guided support finder for women and families in Uzbekistan (clickable prototype).",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=24.20.0 <25"
+  },
+  "packageManager": "pnpm@12.4.1",
+  "scripts": {
+    "db:up": "docker compose up -d postgres",
+    "db:setup": "pnpm --filter hamroh-api db:deploy && pnpm --filter hamroh-api db:seed",
+    "dev": "pnpm --parallel --filter hamroh-api --filter hamroh-web dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "contract": "pnpm --filter hamroh-api contract:export && pnpm --filter hamroh-web client:generate"
+  }
+}

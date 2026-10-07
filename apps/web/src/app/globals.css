@@ -1,0 +1,207 @@
+@import 'tailwindcss';
+
+/*
+ * Kashshof design system.
+ *
+ * Calm and plain: a warm neutral page, white surfaces for things you act on, deep teal for action,
+ * amber only where something needs attention, red reserved for danger and safety. One type family
+ * (Inter — full Latin and Cyrillic). 8px spacing rhythm, 12–16px surface radius, hairline borders,
+ * almost no shadow. Status is never colour alone: every status pairs an icon and a label.
+ *
+ * All text/background pairs below meet WCAG 2.2 AA (4.5:1 text, 3:1 controls and focus).
+ */
+@theme {
+  /* Neutrals. */
+  --color-canvas: #f6f4ef; /* background */
+  --color-surface: #ffffff;
+  --color-sunken: #edeae3; /* muted */
+  --color-ink: #1c2422; /* foreground */
+  --color-ink-2: #4a5350;
+  --color-ink-3: #5c6561;
+  --color-line: #dfdbd2; /* border */
+  --color-line-strong: #c9c4b8;
+  --color-control: #8a867c; /* input and toggle borders — 3:1 against surface */
+
+  /* Brand. */
+  --color-primary: #0e5a52;
+  --color-primary-hover: #0a4640;
+  --color-primary-soft: #e2efec;
+  --color-secondary: #2c5282;
+  --color-secondary-soft: #e8eef7;
+  --color-focus: #0e5a52;
+
+  /* Status. */
+  --color-success: #25683a;
+  --color-success-soft: #e6f2e8;
+  --color-warning: #8a5300;
+  --color-warning-soft: #fcf1dc;
+  --color-danger: #b0261b;
+  --color-danger-hover: #8f1e15;
+  --color-danger-soft: #fcebe8;
+
+  /* Matching statuses — always shown with an icon and a label too. */
+  --color-fit-strong: var(--color-success);
+  --color-fit-strong-soft: var(--color-success-soft);
+  --color-fit-possible: var(--color-secondary);
+  --color-fit-possible-soft: var(--color-secondary-soft);
+  --color-fit-needs: var(--color-warning);
+  --color-fit-needs-soft: var(--color-warning-soft);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  --shadow-raised: 0 1px 2px rgb(28 36 34 / 0.05), 0 4px 16px -8px rgb(28 36 34 / 0.12);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+::selection {
+  background: var(--color-primary-soft);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  header,
+  footer,
+  nav,
+  [data-print='hide'] {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+}
+
+/* ---- Layout ------------------------------------------------------------------------------ */
+
+@utility page {
+  @apply mx-auto w-full max-w-[1160px] px-4 sm:px-8;
+}
+
+@utility prose-width {
+  @apply max-w-[44rem];
+}
+
+@utility rule {
+  @apply border-t border-line;
+}
+
+/* A white surface for things that behave like objects: results, forms, panels. */
+@utility card {
+  @apply rounded-[var(--radius-lg)] border border-line bg-surface;
+}
+
+/* ---- Type -------------------------------------------------------------------------------- */
+
+@utility title-page {
+  @apply text-[32px] leading-[1.15] font-semibold tracking-[-0.022em] break-words hyphens-auto text-ink sm:text-[44px];
+}
+@utility title-section {
+  @apply text-[24px] leading-[1.25] font-semibold tracking-[-0.016em] text-ink sm:text-[28px];
+}
+@utility title-item {
+  @apply text-[19px] leading-[1.35] font-semibold tracking-[-0.008em] text-ink;
+}
+@utility lead {
+  @apply text-[17px] leading-[1.6] text-ink-2 sm:text-[19px];
+}
+@utility meta {
+  @apply text-[15px] leading-[1.5] text-ink-2;
+}
+@utility label {
+  @apply text-[14px] leading-[1.4] font-medium text-ink-2;
+}
+@utility kicker {
+  @apply text-[13px] leading-[1.4] font-semibold tracking-[0.04em] text-ink-2 uppercase;
+}
+
+/* ---- Actions ----------------------------------------------------------------------------- */
+
+@utility btn {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-[var(--radius-sm)] px-5 py-2.5 text-center text-[16px] leading-snug font-semibold transition-[background-color,border-color,color,transform] duration-150 select-none active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:active:scale-100;
+}
+@utility btn-primary {
+  @apply btn bg-primary text-white hover:bg-primary-hover;
+}
+@utility btn-secondary {
+  @apply btn border border-control bg-surface text-ink hover:border-ink hover:bg-canvas;
+}
+@utility btn-danger {
+  @apply btn bg-danger text-white hover:bg-danger-hover;
+}
+@utility btn-ghost {
+  @apply btn px-3 font-medium text-ink-2 hover:bg-sunken hover:text-ink;
+}
+/* Text action: "View program details", "Change answers". */
+@utility action {
+  @apply inline-flex min-h-11 items-center gap-1.5 text-[16px] font-semibold text-primary underline-offset-4 hover:underline;
+}
+@utility action-quiet {
+  @apply inline-flex min-h-11 items-center gap-1.5 text-[15px] font-medium text-ink-2 underline-offset-4 hover:text-ink hover:underline;
+}
+
+/* ---- Inputs ------------------------------------------------------------------------------ */
+
+@utility field {
+  @apply w-full rounded-[var(--radius-sm)] border border-control bg-surface px-3.5 py-3 text-[16px] text-ink outline-none placeholder:text-ink-3 focus-visible:border-primary aria-[invalid=true]:border-danger;
+}
+
+/* A tappable answer or filter: quiet until chosen. */
+@utility choice {
+  @apply inline-flex min-h-12 items-center gap-2 rounded-[var(--radius-sm)] border border-control bg-surface px-4 text-left text-[16px] font-medium text-ink transition-colors duration-150 hover:border-ink hover:bg-canvas;
+  &[aria-pressed='true'],
+  &[aria-checked='true'],
+  &[aria-current='page'] {
+    @apply border-primary bg-primary-soft text-primary;
+  }
+}
+
+/* Underlined text tab, for section filters. */
+@utility tab {
+  @apply inline-flex min-h-11 items-center border-b-2 border-transparent text-[15px] font-medium whitespace-nowrap text-ink-2 hover:text-ink;
+  &[aria-current='page'],
+  &[aria-selected='true'],
+  &[aria-pressed='true'] {
+    @apply border-primary text-ink;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

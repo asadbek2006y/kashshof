@@ -1,0 +1,16 @@
+packages:
+  - 'apps/*'
+
+allowBuilds:
+  '@swc/core': true
+  '@parcel/watcher': true
+  '@scarf/scarf': true
+  '@prisma/engines': true
+  esbuild: true
+  prisma: true
+  unrs-resolver: true
+  sharp: true
+  '@google/genai': false
+  cpu-features: false
+  protobufjs: false
+  ssh2: false

@@ -1,0 +1,1530 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api/v1/health": {
+      "get": {
+        "operationId": "HealthController_check",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "health"
+        ]
+      }
+    },
+    "/api/v1/programs": {
+      "get": {
+        "operationId": "ProgramsController_list",
+        "parameters": [
+          {
+            "name": "supportType",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "financial",
+                "education",
+                "food",
+                "health",
+                "maternity",
+                "children_family",
+                "employment",
+                "business",
+                "housing",
+                "legal",
+                "safety",
+                "disability",
+                "mental_wellbeing",
+                "emergency"
+              ]
+            }
+          },
+          {
+            "name": "region",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "tashkent_city",
+                "tashkent_region",
+                "andijan",
+                "bukhara",
+                "fergana",
+                "jizzakh",
+                "kashkadarya",
+                "khorezm",
+                "namangan",
+                "navoi",
+                "samarkand",
+                "surkhandarya",
+                "syrdarya",
+                "karakalpakstan"
+              ]
+            }
+          },
+          {
+            "name": "open",
+            "required": false,
+            "in": "query",
+            "description": "Only programs currently accepting applications",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "org",
+            "required": false,
+            "in": "query",
+            "description": "Organization slug",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProgramSummaryDto"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "programs"
+        ]
+      }
+    },
+    "/api/v1/programs/{id}": {
+      "get": {
+        "operationId": "ProgramsController_get",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProgramDetailDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "programs"
+        ]
+      }
+    },
+    "/api/v1/organizations": {
+      "get": {
+        "operationId": "ProgramsController_organizations",
+        "parameters": [
+          {
+            "name": "section",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "children_family",
+                "health",
+                "social_support",
+                "disability",
+                "education_youth",
+                "women_girls",
+                "food_humanitarian",
+                "emergency",
+                "faith_zakat",
+                "development"
+              ]
+            }
+          },
+          {
+            "name": "q",
+            "required": false,
+            "in": "query",
+            "description": "Case-insensitive name search",
+            "schema": {
+              "maxLength": 100,
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OrganizationDetailDto"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "programs"
+        ]
+      }
+    },
+    "/api/v1/organizations/{slug}": {
+      "get": {
+        "operationId": "ProgramsController_organization",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationDetailDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "programs"
+        ]
+      }
+    },
+    "/api/v1/matches": {
+      "post": {
+        "operationId": "MatchingController_match",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatchRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MatchResultDto"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "matching"
+        ]
+      }
+    },
+    "/api/v1/assistant/info": {
+      "get": {
+        "operationId": "AssistantController_info",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssistantInfoDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "assistant"
+        ]
+      }
+    },
+    "/api/v1/assistant/turn": {
+      "post": {
+        "operationId": "AssistantController_turn",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssistantTurnRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssistantTurnResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "assistant"
+        ]
+      }
+    },
+    "/api/v1/demo/persona": {
+      "get": {
+        "operationId": "DemoController_persona",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DemoPersonaDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "demo"
+        ]
+      }
+    },
+    "/api/v1/org/programs": {
+      "get": {
+        "operationId": "OrgController_drafts",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProgramDetailDto"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "org"
+        ]
+      },
+      "post": {
+        "operationId": "OrgController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProgramDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProgramDetailDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "org"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Hamroh API",
+    "description": "Verified support programs, eligibility matching and the scripted assistant.",
+    "version": "0.1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "schemas": {
+      "HealthDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "ok"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "LocalizedTextDto": {
+        "type": "object",
+        "properties": {
+          "uz": {
+            "type": "string"
+          },
+          "ru": {
+            "type": "string"
+          },
+          "en": {
+            "type": "string"
+          }
+        }
+      },
+      "OrganizationRefDto": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "verification": {
+            "type": "string",
+            "enum": [
+              "VERIFIED",
+              "UNVERIFIED"
+            ]
+          }
+        },
+        "required": [
+          "slug",
+          "name",
+          "verification"
+        ]
+      },
+      "ProgramSummaryDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "$ref": "#/components/schemas/LocalizedTextDto"
+          },
+          "summary": {
+            "$ref": "#/components/schemas/LocalizedTextDto"
+          },
+          "supportTypes": {
+            "description": "Support type vocabulary values",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "genders": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "requiredDocuments": {
+            "description": "Document vocabulary values",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "applicationStatus": {
+            "type": "string",
+            "enum": [
+              "OPEN",
+              "CLOSED",
+              "UNKNOWN"
+            ]
+          },
+          "deadline": {
+            "type": "string",
+            "nullable": true,
+            "format": "date-time"
+          },
+          "statusVerifiedAt": {
+            "type": "string",
+            "nullable": true,
+            "format": "date-time"
+          },
+          "isDraft": {
+            "type": "boolean"
+          },
+          "origin": {
+            "type": "string",
+            "enum": [
+              "SAMPLE",
+              "RESEARCHED"
+            ],
+            "description": "SAMPLE = invented prototype data; RESEARCHED = collected from a public source"
+          },
+          "sourceUrl": {
+            "type": "string",
+            "nullable": true,
+            "description": "Page the program information was collected from"
+          },
+          "regions": {
+            "description": "Region vocabulary values; empty means nationwide",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "targetCircumstances": {
+            "description": "Circumstance vocabulary values the program is designed for",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "organization": {
+            "$ref": "#/components/schemas/OrganizationRefDto"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "summary",
+          "supportTypes",
+          "genders",
+          "requiredDocuments",
+          "applicationStatus",
+          "deadline",
+          "statusVerifiedAt",
+          "isDraft",
+          "origin",
+          "sourceUrl",
+          "regions",
+          "targetCircumstances",
+          "organization"
+        ]
+      },
+      "ProgramDetailDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "$ref": "#/components/schemas/LocalizedTextDto"
+          },
+          "summary": {
+            "$ref": "#/components/schemas/LocalizedTextDto"
+          },
+          "supportTypes": {
+            "description": "Support type vocabulary values",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "genders": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "requiredDocuments": {
+            "description": "Document vocabulary values",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "applicationStatus": {
+            "type": "string",
+            "enum": [
+              "OPEN",
+              "CLOSED",
+              "UNKNOWN"
+            ]
+          },
+          "deadline": {
+            "type": "string",
+            "nullable": true,
+            "format": "date-time"
+          },
+          "statusVerifiedAt": {
+            "type": "string",
+            "nullable": true,
+            "format": "date-time"
+          },
+          "isDraft": {
+            "type": "boolean"
+          },
+          "origin": {
+            "type": "string",
+            "enum": [
+              "SAMPLE",
+              "RESEARCHED"
+            ],
+            "description": "SAMPLE = invented prototype data; RESEARCHED = collected from a public source"
+          },
+          "sourceUrl": {
+            "type": "string",
+            "nullable": true,
+            "description": "Page the program information was collected from"
+          },
+          "regions": {
+            "description": "Region vocabulary values; empty means nationwide",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "targetCircumstances": {
+            "description": "Circumstance vocabulary values the program is designed for",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "organization": {
+            "$ref": "#/components/schemas/OrganizationRefDto"
+          },
+          "howToApply": {
+            "nullable": true,
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LocalizedTextDto"
+              }
+            ]
+          },
+          "ageMin": {
+            "type": "number",
+            "nullable": true
+          },
+          "ageMax": {
+            "type": "number",
+            "nullable": true
+          },
+          "requiredCircumstances": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "incomeTested": {
+            "type": "boolean"
+          },
+          "source": {
+            "type": "string",
+            "description": "Where the information came from"
+          },
+          "researchedAt": {
+            "type": "string",
+            "nullable": true,
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "summary",
+          "supportTypes",
+          "genders",
+          "requiredDocuments",
+          "applicationStatus",
+          "deadline",
+          "statusVerifiedAt",
+          "isDraft",
+          "origin",
+          "sourceUrl",
+          "regions",
+          "targetCircumstances",
+          "organization",
+          "ageMin",
+          "ageMax",
+          "requiredCircumstances",
+          "incomeTested",
+          "source",
+          "researchedAt"
+        ]
+      },
+      "OrganizationDetailDto": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "verification": {
+            "type": "string",
+            "enum": [
+              "VERIFIED",
+              "UNVERIFIED"
+            ]
+          },
+          "description": {
+            "$ref": "#/components/schemas/LocalizedTextDto"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sections": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "children_family",
+                "health",
+                "social_support",
+                "disability",
+                "education_youth",
+                "women_girls",
+                "food_humanitarian",
+                "emergency",
+                "faith_zakat",
+                "development"
+              ]
+            }
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "NGO",
+              "INTERNATIONAL",
+              "GOVERNMENT"
+            ]
+          },
+          "website": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "source": {
+            "type": "string"
+          },
+          "sourceUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "researchedAt": {
+            "type": "string",
+            "nullable": true,
+            "format": "date-time",
+            "description": "When information was collected from sourceUrl"
+          },
+          "lastVerifiedAt": {
+            "type": "string",
+            "nullable": true,
+            "format": "date-time"
+          },
+          "programs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProgramSummaryDto"
+            }
+          }
+        },
+        "required": [
+          "slug",
+          "name",
+          "verification",
+          "description",
+          "categories",
+          "sections",
+          "kind",
+          "website",
+          "phone",
+          "email",
+          "source",
+          "sourceUrl",
+          "researchedAt",
+          "lastVerifiedAt",
+          "programs"
+        ]
+      },
+      "SupportProfileDto": {
+        "type": "object",
+        "properties": {
+          "needs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "financial",
+                "education",
+                "food",
+                "health",
+                "maternity",
+                "children_family",
+                "employment",
+                "business",
+                "housing",
+                "legal",
+                "safety",
+                "disability",
+                "mental_wellbeing",
+                "emergency"
+              ]
+            }
+          },
+          "region": {
+            "type": "string",
+            "enum": [
+              "tashkent_city",
+              "tashkent_region",
+              "andijan",
+              "bukhara",
+              "fergana",
+              "jizzakh",
+              "kashkadarya",
+              "khorezm",
+              "namangan",
+              "navoi",
+              "samarkand",
+              "surkhandarya",
+              "syrdarya",
+              "karakalpakstan"
+            ]
+          },
+          "ageMin": {
+            "type": "number"
+          },
+          "ageMax": {
+            "type": "number"
+          },
+          "gender": {
+            "type": "string",
+            "enum": [
+              "female",
+              "male"
+            ]
+          },
+          "childrenCount": {
+            "type": "number"
+          },
+          "circumstances": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "student",
+                "employed",
+                "unemployed",
+                "single_parent",
+                "has_children",
+                "pregnant",
+                "disability",
+                "low_income",
+                "entrepreneur",
+                "survivor",
+                "care_leaver"
+              ]
+            }
+          },
+          "notCircumstances": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "student",
+                "employed",
+                "unemployed",
+                "single_parent",
+                "has_children",
+                "pregnant",
+                "disability",
+                "low_income",
+                "entrepreneur",
+                "survivor",
+                "care_leaver"
+              ]
+            }
+          }
+        },
+        "required": [
+          "needs",
+          "circumstances",
+          "notCircumstances"
+        ]
+      },
+      "MatchFiltersDto": {
+        "type": "object",
+        "properties": {
+          "onlyOpen": {
+            "type": "boolean"
+          },
+          "womenOnly": {
+            "type": "boolean"
+          }
+        }
+      },
+      "MatchRequestDto": {
+        "type": "object",
+        "properties": {
+          "profile": {
+            "$ref": "#/components/schemas/SupportProfileDto"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/MatchFiltersDto"
+          }
+        },
+        "required": [
+          "profile"
+        ]
+      },
+      "MatchReasonDto": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "yes",
+              "unknown",
+              "risk"
+            ]
+          },
+          "key": {
+            "type": "string",
+            "description": "i18n key under \"reasons.\" in the web app"
+          },
+          "params": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "kind",
+          "key"
+        ]
+      },
+      "MatchResultDto": {
+        "type": "object",
+        "properties": {
+          "program": {
+            "$ref": "#/components/schemas/ProgramSummaryDto"
+          },
+          "fit": {
+            "type": "string",
+            "enum": [
+              "strong",
+              "possible",
+              "needs_info"
+            ]
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MatchReasonDto"
+            }
+          }
+        },
+        "required": [
+          "program",
+          "fit",
+          "reasons"
+        ]
+      },
+      "AssistantInfoDto": {
+        "type": "object",
+        "properties": {
+          "aiAvailable": {
+            "type": "boolean",
+            "description": "Whether the AI-assisted (Gemini) mode is configured on this server"
+          }
+        },
+        "required": [
+          "aiAvailable"
+        ]
+      },
+      "HistoryItemDto": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "user",
+              "model"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 4000
+          }
+        },
+        "required": [
+          "role",
+          "text"
+        ]
+      },
+      "AssistantStateDto": {
+        "type": "object",
+        "properties": {
+          "profile": {
+            "$ref": "#/components/schemas/SupportProfileDto"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "chat",
+              "results",
+              "safety"
+            ]
+          },
+          "asked": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "need",
+                "region",
+                "age",
+                "situation"
+              ]
+            }
+          },
+          "retried": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "need",
+                "region",
+                "age",
+                "situation"
+              ]
+            }
+          },
+          "pendingSlot": {
+            "type": "string",
+            "enum": [
+              "need",
+              "region",
+              "age",
+              "situation"
+            ]
+          },
+          "filters": {
+            "$ref": "#/components/schemas/MatchFiltersDto"
+          },
+          "lastResultIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "turn": {
+            "type": "number"
+          },
+          "history": {
+            "description": "Recent turns, for the LLM engine",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HistoryItemDto"
+            }
+          }
+        },
+        "required": [
+          "profile",
+          "mode",
+          "asked",
+          "retried",
+          "filters",
+          "lastResultIds",
+          "turn"
+        ]
+      },
+      "AssistantChoiceDto": {
+        "type": "object",
+        "properties": {
+          "slot": {
+            "type": "string",
+            "enum": [
+              "need",
+              "region",
+              "age",
+              "situation",
+              "safety",
+              "next"
+            ]
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "slot",
+          "values"
+        ]
+      },
+      "AssistantTurnRequestDto": {
+        "type": "object",
+        "properties": {
+          "state": {
+            "description": "Omit to start a new conversation",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AssistantStateDto"
+              }
+            ]
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "uz",
+              "ru",
+              "en"
+            ],
+            "description": "Language the assistant should answer in"
+          },
+          "choice": {
+            "$ref": "#/components/schemas/AssistantChoiceDto"
+          },
+          "assistantMode": {
+            "type": "string",
+            "enum": [
+              "ai",
+              "private"
+            ],
+            "description": "\"private\" never sends the turn to a language model (scripted engine only). Defaults to \"ai\"."
+          }
+        }
+      },
+      "AssistantMessageDto": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "i18n key under \"assistant.\" in the web app (\"llm\" when `text` is set)"
+          },
+          "text": {
+            "type": "string",
+            "description": "Free text from the Gemini engine, already in the requested language"
+          },
+          "params": {
+            "type": "object",
+            "additionalProperties": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          },
+          "list": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "listKind": {
+            "type": "string",
+            "enum": [
+              "need",
+              "document",
+              "circumstance"
+            ]
+          },
+          "programId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "key"
+        ]
+      },
+      "QuickReplyOptionDto": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          },
+          "labelKey": {
+            "type": "string",
+            "description": "i18n key under \"assistant.\" in the web app"
+          },
+          "href": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "value",
+          "labelKey"
+        ]
+      },
+      "QuickRepliesDto": {
+        "type": "object",
+        "properties": {
+          "slot": {
+            "type": "string",
+            "enum": [
+              "need",
+              "region",
+              "age",
+              "situation",
+              "safety",
+              "next"
+            ]
+          },
+          "multi": {
+            "type": "boolean"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QuickReplyOptionDto"
+            }
+          }
+        },
+        "required": [
+          "slot",
+          "multi",
+          "options"
+        ]
+      },
+      "AssistantTurnResponseDto": {
+        "type": "object",
+        "properties": {
+          "state": {
+            "$ref": "#/components/schemas/AssistantStateDto"
+          },
+          "engine": {
+            "type": "string",
+            "enum": [
+              "gemini",
+              "scripted"
+            ],
+            "description": "Which assistant engine produced this turn"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AssistantMessageDto"
+            }
+          },
+          "quickReplies": {
+            "$ref": "#/components/schemas/QuickRepliesDto"
+          },
+          "results": {
+            "description": "Present when the assistant shows results",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MatchResultDto"
+            }
+          }
+        },
+        "required": [
+          "state",
+          "engine",
+          "messages"
+        ]
+      },
+      "DemoDocumentDto": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Document vocabulary value"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ready",
+              "missing"
+            ]
+          }
+        },
+        "required": [
+          "type",
+          "status"
+        ]
+      },
+      "DemoApplicationDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "program": {
+            "$ref": "#/components/schemas/ProgramSummaryDto"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "not_started",
+              "in_progress",
+              "submitted"
+            ]
+          },
+          "progress": {
+            "type": "number",
+            "description": "Percent of application steps done (requirements, documents, statement)"
+          },
+          "readyDocuments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "missingDocuments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "program",
+          "status",
+          "progress",
+          "readyDocuments",
+          "missingDocuments"
+        ]
+      },
+      "DemoPersonaDto": {
+        "type": "object",
+        "properties": {
+          "isDemo": {
+            "type": "boolean",
+            "description": "Always true — this is fixed demonstration data, not a real account"
+          },
+          "name": {
+            "type": "string"
+          },
+          "profile": {
+            "$ref": "#/components/schemas/SupportProfileDto"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DemoDocumentDto"
+            }
+          },
+          "applications": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DemoApplicationDto"
+            }
+          },
+          "recommendations": {
+            "description": "Matches for the persona not already applied to",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MatchResultDto"
+            }
+          }
+        },
+        "required": [
+          "isDemo",
+          "name",
+          "profile",
+          "documents",
+          "applications",
+          "recommendations"
+        ]
+      },
+      "CreateProgramDto": {
+        "type": "object",
+        "properties": {
+          "orgSlug": {
+            "type": "string"
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "uz",
+              "ru",
+              "en"
+            ],
+            "description": "Language the title and description are written in"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "summary": {
+            "type": "string",
+            "maxLength": 1000
+          },
+          "supportTypes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "financial",
+                "education",
+                "food",
+                "health",
+                "maternity",
+                "children_family",
+                "employment",
+                "business",
+                "housing",
+                "legal",
+                "safety",
+                "disability",
+                "mental_wellbeing",
+                "emergency"
+              ]
+            }
+          },
+          "genders": {
+            "type": "array",
+            "description": "Empty = anyone",
+            "items": {
+              "type": "string",
+              "enum": [
+                "female",
+                "male"
+              ]
+            }
+          },
+          "ageMin": {
+            "type": "number"
+          },
+          "ageMax": {
+            "type": "number"
+          },
+          "regions": {
+            "type": "array",
+            "description": "Empty = nationwide",
+            "items": {
+              "type": "string",
+              "enum": [
+                "tashkent_city",
+                "tashkent_region",
+                "andijan",
+                "bukhara",
+                "fergana",
+                "jizzakh",
+                "kashkadarya",
+                "khorezm",
+                "namangan",
+                "navoi",
+                "samarkand",
+                "surkhandarya",
+                "syrdarya",
+                "karakalpakstan"
+              ]
+            }
+          },
+          "requiredDocuments": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "id_document",
+                "income_certificate",
+                "enrollment_certificate",
+                "birth_certificate",
+                "medical_report",
+                "disability_certificate",
+                "residence_certificate",
+                "business_plan",
+                "family_composition"
+              ]
+            }
+          },
+          "applicationStatus": {
+            "type": "string",
+            "enum": [
+              "OPEN",
+              "CLOSED",
+              "UNKNOWN"
+            ]
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "required": [
+          "orgSlug",
+          "locale",
+          "title",
+          "summary",
+          "supportTypes",
+          "genders",
+          "regions",
+          "requiredDocuments",
+          "applicationStatus"
+        ]
+      }
+    }
+  }
+}

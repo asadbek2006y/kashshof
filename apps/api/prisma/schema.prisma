@@ -1,0 +1,129 @@
+// Hamroh data model.
+//
+// The database decides what exists; the matching engine (src/matching) decides potential fit;
+// the assistant only explains. Vocabulary values stored in the String[] columns below
+// (support types, regions, circumstances, documents) are the closed sets in
+// src/domain/vocabulary.ts — the web app translates them, the database never stores copy for them.
+
+generator client {
+  provider            = "prisma-client"
+  output              = "../src/generated/prisma"
+  // CommonJS with extensionless relative imports, so the same generated sources run under tsc
+  // output, Jest and the SWC require hook used by `pnpm dev`.
+  moduleFormat        = "cjs"
+  importFileExtension = ""
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum VerificationStatus {
+  VERIFIED
+  UNVERIFIED
+}
+
+// What kind of body an organization is. PARTNER (funders, development banks, umbrella bodies)
+// and GROUPING (generic entries like "zakat funds") don't help individuals directly, so they are
+// kept for reference but never shown to people looking for support.
+enum OrganizationKind {
+  NGO
+  INTERNATIONAL
+  GOVERNMENT
+  PARTNER
+  GROUPING
+}
+
+// Where a program's information came from. SAMPLE programs were invented for the prototype;
+// RESEARCHED ones were collected from public sources (official sites, gov portals) and carry a
+// sourceUrl, but have not yet been reviewed by a person.
+enum ProgramOrigin {
+  SAMPLE
+  RESEARCHED
+}
+
+enum ApplicationStatus {
+  OPEN
+  CLOSED
+  UNKNOWN
+}
+
+model Organization {
+  // Human-readable slug doubles as the id so URLs stay stable (/organizations/zamin).
+  slug        String @id
+  name        String
+  // { uz, ru, en } — see LocalizedText in src/domain/localized.ts.
+  description Json
+
+  categories String[]
+  // Directory sections from the source organization list (see prisma/directory-data.ts).
+  sections   String[]         @default([])
+  kind       OrganizationKind @default(NGO)
+  // Research couldn't confirm the organization exists or still operates: kept for reference,
+  // never shown to people. reviewNote says why.
+  hidden     Boolean          @default(false)
+  reviewNote String?
+
+  // Nullable on purpose: seed data never invents contact details. The UI shows "not yet
+  // collected" rather than a plausible-looking fake number.
+  website String?
+  phone   String?
+  email   String?
+
+  verification   VerificationStatus @default(UNVERIFIED)
+  // Where the record's information came from, shown in the trust block.
+  source         String
+  // Page the information was collected from, and when (research, not human verification).
+  sourceUrl      String?
+  researchedAt   DateTime?
+  lastVerifiedAt DateTime?
+
+  programs Program[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Program {
+  id      String       @id
+  orgSlug String
+  org     Organization @relation(fields: [orgSlug], references: [slug], onDelete: Cascade)
+
+  title       Json
+  summary     Json
+  // What the person should do next, in plain language.
+  howToApply  Json?
+
+  supportTypes String[]
+
+  // Eligibility. Empty arrays mean "no restriction" (any gender / nationwide / anyone).
+  genders               String[]
+  ageMin                Int?
+  ageMax                Int?
+  regions               String[]
+  // Groups the program is designed for — any one of them strengthens the match.
+  targetCircumstances   String[]
+  // Circumstances an applicant must have (e.g. enrolled student for a tuition grant).
+  requiredCircumstances String[]
+  // Income is checked by the organization; we can never confirm it, only flag it.
+  incomeTested          Boolean  @default(false)
+
+  requiredDocuments String[]
+
+  applicationStatus ApplicationStatus @default(UNKNOWN)
+  deadline          DateTime?
+  statusVerifiedAt  DateTime?
+
+  origin    ProgramOrigin @default(SAMPLE)
+  sourceUrl String?
+
+  // Programs submitted through the organization dashboard stay drafts until reviewed and are
+  // never returned by public listing or matching.
+  isDraft Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([orgSlug])
+  @@index([isDraft])
+}
