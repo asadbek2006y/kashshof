@@ -1,0 +1,35 @@
+# Render Blueprint: the Kashshof API and its PostgreSQL database (the website runs on Vercel).
+# Deploy: https://render.com/deploy?repo=https://github.com/asadbek2006y/kashshof
+databases:
+  - name: kashshof-db
+    plan: free
+    region: frankfurt
+    databaseName: kashshof
+    user: kashshof
+
+services:
+  - type: web
+    name: kashshof-api
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter hamroh-api build
+    # Free instances have no pre-deploy step, so migrations and the (idempotent) demo seed run on
+    # start. NODE_ENV is deliberately not "production": the seed refuses to run there, and this
+    # deployment is a demo of the prototype's sourced data.
+    startCommand: pnpm --filter hamroh-api db:deploy && pnpm --filter hamroh-api db:seed && pnpm --filter hamroh-api start
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: NODE_VERSION
+        value: 24.20.0
+      - key: DATABASE_URL
+        fromDatabase:
+          name: kashshof-db
+          property: connectionString
+      - key: ASSISTANT_ENGINE
+        value: gemini
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash-lite,gemini-3.5-flash
+      # Entered in the Render dashboard, never committed. Leave empty to run without AI.
+      - key: GEMINI_API_KEY
+        sync: false
