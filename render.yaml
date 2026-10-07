@@ -13,7 +13,8 @@ services:
     runtime: node
     plan: free
     region: frankfurt
-    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter hamroh-api build
+    # Generate the Prisma client explicitly: with a warm install cache pnpm skips postinstall.
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter hamroh-api db:generate && pnpm --filter hamroh-api build
     # Free instances have no pre-deploy step, so migrations and the (idempotent) demo seed run on
     # start. Render sets NODE_ENV=production, where the seed refuses to run unless ALLOW_DEMO_SEED
     # is set — this deployment is a demo of the prototype's sourced data, so it opts in.
