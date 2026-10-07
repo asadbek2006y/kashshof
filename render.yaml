@@ -15,8 +15,8 @@ services:
     region: frankfurt
     buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter hamroh-api build
     # Free instances have no pre-deploy step, so migrations and the (idempotent) demo seed run on
-    # start. NODE_ENV is deliberately not "production": the seed refuses to run there, and this
-    # deployment is a demo of the prototype's sourced data.
+    # start. Render sets NODE_ENV=production, where the seed refuses to run unless ALLOW_DEMO_SEED
+    # is set — this deployment is a demo of the prototype's sourced data, so it opts in.
     startCommand: pnpm --filter hamroh-api db:deploy && pnpm --filter hamroh-api db:seed && pnpm --filter hamroh-api start
     healthCheckPath: /api/v1/health
     envVars:
@@ -26,6 +26,8 @@ services:
         fromDatabase:
           name: kashshof-db
           property: connectionString
+      - key: ALLOW_DEMO_SEED
+        value: "true"
       - key: ASSISTANT_ENGINE
         value: gemini
       - key: GEMINI_MODEL

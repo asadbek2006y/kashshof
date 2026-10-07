@@ -13,8 +13,9 @@ const DAY_MS = 24 * 60 * 60 * 1000;
  * re-running refreshes the relative dates and leaves organization-dashboard drafts alone.
  */
 async function main(): Promise<void> {
-  if (process.env.NODE_ENV === 'production') {
-    throw new Error('Refusing to run the prototype seed against production.');
+  // A hosted demo of the prototype may opt in explicitly; a real production database never should.
+  if (process.env.NODE_ENV === 'production' && process.env.ALLOW_DEMO_SEED !== 'true') {
+    throw new Error('Refusing to run the prototype seed against production (set ALLOW_DEMO_SEED=true for a demo deployment).');
   }
 
   const prisma = new PrismaClient({ adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL }) });
