@@ -27,6 +27,9 @@ services:
         fromDatabase:
           name: kashshof-db
           property: connectionString
+      # Where the bare API address redirects to.
+      - key: APP_ORIGIN
+        value: https://kashshof.vercel.app
       - key: ALLOW_DEMO_SEED
         value: "true"
       - key: ASSISTANT_ENGINE

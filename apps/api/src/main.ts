@@ -11,6 +11,12 @@ async function bootstrap(): Promise<void> {
   // Explicit DTOs, not raw bodies: reject unknown fields and coerce to the declared types.
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true, transform: true }));
 
+  // The API has no pages of its own: someone opening its bare address is sent to the website.
+  const appOrigin = process.env.APP_ORIGIN ?? 'http://localhost:3100';
+  app.getHttpAdapter().get('/', (_request: unknown, response: { redirect: (status: number, url: string) => void }) =>
+    response.redirect(302, appOrigin),
+  );
+
   // The web app proxies /api/v1/* same-origin (apps/web/src/proxy.ts), so no CORS is enabled.
   const port = process.env.PORT ?? 4100;
   await app.listen(port);
