@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation';
 export function Footer() {
   const t = useTranslations('footer');
   const links = [
+    { href: '/about', label: t('about') },
     { href: '/how-it-works', label: t('howItWorks') },
     { href: '/explore', label: t('browse') },
     { href: '/safety', label: t('urgentHelp') },
@@ -16,7 +17,6 @@ export function Footer() {
       <div className="page grid gap-6 py-8 sm:grid-cols-[1fr_auto] sm:items-start">
         <div className="max-w-[36rem]">
           <p className="text-[15px] font-semibold text-ink">{t('tagline')}</p>
-          <p className="meta mt-1">{t('prototype')}</p>
           <p className="meta mt-1">{t('notOfficial')}</p>
         </div>
         <nav aria-label={t('label')}>

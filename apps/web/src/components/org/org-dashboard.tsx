@@ -43,7 +43,7 @@ export function OrgDashboard({ createdId }: { createdId?: string }) {
         </Link>
       </header>
 
-      <div className="-mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
+      <div className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
         <div role="tablist" aria-label={t('title')} className="flex gap-6 border-b border-line">
           {TABS.map(({ key }) => (
             <button key={key} role="tab" type="button" aria-selected={tab === key} onClick={() => setTab(key)} className="tab">

@@ -27,6 +27,7 @@ export function toProgramSummary(program: ProgramWithOrg): ProgramSummaryDto {
       slug: program.org.slug,
       name: program.org.name,
       verification: program.org.verification,
+      lastVerifiedAt: iso(program.org.lastVerifiedAt),
     },
   };
 }
@@ -60,10 +61,13 @@ export function toOrganizationDetail(
     website: org.website,
     phone: org.phone,
     email: org.email,
+    address: org.address,
     source: org.source,
     sourceUrl: org.sourceUrl,
+    sourceName: org.sourceName,
     researchedAt: iso(org.researchedAt),
     lastVerifiedAt: iso(org.lastVerifiedAt),
+    verificationNote: org.verification === 'VERIFIED' ? org.verificationNote : null,
     programs: programs.map(toProgramSummary),
   };
 }

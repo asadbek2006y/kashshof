@@ -164,6 +164,38 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/reports": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["ReportsController_list"];
+        put?: never;
+        post: operations["ReportsController_create"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/reports/{id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch: operations["ReportsController_review"];
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -180,8 +212,16 @@ export interface components {
         OrganizationRefDto: {
             slug: string;
             name: string;
-            /** @enum {string} */
-            verification: "VERIFIED" | "UNVERIFIED";
+            /**
+             * @description VERIFIED = a person confirmed it against the source; PENDING = collected from a public source, awaiting review; UNVERIFIED = no source on record
+             * @enum {string}
+             */
+            verification: "VERIFIED" | "PENDING" | "UNVERIFIED";
+            /**
+             * Format: date-time
+             * @description When a person last confirmed the details (VERIFIED only)
+             */
+            lastVerifiedAt: string | null;
         };
         ProgramSummaryDto: {
             id: string;
@@ -253,8 +293,16 @@ export interface components {
         OrganizationDetailDto: {
             slug: string;
             name: string;
-            /** @enum {string} */
-            verification: "VERIFIED" | "UNVERIFIED";
+            /**
+             * @description VERIFIED = a person confirmed it against the source; PENDING = collected from a public source, awaiting review; UNVERIFIED = no source on record
+             * @enum {string}
+             */
+            verification: "VERIFIED" | "PENDING" | "UNVERIFIED";
+            /**
+             * Format: date-time
+             * @description When a person last confirmed the details (VERIFIED only)
+             */
+            lastVerifiedAt: string | null;
             description: components["schemas"]["LocalizedTextDto"];
             categories: string[];
             sections: ("children_family" | "health" | "social_support" | "disability" | "education_youth" | "women_girls" | "food_humanitarian" | "emergency" | "faith_zakat" | "development")[];
@@ -263,15 +311,18 @@ export interface components {
             website: string | null;
             phone: string | null;
             email: string | null;
+            address: string | null;
             source: string;
             sourceUrl: string | null;
+            /** @description Name of the source site, e.g. "gov.uz" */
+            sourceName: string | null;
             /**
              * Format: date-time
              * @description When information was collected from sourceUrl
              */
             researchedAt: string | null;
-            /** Format: date-time */
-            lastVerifiedAt: string | null;
+            /** @description What a person checked to verify the record (VERIFIED only) */
+            verificationNote: string | null;
             programs: components["schemas"]["ProgramSummaryDto"][];
         };
         SupportProfileDto: {
@@ -438,6 +489,41 @@ export interface components {
             /** Format: date */
             deadline?: string;
         };
+        CreateReportDto: {
+            /** @description Organization the report is about */
+            orgSlug: string;
+            /** @description Program, when reported from a program page */
+            programId?: string;
+            /** @enum {string} */
+            reason: "INCORRECT_DETAILS" | "BROKEN_CONTACT" | "OUTDATED" | "NOT_OPERATING" | "OTHER";
+            /** @description What is wrong, in the reporter’s words */
+            details?: string;
+        };
+        ReportReceiptDto: {
+            id: string;
+            /** @enum {string} */
+            status: "NEW" | "ACCEPTED" | "REJECTED";
+        };
+        ReportDto: {
+            id: string;
+            /** @enum {string} */
+            status: "NEW" | "ACCEPTED" | "REJECTED";
+            orgSlug: string;
+            orgName: string;
+            programId: string | null;
+            /** @enum {string} */
+            reason: "INCORRECT_DETAILS" | "BROKEN_CONTACT" | "OUTDATED" | "NOT_OPERATING" | "OTHER";
+            details: string | null;
+            /** Format: date-time */
+            createdAt: string;
+        };
+        UpdateReportDto: {
+            /**
+             * @description Accepting a report does not change the data — a person still edits the record
+             * @enum {string}
+             */
+            status: "ACCEPTED" | "REJECTED";
+        };
     };
     responses: never;
     parameters: never;
@@ -523,8 +609,14 @@ export interface operations {
         parameters: {
             query?: {
                 section?: "children_family" | "health" | "social_support" | "disability" | "education_youth" | "women_girls" | "food_humanitarian" | "emergency" | "faith_zakat" | "development";
-                /** @description Case-insensitive name search */
+                /** @description Search names and descriptions; ignores case, apostrophe variants and Cyrillic/Latin script */
                 q?: string;
+                status?: "VERIFIED" | "PENDING" | "UNVERIFIED";
+                kind?: "NGO" | "INTERNATIONAL" | "GOVERNMENT";
+                /** @description Type of assistance */
+                supportType?: "financial" | "education" | "food" | "health" | "maternity" | "children_family" | "employment" | "business" | "housing" | "legal" | "safety" | "disability" | "mental_wellbeing" | "emergency";
+                /** @description Organizations with a program in this region or nationwide; organizations whose area is unknown are left out */
+                region?: "tashkent_city" | "tashkent_region" | "andijan" | "bukhara" | "fergana" | "jizzakh" | "kashkadarya" | "khorezm" | "namangan" | "navoi" | "samarkand" | "surkhandarya" | "syrdarya" | "karakalpakstan";
             };
             header?: never;
             path?: never;
@@ -691,6 +783,91 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["ProgramDetailDto"];
+                };
+            };
+        };
+    };
+    ReportsController_list: {
+        parameters: {
+            query?: {
+                status?: "NEW" | "ACCEPTED" | "REJECTED";
+            };
+            header: {
+                "x-review-token": string;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ReportDto"][];
+                };
+            };
+        };
+    };
+    ReportsController_create: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["CreateReportDto"];
+            };
+        };
+        responses: {
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ReportReceiptDto"];
+                };
+            };
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            429: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    ReportsController_review: {
+        parameters: {
+            query?: never;
+            header: {
+                "x-review-token": string;
+            };
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["UpdateReportDto"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ReportReceiptDto"];
                 };
             };
         };

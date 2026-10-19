@@ -172,7 +172,13 @@ export default async function ProgramPage({ params }: { params: Promise<{ locale
             </ProgramSection>
 
             <ProgramSection id="status" title={t('dataStatus')}>
-              <DataStatus status={status} researchedAt={program.origin === 'RESEARCHED' ? program.researchedAt : null} hasSource={Boolean(program.sourceUrl)} />
+              <DataStatus
+                status={status}
+                researchedAt={program.origin === 'RESEARCHED' ? program.researchedAt : null}
+                hasSource={Boolean(program.sourceUrl)}
+                orgSlug={program.organization.slug}
+                programId={program.id}
+              />
             </ProgramSection>
           </div>
         </article>

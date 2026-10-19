@@ -34,14 +34,14 @@
   "footer": {
     "label": "More",
     "tagline": "Kashshof — support for women and families in Uzbekistan",
-    "prototype": "A university capstone prototype. Program information comes from public sources and hasn’t been reviewed by a person yet.",
     "notOfficial": "Kashshof is not a government service and doesn’t make eligibility decisions.",
     "howItWorks": "How it works",
     "browse": "Browse programs",
     "urgentHelp": "Urgent help",
     "forOrganizations": "For organizations",
     "demoAccount": "Demo account",
-    "credits": "Photo credits"
+    "credits": "Photo credits",
+    "about": "About Kashshof"
   },
   "home": {
     "title": "You don’t have to figure out where to start alone.",
@@ -64,7 +64,7 @@
         "body": "Each program links to the public page its information came from."
       }
     },
-    "facts": "{programs, plural, one {# program} other {# programs}} from {organizations, plural, one {# organization} other {# organizations}}, collected from public sources and not yet reviewed by a person.",
+    "facts": "{programs, plural, one {# program} other {# programs}} from {organizations, plural, one {# organization} other {# organizations}}, each linked to the public source it came from. Every page shows how far its information has been checked.",
     "aiOn": "Optional AI assistance (Google Gemini) is available — you choose before you start.",
     "aiOff": "AI assistance is switched off; Kashshof uses guided questions.",
     "programsTitle": "Support programs",
@@ -319,16 +319,16 @@
   },
   "review": {
     "label": {
-      "source_collected": "Source collected — not yet manually verified",
-      "source_unavailable": "Source currently unavailable",
-      "manually_reviewed": "Manually reviewed against the source",
+      "source_collected": "Information being checked",
+      "source_unavailable": "Source not available yet",
+      "manually_reviewed": "Verified",
       "needs_rereview": "Needs re-review",
       "sample": "Sample data — not real program information"
     },
     "body": {
-      "source_collected": "This information was copied from a public page, linked here. A person hasn’t checked it yet, so details may have changed.",
+      "source_collected": "Collected from the public page linked here and waiting for a person to review it. Details may have changed since.",
       "source_unavailable": "We don’t have a source page for this program, so we can’t show where the information came from. Confirm everything with the organization.",
-      "manually_reviewed": "A person compared this information with the official source. It still isn’t an eligibility decision.",
+      "manually_reviewed": "A person confirmed the organization’s information against an official source. It still isn’t a decision about your eligibility.",
       "needs_rereview": "A person reviewed this information, but some time ago. It may be out of date.",
       "sample": "This program was invented for the prototype. Don’t rely on it."
     }
@@ -375,10 +375,10 @@
     "applications": "Applications",
     "OPEN": "Applications open",
     "CLOSED": "Applications closed",
-    "UNKNOWN": "Application status unknown",
+    "UNKNOWN": "Intake status not confirmed",
     "deadline": "Deadline",
     "lastChecked": "Status checked",
-    "notRecentlyVerified": "Not recently checked — confirm on the official page before applying",
+    "notRecentlyVerified": "Check with the organization before applying",
     "daysAgo": "{count, plural, =0 {today} one {# day ago} other {# days ago}}",
     "checkedOn": "Checked {date}"
   },
@@ -399,7 +399,10 @@
     "clearTitle": "Clear all saved programs?",
     "clearBody": "They will be removed from this browser.",
     "clearConfirm": "Clear all",
-    "clearedToast": "Saved programs cleared"
+    "clearedToast": "Saved programs cleared",
+    "cannot": {
+      "verify": "Guarantee information is current — check each page’s status and confirm with the organization."
+    }
   },
   "explore": {
     "title": "Browse support programs",
@@ -428,9 +431,9 @@
       "show": "{count, plural, =0 {No programs to show} one {Show # program} other {Show # programs}}"
     },
     "reviewOption": {
-      "source_collected": "Source collected, not yet reviewed",
-      "source_unavailable": "Source unavailable",
-      "manually_reviewed": "Manually reviewed",
+      "source_collected": "Information being checked",
+      "source_unavailable": "Source not available yet",
+      "manually_reviewed": "Verified",
       "needs_rereview": "Needs re-review",
       "sample": "Sample data"
     }
@@ -652,41 +655,51 @@
     "noDescription": "We haven't collected a description for this organization yet.",
     "noPrograms": "We haven't collected this organization's programs yet. Check with the organization directly.",
     "breadcrumb": "Breadcrumb",
-    "officialWebsite": "Official website",
-    "checkEligibility": "Check my eligibility"
+    "officialWebsite": "Go to official website",
+    "opensNewTab": "(opens in a new tab)",
+    "contact": "Contact",
+    "incompleteTitle": "Some information may be incomplete",
+    "incompleteBody": "This page shows only what we could find in sources. Confirm services, conditions and contact details with the organization itself before you rely on them.",
+    "services": "Services",
+    "noServices": "We haven’t collected which services it offers yet.",
+    "nationwide": "Anywhere in Uzbekistan",
+    "areaUnknown": "Area not known yet",
+    "whoCanApply": "Who can apply",
+    "groupsLead": "Its programs are mainly for:",
+    "groupsOpen": "Its collected programs aren’t limited to particular groups. See each program for conditions.",
+    "eligibilityUnknown": "We don’t know the requirements yet. Ask the organization.",
+    "eligibilityNote": "Only the organization decides who can get help.",
+    "documents": "Documents",
+    "documentsUnknown": "No document list collected. Ask the organization what to bring."
   },
   "trust": {
     "title": "About this information",
-    "verified": "Verified organization",
-    "unverified": "Not yet verified",
-    "source": "Information source",
+    "source": "Source",
     "lastChecked": "Last checked",
-    "never": "Never",
-    "checkOfficial": "Always confirm details with the organization before applying.",
-    "report": "Report incorrect information",
-    "reportPrototype": "Thank you. In this prototype, reports aren't sent anywhere yet.",
     "sampleSource": "Prototype sample data — not yet checked against official sources",
-    "listSource": "Kashshof organization list (September 2026) — name only, not yet checked",
-    "status": "Status",
-    "researchSource": "Collected from public sources — not yet reviewed by a person",
-    "collected": "Collected",
-    "reviewedByPerson": "Reviewed by a person"
+    "listSource": "Kashshof organization list (Sep 2026) — name only",
+    "researchSource": "Collected from a public source",
+    "collected": "Collected on",
+    "noSource": "Source not available yet",
+    "opensNewTab": "(opens in a new tab)",
+    "lastVerified": "Last verified",
+    "notYetVerified": "Not verified by a person yet",
+    "notEligibility": "This status is about the information, not about you: only the organization decides who can get help."
   },
   "contact": {
     "title": "Contact",
     "website": "Website",
     "phone": "Phone",
     "email": "Email",
-    "notCollected": "{what}: not collected yet",
-    "notCollectedShort": "Not collected yet"
+    "address": "Address",
+    "noneCollected": "No contact details collected yet. Look the organization up on official sources before you go.",
+    "confirm": "Call or write before visiting: hours and services can change."
   },
   "notices": {
     "prototypeTitle": "Prototype data",
     "prototypeBody": "The organization names are real, but these programs, rules, deadlines and statuses are samples made for this prototype. They have not been checked with the organizations.",
     "demoTitle": "Demo profile",
-    "demoBody": "This screen shows a sample person, \"Malika\", to demonstrate how accounts would work. No real personal data is used.",
-    "researchedTitle": "Collected from public sources",
-    "researchedBody": "This information comes from the organization's website or official portals, linked below. It hasn't been reviewed by a person yet, so confirm details with the organization before applying."
+    "demoBody": "This screen shows a sample person, \"Malika\", to demonstrate how accounts would work. No real personal data is used."
   },
   "applications": {
     "title": "Applications",
@@ -911,18 +924,36 @@
   },
   "directory": {
     "title": "Organizations",
-    "lead": "Charities, foundations and services in Uzbekistan that help women and families. Details are still being collected.",
+    "lead": "Charities, foundations and services in Uzbekistan that help women and families. Each one shows how far its information has been checked.",
     "searchLabel": "Search organizations",
-    "searchPlaceholder": "Search by name…",
+    "searchPlaceholder": "Search organizations",
     "search": "Search",
     "sections": "Sections",
     "all": "All",
     "count": "{count, plural, =0 {No organizations} one {# organization} other {# organizations}}",
     "programs": "{count, plural, one {# program} other {# programs}}",
     "noPrograms": "No programs collected yet",
-    "none": "No organizations match. Try another name or section.",
+    "none": "No organizations match these filters. Try fewer filters or another section.",
     "error": "We couldn't load organizations. Please try again.",
-    "sourceNote": "From a list of organizations working in Uzbekistan. Only names have been collected so far; none has been verified yet. Funders and development banks that don't help people directly aren't shown."
+    "sourceNote": "Based on the Kashshof team’s list of organizations in Uzbekistan, checked against public sources. Funders, development banks and organizations confirmed to have closed or to have no services in Uzbekistan aren’t shown.",
+    "moreFilters": "Filters",
+    "filterStatus": "Verification status",
+    "anyStatus": "Any status",
+    "filterKind": "Type of organization",
+    "anyKind": "Any type",
+    "filterNeed": "Type of help",
+    "anyNeed": "Any help",
+    "filterRegion": "Region",
+    "anyRegion": "Any region",
+    "apply": "Show results",
+    "clear": "Clear filters",
+    "regionNote": "Organizations whose area we don’t know yet aren’t shown with a region filter.",
+    "noneTitle": "Nothing found",
+    "noneQuery": "Nothing matches “{q}”. Check the spelling or try part of the name.",
+    "nationwide": "Anywhere in Uzbekistan",
+    "areaUnknown": "Area not known yet",
+    "noDescription": "No description collected yet.",
+    "opensNewTab": "(opens in a new tab)"
   },
   "orgKind": {
     "NGO": "Non-profit organization",
@@ -972,5 +1003,61 @@
       "dasturkhan": "Home page, “How Kashshof works”",
       "motherChild": "Home page, “Try a demo situation”"
     }
+  },
+  "verification": {
+    "label": {
+      "VERIFIED": "Verified",
+      "PENDING": "Information being checked",
+      "UNVERIFIED": "Unverified"
+    },
+    "body": {
+      "VERIFIED": "A person confirmed these details against an official source on the date shown.",
+      "PENDING": "Collected from a public source (linked on the organization’s page) and waiting for a person to review it. Details may have changed since.",
+      "UNVERIFIED": "We only have this organization’s name so far — no source yet. This doesn’t mean anything is wrong with the organization."
+    },
+    "verifiedOn": "Verified on {date}",
+    "collectedOn": "Source collected {date}",
+    "legendTitle": "What do the statuses mean?",
+    "notEligibility": "A status only says how far we have checked the information. It is not a decision about whether you can get help — only the organization can decide that."
+  },
+  "report": {
+    "open": "Report an error",
+    "title": "Report wrong information",
+    "lead": "A person will check your report before anything on the page changes.",
+    "reasonLabel": "What is wrong?",
+    "reason": {
+      "INCORRECT_DETAILS": "Organization details are incorrect",
+      "BROKEN_CONTACT": "Website or contact details don’t work",
+      "OUTDATED": "Information is out of date",
+      "NOT_OPERATING": "The organization no longer operates",
+      "OTHER": "Something else"
+    },
+    "detailsLabel": "Details",
+    "optional": "optional",
+    "detailsPlaceholder": "For example: the phone number has changed to…",
+    "privacy": "Please don’t write your name, phone number or anything about your situation. We don’t need it to fix the information.",
+    "submit": "Send report",
+    "sending": "Sending…",
+    "sentTitle": "Thank you — your report was sent",
+    "sentBody": "It is saved for review. The information on the page stays as it is until a person has checked it.",
+    "done": "Done",
+    "error": "We couldn’t send your report. Please try again.",
+    "tooMany": "Many reports have been sent just now. Please try again in an hour.",
+    "reviewNote": "Reports are reviewed by a person and are never published or used as facts on their own."
+  },
+  "about": {
+    "title": "About Kashshof",
+    "lead": "Kashshof helps women and families in Uzbekistan find organizations and programs that may help, and shows where every piece of information comes from.",
+    "dataTitle": "Where the information comes from",
+    "dataBody": "We start from a list of organizations working in Uzbekistan, then look for each one on official websites, government portals (gov.uz, lex.uz) and reputable news sites. We only add what a source says, and link to it. If we can’t find a source, the page says so instead of guessing.",
+    "statusTitle": "How information is checked",
+    "decideTitle": "What Kashshof does not decide",
+    "decideBody": "Kashshof is not a government service. It suggests what may be worth looking at and why, but only the organization decides whether you can get help.",
+    "errorsTitle": "Found a mistake?",
+    "errorsBody": "Every organization page has a “Report an error” button. Reports are reviewed by a person before anything changes.",
+    "errorsLink": "Browse organizations",
+    "projectTitle": "About the project",
+    "projectBody": "Kashshof began as a university graduation project and is an early version (MVP). Accounts, the organization dashboard and some screens are still demonstrations and are labelled as such.",
+    "urgent": "In danger right now? See urgent numbers"
   }
 }

@@ -39,7 +39,8 @@ export function ProgramStatus({ program, className }: { program: ProgramSummary;
           <dd className="text-ink">{formatDay(locale, deadline, true)}</dd>
         </div>
       )}
-      {(status === 'UNKNOWN' || stale) && status !== 'CLOSED' && (
+      {/* UNKNOWN already says the status isn't confirmed; only an OPEN status can be stale. */}
+      {status === 'OPEN' && stale && (
         <div className="text-ink-2">
           <dt className="sr-only">{t('lastChecked')}</dt>
           <dd>{t('notRecentlyVerified')}</dd>

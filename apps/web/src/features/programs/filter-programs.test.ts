@@ -21,7 +21,7 @@ function program(id: string, overrides: Partial<ProgramSummary> = {}): ProgramSu
     sourceUrl: 'https://gov.uz',
     regions: [],
     targetCircumstances: [],
-    organization: { slug: 'org', name: 'Org', verification: 'UNVERIFIED' },
+    organization: { slug: 'org', name: 'Org', verification: 'UNVERIFIED', lastVerifiedAt: null },
     ...overrides,
   } as ProgramSummary;
 }

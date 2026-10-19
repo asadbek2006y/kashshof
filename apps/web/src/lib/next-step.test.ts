@@ -8,7 +8,7 @@ function match(reasons: MatchResult['reasons'], program: Partial<MatchResult['pr
     program: {
       requiredDocuments: [],
       sourceUrl: null,
-      organization: { slug: 'org', name: 'Org', verification: 'UNVERIFIED' },
+      organization: { slug: 'org', name: 'Org', verification: 'UNVERIFIED', lastVerifiedAt: null },
       ...program,
     } as MatchResult['program'],
   };

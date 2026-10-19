@@ -1,5 +1,6 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import type { HumanReview } from '../src/domain/verification';
 
 /**
  * Organization details collected from public sources (official websites, government portals,
@@ -40,9 +41,22 @@ export interface ResearchedOrganization {
   website: string | null;
   phone: string | null;
   email: string | null;
+  /** Office address, only when an official page states it. */
+  address?: string | null;
   description: L | null;
   /** Main page the organization's information came from. */
   sourceUrl: string | null;
+  /** The source site's name ("Gazeta.uz"); defaults to the URL's host. */
+  sourceName?: string | null;
+  /** Short verbatim quote from sourceUrl supporting the description — for reviewers, not shown. */
+  evidenceQuote?: string | null;
+  /** When this entry was collected, if later than the file's collectedAt. */
+  checkedAt?: string;
+  /**
+   * A person's review against the source. Only this makes an organization VERIFIED — add it after
+   * confirming the details (ideally with the organization itself), never from research alone.
+   */
+  review?: HumanReview | null;
   programs: ResearchedProgram[];
 }
 

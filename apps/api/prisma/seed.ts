@@ -4,6 +4,7 @@ import { PrismaClient } from '../src/generated/prisma/client';
 import { directory, DIRECTORY_SOURCE, SECTION_SUPPORT_TYPES } from './directory-data';
 import { loadResearch, RESEARCH_SOURCE } from './research-data';
 import { organizations, programs, SEED_SOURCE } from './seed-data';
+import { deriveVerification, sourceSiteName } from '../src/domain/verification';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -98,8 +99,14 @@ async function main(): Promise<void> {
     // Research: real contacts, descriptions and programs, each with its source.
     let researchedPrograms = 0;
     if (research) {
-      const collectedAt = new Date(research.collectedAt);
       for (const org of research.organizations) {
+        const collectedAt = new Date(org.checkedAt ?? research.collectedAt);
+        // The status follows from the evidence: a source page makes it PENDING, and only a recorded
+        // human review makes it VERIFIED.
+        const verification = deriveVerification({ sourceUrl: org.sourceUrl, review: org.review });
+        if (org.review && verification !== 'VERIFIED') {
+          throw new Error(`${org.slug}: a review needs a source URL, a date and a note before it can verify the record`);
+        }
         await prisma.program.deleteMany({ where: { orgSlug: org.slug, origin: 'SAMPLE', isDraft: false } });
         await prisma.organization.update({
           where: { slug: org.slug },
@@ -107,15 +114,19 @@ async function main(): Promise<void> {
             website: org.website,
             phone: org.phone,
             email: org.email,
+            address: org.address ?? null,
             // No sourced description → empty, never the invented sample text.
             description: org.description ?? {},
-            source: RESEARCH_SOURCE,
+            // Searched for but no usable source found: still just the name from the team's list.
+            source: org.sourceUrl ? RESEARCH_SOURCE : DIRECTORY_SOURCE,
             sourceUrl: org.sourceUrl,
-            researchedAt: collectedAt,
+            sourceName: org.sourceName ?? sourceSiteName(org.sourceUrl),
+            researchedAt: org.sourceUrl ? collectedAt : null,
             hidden: org.hidden,
             reviewNote: org.reviewNote,
-            verification: 'UNVERIFIED',
-            lastVerifiedAt: null,
+            verification,
+            lastVerifiedAt: verification === 'VERIFIED' ? new Date(org.review!.reviewedAt) : null,
+            verificationNote: verification === 'VERIFIED' ? org.review!.note : null,
           },
         });
         for (const p of org.programs) {

@@ -1,4 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
+import type { LocalizedText } from '../domain/localized';
+import { matchesSearch, normalizeSearch } from '../domain/search';
 import { PrismaService } from '../prisma/prisma.service';
 import { isAcceptingApplications } from '../matching/matching';
 import {
@@ -63,15 +65,30 @@ export class ProgramsService {
     const q = query.q?.trim();
     const orgs = await this.prisma.organization.findMany({
       where: {
-        kind: { in: [...LISTED_KINDS] },
+        kind: query.kind ? query.kind : { in: [...LISTED_KINDS] },
         hidden: false,
         ...(query.section ? { sections: { has: query.section } } : {}),
-        ...(q ? { name: { contains: q, mode: 'insensitive' as const } } : {}),
+        ...(query.status ? { verification: query.status } : {}),
       },
       orderBy: { name: 'asc' },
       include: { programs: { where: { isDraft: false }, include: { org: true }, orderBy: { id: 'asc' } } },
     });
-    return orgs.map((org) => toOrganizationDetail(org, org.programs));
+    // The directory is small (tens of rows), so text search and program-derived filters run in
+    // memory: that's what lets search ignore apostrophe variants and Cyrillic/Latin script.
+    return orgs
+      .filter((org) => !q || matchesSearch(q, [org.name, ...Object.values((org.description ?? {}) as Partial<LocalizedText>)]))
+      .filter(
+        (org) =>
+          !query.supportType ||
+          org.categories.includes(query.supportType) ||
+          org.programs.some((p) => p.supportTypes.includes(query.supportType!)),
+      )
+      .filter(
+        (org) => !query.region || org.programs.some((p) => p.regions.length === 0 || p.regions.includes(query.region!)),
+      )
+      // By name, ignoring the quotes and apostrophes many Uzbek names start with (“Vaqf” → vaqf).
+      .sort((a, b) => normalizeSearch(a.name).localeCompare(normalizeSearch(b.name)))
+      .map((org) => toOrganizationDetail(org, org.programs));
   }
 
   async getOrganization(slug: string): Promise<OrganizationDetailDto> {

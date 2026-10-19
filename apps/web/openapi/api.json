@@ -174,10 +174,86 @@
             "name": "q",
             "required": false,
             "in": "query",
-            "description": "Case-insensitive name search",
+            "description": "Search names and descriptions; ignores case, apostrophe variants and Cyrillic/Latin script",
             "schema": {
               "maxLength": 100,
               "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "VERIFIED",
+                "PENDING",
+                "UNVERIFIED"
+              ]
+            }
+          },
+          {
+            "name": "kind",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "NGO",
+                "INTERNATIONAL",
+                "GOVERNMENT"
+              ]
+            }
+          },
+          {
+            "name": "supportType",
+            "required": false,
+            "in": "query",
+            "description": "Type of assistance",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "financial",
+                "education",
+                "food",
+                "health",
+                "maternity",
+                "children_family",
+                "employment",
+                "business",
+                "housing",
+                "legal",
+                "safety",
+                "disability",
+                "mental_wellbeing",
+                "emergency"
+              ]
+            }
+          },
+          {
+            "name": "region",
+            "required": false,
+            "in": "query",
+            "description": "Organizations with a program in this region or nationwide; organizations whose area is unknown are left out",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "tashkent_city",
+                "tashkent_region",
+                "andijan",
+                "bukhara",
+                "fergana",
+                "jizzakh",
+                "kashkadarya",
+                "khorezm",
+                "namangan",
+                "navoi",
+                "samarkand",
+                "surkhandarya",
+                "syrdarya",
+                "karakalpakstan"
+              ]
             }
           }
         ],
@@ -393,6 +469,136 @@
           "org"
         ]
       }
+    },
+    "/api/v1/reports": {
+      "post": {
+        "operationId": "ReportsController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateReportDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReportReceiptDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": ""
+          },
+          "429": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "reports"
+        ]
+      },
+      "get": {
+        "operationId": "ReportsController_list",
+        "parameters": [
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "NEW",
+              "type": "string",
+              "enum": [
+                "NEW",
+                "ACCEPTED",
+                "REJECTED"
+              ]
+            }
+          },
+          {
+            "name": "x-review-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReportDto"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "reports"
+        ]
+      }
+    },
+    "/api/v1/reports/{id}": {
+      "patch": {
+        "operationId": "ReportsController_review",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-review-token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateReportDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReportReceiptDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "reports"
+        ]
+      }
     }
   },
   "info": {
@@ -444,14 +650,23 @@
             "type": "string",
             "enum": [
               "VERIFIED",
+              "PENDING",
               "UNVERIFIED"
-            ]
+            ],
+            "description": "VERIFIED = a person confirmed it against the source; PENDING = collected from a public source, awaiting review; UNVERIFIED = no source on record"
+          },
+          "lastVerifiedAt": {
+            "type": "string",
+            "nullable": true,
+            "format": "date-time",
+            "description": "When a person last confirmed the details (VERIFIED only)"
           }
         },
         "required": [
           "slug",
           "name",
-          "verification"
+          "verification",
+          "lastVerifiedAt"
         ]
       },
       "ProgramSummaryDto": {
@@ -712,8 +927,16 @@
             "type": "string",
             "enum": [
               "VERIFIED",
+              "PENDING",
               "UNVERIFIED"
-            ]
+            ],
+            "description": "VERIFIED = a person confirmed it against the source; PENDING = collected from a public source, awaiting review; UNVERIFIED = no source on record"
+          },
+          "lastVerifiedAt": {
+            "type": "string",
+            "nullable": true,
+            "format": "date-time",
+            "description": "When a person last confirmed the details (VERIFIED only)"
           },
           "description": {
             "$ref": "#/components/schemas/LocalizedTextDto"
@@ -762,6 +985,10 @@
             "type": "string",
             "nullable": true
           },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
           "source": {
             "type": "string"
           },
@@ -769,16 +996,21 @@
             "type": "string",
             "nullable": true
           },
+          "sourceName": {
+            "type": "string",
+            "nullable": true,
+            "description": "Name of the source site, e.g. \"gov.uz\""
+          },
           "researchedAt": {
             "type": "string",
             "nullable": true,
             "format": "date-time",
             "description": "When information was collected from sourceUrl"
           },
-          "lastVerifiedAt": {
+          "verificationNote": {
             "type": "string",
             "nullable": true,
-            "format": "date-time"
+            "description": "What a person checked to verify the record (VERIFIED only)"
           },
           "programs": {
             "type": "array",
@@ -791,6 +1023,7 @@
           "slug",
           "name",
           "verification",
+          "lastVerifiedAt",
           "description",
           "categories",
           "sections",
@@ -798,10 +1031,12 @@
           "website",
           "phone",
           "email",
+          "address",
           "source",
           "sourceUrl",
+          "sourceName",
           "researchedAt",
-          "lastVerifiedAt",
+          "verificationNote",
           "programs"
         ]
       },
@@ -1523,6 +1758,128 @@
           "regions",
           "requiredDocuments",
           "applicationStatus"
+        ]
+      },
+      "CreateReportDto": {
+        "type": "object",
+        "properties": {
+          "orgSlug": {
+            "type": "string",
+            "description": "Organization the report is about"
+          },
+          "programId": {
+            "type": "string",
+            "description": "Program, when reported from a program page"
+          },
+          "reason": {
+            "type": "string",
+            "enum": [
+              "INCORRECT_DETAILS",
+              "BROKEN_CONTACT",
+              "OUTDATED",
+              "NOT_OPERATING",
+              "OTHER"
+            ]
+          },
+          "details": {
+            "type": "string",
+            "maxLength": 1000,
+            "description": "What is wrong, in the reporter’s words"
+          }
+        },
+        "required": [
+          "orgSlug",
+          "reason"
+        ]
+      },
+      "ReportReceiptDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "NEW",
+              "ACCEPTED",
+              "REJECTED"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "status"
+        ]
+      },
+      "ReportDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "NEW",
+              "ACCEPTED",
+              "REJECTED"
+            ]
+          },
+          "orgSlug": {
+            "type": "string"
+          },
+          "orgName": {
+            "type": "string"
+          },
+          "programId": {
+            "type": "string",
+            "nullable": true
+          },
+          "reason": {
+            "type": "string",
+            "enum": [
+              "INCORRECT_DETAILS",
+              "BROKEN_CONTACT",
+              "OUTDATED",
+              "NOT_OPERATING",
+              "OTHER"
+            ]
+          },
+          "details": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "status",
+          "orgSlug",
+          "orgName",
+          "programId",
+          "reason",
+          "details",
+          "createdAt"
+        ]
+      },
+      "UpdateReportDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACCEPTED",
+              "REJECTED"
+            ],
+            "description": "Accepting a report does not change the data — a person still edits the record"
+          }
+        },
+        "required": [
+          "status"
         ]
       }
     }

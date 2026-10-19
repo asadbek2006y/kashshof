@@ -7,6 +7,7 @@ import { MatchingModule } from './matching/matching.module';
 import { OrgModule } from './org/org.module';
 import { PrismaModule } from './prisma/prisma.module';
 import { ProgramsModule } from './programs/programs.module';
+import { ReportsModule } from './reports/reports.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { ProgramsModule } from './programs/programs.module';
     AssistantModule,
     DemoModule,
     OrgModule,
+    ReportsModule,
   ],
   controllers: [HealthController],
 })

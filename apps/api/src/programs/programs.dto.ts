@@ -2,11 +2,12 @@ import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { Transform } from 'class-transformer';
 import { IsBoolean, IsIn, IsOptional, IsString, MaxLength } from 'class-validator';
 import { LocalizedTextDto } from '../common/localized-text.dto';
+import { VERIFICATION_STATUSES } from '../domain/verification';
 import { DIRECTORY_SECTIONS, LISTED_KINDS, REGIONS, SUPPORT_TYPES } from '../domain/vocabulary';
 
 export { DIRECTORY_SECTIONS, LISTED_KINDS };
 
-export const VERIFICATION = ['VERIFIED', 'UNVERIFIED'] as const;
+export const VERIFICATION = VERIFICATION_STATUSES;
 export const APPLICATION_STATUS = ['OPEN', 'CLOSED', 'UNKNOWN'] as const;
 
 export class OrganizationRefDto {
@@ -16,8 +17,14 @@ export class OrganizationRefDto {
   @ApiProperty()
   name!: string;
 
-  @ApiProperty({ enum: VERIFICATION })
+  @ApiProperty({
+    enum: VERIFICATION,
+    description: 'VERIFIED = a person confirmed it against the source; PENDING = collected from a public source, awaiting review; UNVERIFIED = no source on record',
+  })
   verification!: (typeof VERIFICATION)[number];
+
+  @ApiProperty({ type: String, nullable: true, format: 'date-time', description: 'When a person last confirmed the details (VERIFIED only)' })
+  lastVerifiedAt!: string | null;
 }
 
 export class ProgramSummaryDto {
@@ -112,17 +119,23 @@ export class OrganizationDetailDto extends OrganizationRefDto {
   @ApiProperty({ type: String, nullable: true })
   email!: string | null;
 
+  @ApiProperty({ type: String, nullable: true })
+  address!: string | null;
+
   @ApiProperty()
   source!: string;
 
   @ApiProperty({ type: String, nullable: true })
   sourceUrl!: string | null;
 
+  @ApiProperty({ type: String, nullable: true, description: 'Name of the source site, e.g. "gov.uz"' })
+  sourceName!: string | null;
+
   @ApiProperty({ type: String, nullable: true, format: 'date-time', description: 'When information was collected from sourceUrl' })
   researchedAt!: string | null;
 
-  @ApiProperty({ type: String, nullable: true, format: 'date-time' })
-  lastVerifiedAt!: string | null;
+  @ApiProperty({ type: String, nullable: true, description: 'What a person checked to verify the record (VERIFIED only)' })
+  verificationNote!: string | null;
 
   @ApiProperty({ type: [ProgramSummaryDto] })
   programs!: ProgramSummaryDto[];
@@ -157,9 +170,29 @@ export class OrganizationListQueryDto {
   @IsIn(DIRECTORY_SECTIONS)
   section?: string;
 
-  @ApiPropertyOptional({ description: 'Case-insensitive name search', maxLength: 100 })
+  @ApiPropertyOptional({ description: 'Search names and descriptions; ignores case, apostrophe variants and Cyrillic/Latin script', maxLength: 100 })
   @IsOptional()
   @IsString()
   @MaxLength(100)
   q?: string;
+
+  @ApiPropertyOptional({ enum: VERIFICATION })
+  @IsOptional()
+  @IsIn(VERIFICATION)
+  status?: (typeof VERIFICATION)[number];
+
+  @ApiPropertyOptional({ enum: LISTED_KINDS })
+  @IsOptional()
+  @IsIn(LISTED_KINDS)
+  kind?: (typeof LISTED_KINDS)[number];
+
+  @ApiPropertyOptional({ enum: SUPPORT_TYPES, description: 'Type of assistance' })
+  @IsOptional()
+  @IsIn(SUPPORT_TYPES)
+  supportType?: string;
+
+  @ApiPropertyOptional({ enum: REGIONS, description: 'Organizations with a program in this region or nationwide; organizations whose area is unknown are left out' })
+  @IsOptional()
+  @IsIn(REGIONS)
+  region?: string;
 }

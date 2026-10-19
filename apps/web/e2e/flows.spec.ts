@@ -363,9 +363,10 @@ test('every photo is captioned, attributed and listed on the credits page', asyn
 });
 
 // 19
-const AXE_PAGES = ['/en', '/en/ask', '/en/results', '/en/explore', '/en/programs/ezgu-amal-child-treatment', '/en/apply/ezgu-amal-child-treatment', '/en/safety', '/en/how-it-works', '/en/saved', '/en/credits', '/ru', '/uz/ask'];
+const AXE_PAGES = ['/en', '/en/ask', '/en/results', '/en/explore', '/en/programs/ezgu-amal-child-treatment', '/en/apply/ezgu-amal-child-treatment', '/en/safety', '/en/how-it-works', '/en/saved', '/en/credits', '/ru', '/uz/ask', '/uz/organizations', '/uz/organizations/vaqf-xayriya-jamoat-fondi', '/uz/organizations/nanasaid-jamoat-fondi', '/en/about'];
 for (const path of AXE_PAGES) {
   test(`no serious accessibility violations on ${path}`, async ({ page }) => {
+    test.setTimeout(60_000); // axe on the full directory is slow while other workers run
     await page.goto(path);
     await page.waitForLoadState('networkidle');
     // Let entrance animations finish so contrast is measured at full opacity.
@@ -402,11 +403,11 @@ test('mobile navigation reaches every main area @mobile', async ({ page, isMobil
 });
 
 test('no horizontal scrolling on small phones in any language', async ({ browser }) => {
-  test.setTimeout(240_000); // 3 widths × 3 languages × 8 pages
+  test.setTimeout(360_000); // 3 widths × 3 languages × 12 pages
   for (const width of [320, 360, 390]) {
     const page = await browser.newPage({ viewport: { width, height: 760 } });
     for (const locale of ['uz', 'ru', 'en']) {
-      for (const path of ['', '/credits', '/ask', '/explore', '/results', '/safety', '/how-it-works', '/programs/ezgu-amal-child-treatment', '/apply/ezgu-amal-child-treatment']) {
+      for (const path of ['', '/credits', '/ask', '/explore', '/results', '/safety', '/how-it-works', '/programs/ezgu-amal-child-treatment', '/apply/ezgu-amal-child-treatment', '/organizations', '/organizations/vaqf-xayriya-jamoat-fondi', '/organizations/bolalarni-ijtimoiy-moslashtirish-respublika-markazi', '/about']) {
         await page.goto(`/${locale}${path}`);
         const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
         expect(overflow, `${width}px /${locale}${path}`).toBeLessThanOrEqual(0);
@@ -433,15 +434,98 @@ test('an organization can create a draft program that stays private', async ({ p
 
 test('the organization directory lists the imported organizations and hides funders @mobile', async ({ page }) => {
   await page.goto('/en/organizations');
-  await expect(page.getByTestId('directory-count')).toHaveText('52 organizations');
-  await page.getByTestId('directory-search').fill('karlar');
+  await expect(page.getByTestId('directory-count')).toHaveText('45 organizations');
+  await page.getByTestId('directory-search').fill('nana');
   await page.getByTestId('directory-search').press('Enter');
-  await expect(page.getByTestId('directory-list').getByRole('link')).toHaveCount(1);
-  await page.getByTestId('directory-list').getByRole('link').click();
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('O‘zbekiston Karlar jamiyati');
+  await expect(page.getByTestId('org-card')).toHaveCount(1);
+  await page.getByTestId('org-card').getByRole('link').first().click();
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('“Nana’Said” jamoat fondi');
   await expect(page.getByText("We haven't collected a description for this organization yet.")).toBeVisible();
-  for (const q of ['Jahon banki', 'Mehr Nuri']) {
+  // Funders, organizations that couldn't be found to exist, and ones confirmed closed stay hidden.
+  for (const q of ['Jahon banki', 'Mehr Nuri', 'Mercy Corps', 'Chegarasiz shifokorlar']) {
     await page.goto(`/en/organizations?q=${encodeURIComponent(q)}`);
     await expect(page.getByTestId('directory-count')).toHaveText('No organizations');
   }
+});
+
+test('directory search ignores apostrophe variants and Cyrillic script', async ({ page }) => {
+  for (const q of ["o'zbekiston karlar", 'ozbekiston karlar', 'Ўзбекистон карлар']) {
+    await page.goto(`/uz/organizations?q=${encodeURIComponent(q)}`);
+    await expect(page.getByTestId('org-card'), q).toHaveCount(1);
+    await expect(page.getByTestId('org-card')).toHaveAttribute('data-org', 'ozbekiston-karlar-jamiyati');
+  }
+  await page.goto('/en/organizations?q=xyzzy');
+  await expect(page.getByText('Nothing matches “xyzzy”')).toBeVisible();
+  await page.getByRole('link', { name: 'Clear filters' }).first().click();
+  await expect(page).toHaveURL(/\/en\/organizations$/, { timeout: 15_000 });
+  await expect(page.getByTestId('directory-count')).toHaveText('45 organizations', { timeout: 15_000 });
+});
+
+test('directory filters by verification status, type of organization and region', async ({ page }) => {
+  await page.goto('/uz/organizations');
+  await page.getByText('Filtrlar').click();
+  await page.getByTestId('filter-status').selectOption('UNVERIFIED');
+  await page.getByTestId('directory-apply').click();
+  await expect(page).toHaveURL(/status=UNVERIFIED/);
+  const statuses = page.getByTestId('org-card').getByTestId('org-verification');
+  await expect(statuses.first()).toHaveText('Tasdiqlanmagan');
+  expect(new Set(await statuses.evaluateAll((els) => els.map((e) => e.getAttribute('data-status'))))).toEqual(new Set(['UNVERIFIED']));
+
+  await page.goto('/en/organizations?kind=GOVERNMENT&region=bukhara');
+  const slugs = await page.getByTestId('org-card').evaluateAll((els) => els.map((e) => e.getAttribute('data-org')));
+  expect(slugs).toContain('ijtimoiy-himoya-milliy-agentligi');
+  await expect(page.getByText('Organizations whose area we don’t know yet aren’t shown')).toBeVisible();
+});
+
+test('statuses and actions only appear when the information behind them exists', async ({ page }) => {
+  // Sourced, with website and phone: status says it is being checked, and every action works.
+  await page.goto('/uz/organizations/vaqf-xayriya-jamoat-fondi');
+  await expect(page.getByTestId('org-verification').first()).toContainText('Ma’lumot tekshirilmoqda');
+  await expect(page.getByTestId('org-website')).toHaveText(/Rasmiy saytga o‘tish/);
+  await expect(page.getByTestId('org-website')).toHaveAttribute('href', 'https://vaqf.uz/');
+  await expect(page.getByTestId('org-contact')).toHaveText(/Bog‘lanish/);
+  await expect(page.getByTestId('contact-block').locator('a[href^="tel:+998"]')).toBeVisible();
+  await expect(page.getByTestId('trust-block').getByTestId('source-link')).toHaveAttribute('href', /^https:\/\/vaqf\.uz/);
+  await expect(page.getByTestId('trust-block')).toContainText('Hali inson tomonidan tasdiqlanmagan');
+
+  // Name only: no website or contact actions, an honest "no source yet", and no claim it's untrustworthy.
+  await page.goto('/uz/organizations/nanasaid-jamoat-fondi');
+  await expect(page.getByTestId('org-verification').first()).toContainText('Tasdiqlanmagan');
+  await expect(page.getByTestId('org-website')).toHaveCount(0);
+  await expect(page.getByTestId('org-contact')).toHaveCount(0);
+  await expect(page.getByTestId('contact-missing')).toBeVisible();
+  await expect(page.getByTestId('trust-block').getByTestId('source-unavailable')).toHaveText('Manba hozircha mavjud emas');
+  await expect(page.getByTestId('trust-block')).toContainText('tashkilotda biror muammo bor degani emas');
+  await expect(page.getByText('Ba’zi ma’lumotlar to‘liq bo‘lmasligi mumkin')).toBeVisible();
+});
+
+test('a person can report wrong information, and the report asks for nothing personal @mobile', async ({ page }) => {
+  let sent: unknown = null;
+  // The API side is unit-tested; stubbing here keeps repeated runs from filling the review queue.
+  await page.route('**/api/v1/reports', async (route) => {
+    sent = route.request().postDataJSON();
+    await route.fulfill({ status: 201, contentType: 'application/json', body: JSON.stringify({ id: 'r1', status: 'NEW' }) });
+  });
+  await page.goto('/en/organizations/vaqf-xayriya-jamoat-fondi');
+  await page.getByTestId('org-actions').getByTestId('report-open').click();
+  const form = page.getByTestId('report-form');
+  await expect(form.getByTestId('report-submit')).toBeDisabled();
+  await expect(form).toContainText('don’t write your name, phone number');
+  await form.getByLabel('Website or contact details don’t work').check();
+  await form.getByRole('textbox').fill('The phone number did not answer.');
+  await form.getByTestId('report-submit').click();
+  await expect(page.getByTestId('report-sent')).toContainText('stays as it is until a person has checked it');
+  expect(sent).toEqual({ orgSlug: 'vaqf-xayriya-jamoat-fondi', reason: 'BROKEN_CONTACT', details: 'The phone number did not answer.' });
+});
+
+test('a report that the API turns away says so instead of pretending it was sent', async ({ page }) => {
+  await page.route('**/api/v1/reports', (route) =>
+    route.fulfill({ status: 429, contentType: 'application/json', body: JSON.stringify({ statusCode: 429, message: 'Too many reports' }) }),
+  );
+  await page.goto('/en/programs/ezgu-amal-child-treatment');
+  await page.getByTestId('data-status').getByTestId('report-open').click();
+  await page.getByTestId('report-form').getByLabel('Information is out of date').check();
+  await page.getByTestId('report-submit').click();
+  await expect(page.getByRole('alert')).toContainText('try again in an hour');
+  await expect(page.getByTestId('report-sent')).toHaveCount(0);
 });

@@ -19,15 +19,23 @@ export type ReviewStatus =
 export const REREVIEW_AFTER_DAYS = 180;
 const DAY = 24 * 60 * 60 * 1000;
 
-type Reviewable = Pick<ProgramSummary, 'origin' | 'sourceUrl' | 'organization'> & {
-  /** When a person last reviewed this program. Not collected yet for any program. */
+type Reviewable = Pick<ProgramSummary, 'origin' | 'sourceUrl'> & {
+  organization: Pick<ProgramSummary['organization'], 'verification'> & { lastVerifiedAt?: string | null };
+  /** When a person last reviewed this program on its own. Not collected yet for any program. */
   reviewedAt?: string | null;
 };
 
+/**
+ * Derived from backend data only: a program counts as reviewed when it has its own review, or when
+ * its organization was VERIFIED by a person (the API's status) and the program has a source page.
+ */
 export function reviewStatus(program: Reviewable, now: Date = new Date()): ReviewStatus {
   if (program.origin === 'SAMPLE') return 'sample';
-  if (program.reviewedAt) {
-    const age = now.getTime() - new Date(program.reviewedAt).getTime();
+  const reviewedAt =
+    program.reviewedAt ??
+    (program.organization.verification === 'VERIFIED' && program.sourceUrl ? program.organization.lastVerifiedAt : null);
+  if (reviewedAt) {
+    const age = now.getTime() - new Date(reviewedAt).getTime();
     return age > REREVIEW_AFTER_DAYS * DAY ? 'needs_rereview' : 'manually_reviewed';
   }
   if (!program.sourceUrl) return 'source_unavailable';
@@ -42,4 +50,11 @@ export function sourceHost(url: string | null | undefined): string | null {
   } catch {
     return null;
   }
+}
+
+export type OrgVerification = ProgramSummary['organization']['verification'];
+export const ORG_VERIFICATIONS: OrgVerification[] = ['VERIFIED', 'PENDING', 'UNVERIFIED'];
+
+export function isOrgVerification(value: unknown): value is OrgVerification {
+  return ORG_VERIFICATIONS.includes(value as OrgVerification);
 }

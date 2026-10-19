@@ -202,7 +202,9 @@ export const directory: DirectoryEntry[] = [
     slug: 'baraka-ijtimoiy-xizmatlar-platformasi',
     name: '“Baraka” ijtimoiy xizmatlar platformasi',
     sections: ['social_support'],
-    kind: 'NGO',
+    // The Baraka social card and app is a state product run with the National Agency for Social
+    // Protection (baraka.gov.uz), not an NGO as the source list grouped it.
+    kind: 'GOVERNMENT',
     listNumbers: [25],
   },
   {

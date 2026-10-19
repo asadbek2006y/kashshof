@@ -18,9 +18,31 @@ datasource db {
   provider = "postgresql"
 }
 
+// How far an organization's information has been checked — never a judgement of the organization.
+//  VERIFIED   a person confirmed the details against an authoritative source (needs lastVerifiedAt,
+//             sourceUrl and verificationNote — the seed refuses a VERIFIED record without them)
+//  PENDING    collected from a public source (sourceUrl), waiting for a person to review it
+//  UNVERIFIED no source on record yet: only the name from the team's list
 enum VerificationStatus {
   VERIFIED
+  PENDING
   UNVERIFIED
+}
+
+// Why someone reported an organization's information as wrong.
+enum ReportReason {
+  INCORRECT_DETAILS
+  BROKEN_CONTACT
+  OUTDATED
+  NOT_OPERATING
+  OTHER
+}
+
+// Reports wait for a person; they are never applied to the data automatically.
+enum ReportStatus {
+  NEW
+  ACCEPTED
+  REJECTED
 }
 
 // What kind of body an organization is. PARTNER (funders, development banks, umbrella bodies)
@@ -69,16 +91,22 @@ model Organization {
   website String?
   phone   String?
   email   String?
+  address String?
 
   verification   VerificationStatus @default(UNVERIFIED)
   // Where the record's information came from, shown in the trust block.
   source         String
-  // Page the information was collected from, and when (research, not human verification).
+  // Page the information was collected from, its site's name ("gov.uz"), and when (research, not
+  // human verification).
   sourceUrl      String?
+  sourceName     String?
   researchedAt   DateTime?
   lastVerifiedAt DateTime?
+  // What a person checked to mark this VERIFIED, and how — the evidence behind the status.
+  verificationNote String?
 
   programs Program[]
+  reports  InfoReport[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -126,4 +154,20 @@ model Program {
 
   @@index([orgSlug])
   @@index([isDraft])
+}
+
+// "This information is wrong" reports from the public site, kept for a person to review. Only what
+// the form asks for is stored: no name, contact, IP address or conversation.
+model InfoReport {
+  id        String       @id @default(uuid())
+  orgSlug   String
+  org       Organization @relation(fields: [orgSlug], references: [slug], onDelete: Cascade)
+  // Set when the report was made from a program page.
+  programId String?
+  reason    ReportReason
+  details   String?
+  status    ReportStatus @default(NEW)
+  createdAt DateTime     @default(now())
+
+  @@index([status, createdAt])
 }

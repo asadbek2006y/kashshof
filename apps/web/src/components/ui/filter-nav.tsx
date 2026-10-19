@@ -6,7 +6,7 @@ import type { ReactNode } from 'react';
  */
 export function FilterNav({ label, children }: { label: string; children: ReactNode }) {
   return (
-    <nav aria-label={label} className="-mx-5 overflow-x-auto px-5 sm:-mx-8 sm:px-8 lg:mx-0 lg:overflow-visible lg:px-0">
+    <nav aria-label={label} className="-mx-4 overflow-x-auto px-4 sm:-mx-8 sm:px-8 lg:mx-0 lg:overflow-visible lg:px-0">
       <p className="kicker mb-2 hidden lg:block">{label}</p>
       <ul className="flex gap-5 border-b border-line lg:flex-col lg:gap-0 lg:border-0">{children}</ul>
     </nav>

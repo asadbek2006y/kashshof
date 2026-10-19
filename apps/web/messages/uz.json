@@ -34,14 +34,14 @@
   "footer": {
     "label": "Qo‘shimcha",
     "tagline": "Kashshof — O‘zbekistondagi ayollar va oilalar uchun yordam",
-    "prototype": "Universitet bitiruv loyihasi prototipi. Dasturlar haqidagi ma’lumot ochiq manbalardan olingan va hali inson tomonidan tekshirilmagan.",
     "notOfficial": "Kashshof davlat xizmati emas va kim yordam olishga haqli ekanini hal qilmaydi.",
     "howItWorks": "Qanday ishlaydi",
     "browse": "Dasturlar ro‘yxati",
     "urgentHelp": "Shoshilinch yordam",
     "forOrganizations": "Tashkilotlar uchun",
     "demoAccount": "Namunaviy hisob",
-    "credits": "Surat mualliflari"
+    "credits": "Surat mualliflari",
+    "about": "Kashshof haqida"
   },
   "home": {
     "title": "Qayerdan boshlashni yolg‘iz o‘zingiz izlashingiz shart emas.",
@@ -64,7 +64,7 @@
         "body": "Har bir dastur ma’lumot olingan ochiq sahifaga havola beradi."
       }
     },
-    "facts": "{organizations, plural, one {# tashkilotning} other {# tashkilotning}} {programs, plural, one {# dasturi} other {# dasturi}} — ochiq manbalardan to‘plangan, hali inson tomonidan tekshirilmagan.",
+    "facts": "{organizations, plural, one {# tashkilotning} other {# tashkilotning}} {programs, plural, one {# dasturi} other {# dasturi}}, har biri olingan ochiq manbaga havola bilan. Har bir sahifada ma’lumot qanchalik tekshirilgani ko‘rsatilgan.",
     "aiOn": "Ixtiyoriy sun’iy intellekt yordami (Google Gemini) mavjud — boshlashdan oldin o‘zingiz tanlaysiz.",
     "aiOff": "Sun’iy intellekt yordami o‘chirilgan; Kashshof tayyor savollar bilan yo‘l ko‘rsatadi.",
     "programsTitle": "Yordam dasturlari",
@@ -319,16 +319,16 @@
   },
   "review": {
     "label": {
-      "source_collected": "Manba to‘plangan — hali qo‘lda tekshirilmagan",
+      "source_collected": "Ma’lumot tekshirilmoqda",
       "source_unavailable": "Manba hozircha mavjud emas",
-      "manually_reviewed": "Manba bilan qo‘lda solishtirilgan",
+      "manually_reviewed": "Tasdiqlangan",
       "needs_rereview": "Qayta tekshirish kerak",
       "sample": "Namunaviy ma’lumot — haqiqiy dastur emas"
     },
     "body": {
-      "source_collected": "Bu ma’lumot shu yerda havolasi berilgan ochiq sahifadan olingan. Uni hali inson tekshirmagan, shuning uchun tafsilotlar o‘zgargan bo‘lishi mumkin.",
+      "source_collected": "Shu yerda havolasi berilgan ochiq sahifadan to‘plangan va inson tomonidan ko‘rib chiqilishini kutmoqda. O‘shandan beri tafsilotlar o‘zgargan bo‘lishi mumkin.",
       "source_unavailable": "Bu dastur uchun manba sahifasi yo‘q, shuning uchun ma’lumot qayerdan olinganini ko‘rsata olmaymiz. Hammasini tashkilot bilan aniqlashtiring.",
-      "manually_reviewed": "Inson bu ma’lumotni rasmiy manba bilan solishtirgan. Bu baribir yordam olish huquqi bo‘yicha qaror emas.",
+      "manually_reviewed": "Inson tashkilot ma’lumotlarini rasmiy manba bilan solishtirib tasdiqlagan. Bu baribir yordam olish huquqingiz haqidagi qaror emas.",
       "needs_rereview": "Bu ma’lumotni inson tekshirgan, lekin ancha oldin. U eskirgan bo‘lishi mumkin.",
       "sample": "Bu dastur prototip uchun o‘ylab topilgan. Unga tayanmang."
     }
@@ -375,10 +375,10 @@
     "applications": "Arizalar",
     "OPEN": "Ariza qabul qilinmoqda",
     "CLOSED": "Ariza qabul qilinmaydi",
-    "UNKNOWN": "Holati noma’lum",
+    "UNKNOWN": "Qabul holati aniqlanmagan",
     "deadline": "Muddat",
     "lastChecked": "Holat tekshirilgan sana",
-    "notRecentlyVerified": "Yaqinda tekshirilmagan — murojaat qilishdan oldin rasmiy manbani ko‘rib chiqing",
+    "notRecentlyVerified": "Murojaat qilishdan oldin tashkilotdan aniqlang",
     "daysAgo": "{count, plural, =0 {bugun} one {# kun oldin} other {# kun oldin}}",
     "checkedOn": "{date} tekshirilgan"
   },
@@ -399,7 +399,10 @@
     "clearTitle": "Barcha saqlangan dasturlar tozalansinmi?",
     "clearBody": "Ular shu brauzerdan o‘chiriladi.",
     "clearConfirm": "Hammasini tozalash",
-    "clearedToast": "Saqlangan dasturlar tozalandi"
+    "clearedToast": "Saqlangan dasturlar tozalandi",
+    "cannot": {
+      "verify": "Ma’lumot dolzarbligini kafolatlash — har bir sahifadagi holatni ko‘ring va tashkilotning o‘zidan aniqlang."
+    }
   },
   "explore": {
     "title": "Yordam dasturlarini ko‘rish",
@@ -428,9 +431,9 @@
       "show": "{count, plural, =0 {Ko‘rsatadigan dastur yo‘q} one {# dasturni ko‘rsatish} other {# dasturni ko‘rsatish}}"
     },
     "reviewOption": {
-      "source_collected": "Manba to‘plangan, hali tekshirilmagan",
-      "source_unavailable": "Manba mavjud emas",
-      "manually_reviewed": "Qo‘lda tekshirilgan",
+      "source_collected": "Ma’lumot tekshirilmoqda",
+      "source_unavailable": "Manba hozircha mavjud emas",
+      "manually_reviewed": "Tasdiqlangan",
       "needs_rereview": "Qayta tekshirish kerak",
       "sample": "Namunaviy ma’lumot"
     }
@@ -652,41 +655,51 @@
     "noDescription": "Bu tashkilot haqida tavsif hali to‘planmagan.",
     "noPrograms": "Bu tashkilot dasturlari hali to‘planmagan. Tashkilotning o‘zidan so‘rab ko‘ring.",
     "breadcrumb": "Yo‘l",
-    "officialWebsite": "Rasmiy veb-sayt",
-    "checkEligibility": "Menga mosligini tekshirish"
+    "officialWebsite": "Rasmiy saytga o‘tish",
+    "opensNewTab": "(yangi oynada ochiladi)",
+    "contact": "Bog‘lanish",
+    "incompleteTitle": "Ba’zi ma’lumotlar to‘liq bo‘lmasligi mumkin",
+    "incompleteBody": "Bu sahifada faqat manbalardan topilgan ma’lumotlar ko‘rsatilgan. Ularga tayanishdan oldin xizmatlar, shartlar va aloqa ma’lumotlarini tashkilotning o‘zidan aniqlang.",
+    "services": "Xizmatlar",
+    "noServices": "Qanday xizmatlar ko‘rsatishi hali to‘planmagan.",
+    "nationwide": "O‘zbekistonning istalgan hududi",
+    "areaUnknown": "Hududi hali ma’lum emas",
+    "whoCanApply": "Kim murojaat qila oladi",
+    "groupsLead": "Dasturlari asosan quyidagilar uchun:",
+    "groupsOpen": "To‘plangan dasturlari muayyan guruhlar bilan cheklanmagan. Shartlarni har bir dastur sahifasida ko‘ring.",
+    "eligibilityUnknown": "Talablar hali ma’lum emas. Tashkilotdan so‘rang.",
+    "eligibilityNote": "Kim yordam olishini faqat tashkilot hal qiladi.",
+    "documents": "Kerakli hujjatlar",
+    "documentsUnknown": "Hujjatlar ro‘yxati to‘planmagan. Nima olib borish kerakligini tashkilotdan so‘rang."
   },
   "trust": {
     "title": "Ushbu ma’lumot haqida",
-    "verified": "Tasdiqlangan tashkilot",
-    "unverified": "Hali tasdiqlanmagan",
     "source": "Ma’lumot manbasi",
     "lastChecked": "Oxirgi tekshiruv",
-    "never": "Hech qachon",
-    "checkOfficial": "Murojaat qilishdan oldin tafsilotlarni doim tashkilotning o‘zidan aniqlang.",
-    "report": "Noto‘g‘ri ma’lumot haqida xabar berish",
-    "reportPrototype": "Rahmat. Bu prototipda xabarlar hali hech qayerga yuborilmaydi.",
     "sampleSource": "Prototip uchun namunaviy ma’lumot — hali rasmiy manbalar bilan tekshirilmagan",
-    "listSource": "Kashshof tashkilotlar ro‘yxati (2026-yil sentabr) — faqat nomi, hali tekshirilmagan",
-    "status": "Holati",
-    "researchSource": "Ochiq manbalardan to‘plangan — hali inson tomonidan tekshirilmagan",
+    "listSource": "Kashshof tashkilotlar ro‘yxati (2026-yil sentabr) — faqat nomi",
+    "researchSource": "Ochiq manbadan to‘plangan",
     "collected": "To‘plangan sana",
-    "reviewedByPerson": "Inson tomonidan tekshirilgan"
+    "noSource": "Manba hozircha mavjud emas",
+    "opensNewTab": "(yangi oynada ochiladi)",
+    "lastVerified": "Oxirgi tasdiqlangan sana",
+    "notYetVerified": "Hali inson tomonidan tasdiqlanmagan",
+    "notEligibility": "Bu holat siz haqingizda emas, ma’lumot haqida: kim yordam olishini faqat tashkilot hal qiladi."
   },
   "contact": {
     "title": "Aloqa",
     "website": "Veb-sayt",
     "phone": "Telefon",
     "email": "Elektron pochta",
-    "notCollected": "{what}: hali kiritilmagan",
-    "notCollectedShort": "Hali kiritilmagan"
+    "address": "Manzil",
+    "noneCollected": "Aloqa ma’lumotlari hali to‘planmagan. Murojaat qilishdan oldin tashkilotni rasmiy manbalardan qidiring.",
+    "confirm": "Borishdan oldin qo‘ng‘iroq qiling yoki yozing: ish vaqti va xizmatlar o‘zgarishi mumkin."
   },
   "notices": {
     "prototypeTitle": "Prototip ma’lumotlari",
     "prototypeBody": "Tashkilotlar nomlari haqiqiy, ammo bu dasturlar, shartlar, muddatlar va holatlar prototip uchun tayyorlangan namunalardir. Ular tashkilotlar bilan tekshirilmagan.",
     "demoTitle": "Namunaviy profil",
-    "demoBody": "Bu sahifada hisoblar qanday ishlashini ko‘rsatish uchun namunaviy shaxs — “Malika” ko‘rsatilgan. Hech qanday haqiqiy shaxsiy ma’lumot ishlatilmagan.",
-    "researchedTitle": "Ochiq manbalardan to‘plangan",
-    "researchedBody": "Bu ma’lumot tashkilot sayti yoki rasmiy portallardan olingan, havola quyida. U hali inson tomonidan tekshirilmagan, shuning uchun ariza berishdan oldin tafsilotlarni tashkilotning o‘zidan aniqlang."
+    "demoBody": "Bu sahifada hisoblar qanday ishlashini ko‘rsatish uchun namunaviy shaxs — “Malika” ko‘rsatilgan. Hech qanday haqiqiy shaxsiy ma’lumot ishlatilmagan."
   },
   "applications": {
     "title": "Arizalar",
@@ -911,18 +924,36 @@
   },
   "directory": {
     "title": "Tashkilotlar",
-    "lead": "O‘zbekistonda ayollar va oilalarga yordam beradigan xayriya tashkilotlari, jamg‘armalar va xizmatlar. Ma’lumotlar hali to‘planmoqda.",
+    "lead": "O‘zbekistonda ayollar va oilalarga yordam beradigan xayriya tashkilotlari, jamg‘armalar va xizmatlar. Har birida ma’lumot qanchalik tekshirilgani ko‘rsatilgan.",
     "searchLabel": "Tashkilotlarni qidirish",
-    "searchPlaceholder": "Nomi bo‘yicha qidiring…",
+    "searchPlaceholder": "Tashkilotni qidiring",
     "search": "Qidirish",
     "sections": "Bo‘limlar",
     "all": "Barchasi",
     "count": "{count, plural, =0 {Tashkilot topilmadi} one {# ta tashkilot} other {# ta tashkilot}}",
     "programs": "{count, plural, one {# ta dastur} other {# ta dastur}}",
     "noPrograms": "Dasturlar hali to‘planmagan",
-    "none": "Mos tashkilot topilmadi. Boshqa nom yoki bo‘limni tanlab ko‘ring.",
+    "none": "Bu filtrlarga mos tashkilot yo‘q. Kamroq filtr yoki boshqa bo‘limni tanlang.",
     "error": "Tashkilotlarni yuklab bo‘lmadi. Qaytadan urinib ko‘ring.",
-    "sourceNote": "O‘zbekistonda faoliyat yuritayotgan tashkilotlar ro‘yxatidan olingan. Hozircha faqat nomlar to‘plangan, hech biri hali tekshirilmagan. Insonlarga bevosita yordam bermaydigan homiylar va rivojlanish banklari ko‘rsatilmaydi."
+    "sourceNote": "Kashshof jamoasining O‘zbekistondagi tashkilotlar ro‘yxati asosida, ochiq manbalar bilan solishtirilgan. Moliyalashtiruvchilar, taraqqiyot banklari hamda yopilgani yoki O‘zbekistonda xizmati yo‘qligi tasdiqlangan tashkilotlar ko‘rsatilmaydi.",
+    "moreFilters": "Filtrlar",
+    "filterStatus": "Tekshiruv holati",
+    "anyStatus": "Har qanday holat",
+    "filterKind": "Tashkilot turi",
+    "anyKind": "Har qanday tur",
+    "filterNeed": "Yordam turi",
+    "anyNeed": "Har qanday yordam",
+    "filterRegion": "Hudud",
+    "anyRegion": "Har qanday hudud",
+    "apply": "Natijalarni ko‘rsatish",
+    "clear": "Filtrlarni tozalash",
+    "regionNote": "Hududi hali ma’lum bo‘lmagan tashkilotlar hudud filtrida ko‘rsatilmaydi.",
+    "noneTitle": "Hech narsa topilmadi",
+    "noneQuery": "“{q}” bo‘yicha hech narsa topilmadi. Yozilishini tekshiring yoki nomning bir qismini kiriting.",
+    "nationwide": "Butun O‘zbekiston",
+    "areaUnknown": "Hududi ma’lum emas",
+    "noDescription": "Tavsif hali to‘planmagan.",
+    "opensNewTab": "(yangi oynada ochiladi)"
   },
   "orgKind": {
     "NGO": "Nodavlat notijorat tashkilot",
@@ -972,5 +1003,61 @@
       "dasturkhan": "Bosh sahifa, “Kashshof qanday ishlaydi”",
       "motherChild": "Bosh sahifa, “Namunaviy vaziyatni sinab ko‘ring”"
     }
+  },
+  "verification": {
+    "label": {
+      "VERIFIED": "Tasdiqlangan",
+      "PENDING": "Ma’lumot tekshirilmoqda",
+      "UNVERIFIED": "Tasdiqlanmagan"
+    },
+    "body": {
+      "VERIFIED": "Inson bu ma’lumotlarni ko‘rsatilgan sanada rasmiy manba bilan solishtirib tasdiqlagan.",
+      "PENDING": "Ochiq manbadan to‘plangan (havolasi tashkilot sahifasida) va inson tomonidan ko‘rib chiqilishini kutmoqda. O‘shandan beri tafsilotlar o‘zgargan bo‘lishi mumkin.",
+      "UNVERIFIED": "Hozircha bizda faqat tashkilot nomi bor, manba hali yo‘q. Bu tashkilotda biror muammo bor degani emas."
+    },
+    "verifiedOn": "Tasdiqlangan sana: {date}",
+    "collectedOn": "Manba to‘plangan sana: {date}",
+    "legendTitle": "Holatlar nimani anglatadi?",
+    "notEligibility": "Holat faqat ma’lumot qanchalik tekshirilganini bildiradi. U yordam olish huquqingiz haqidagi qaror emas — buni faqat tashkilotning o‘zi hal qiladi."
+  },
+  "report": {
+    "open": "Xatolik haqida xabar berish",
+    "title": "Noto‘g‘ri ma’lumot haqida xabar berish",
+    "lead": "Sahifada biror narsa o‘zgarishidan oldin xabaringizni inson tekshiradi.",
+    "reasonLabel": "Nima noto‘g‘ri?",
+    "reason": {
+      "INCORRECT_DETAILS": "Tashkilot ma’lumotlari noto‘g‘ri",
+      "BROKEN_CONTACT": "Sayt yoki aloqa ma’lumotlari ishlamayapti",
+      "OUTDATED": "Ma’lumot eskirgan",
+      "NOT_OPERATING": "Tashkilot endi faoliyat yuritmaydi",
+      "OTHER": "Boshqa muammo"
+    },
+    "detailsLabel": "Tafsilotlar",
+    "optional": "ixtiyoriy",
+    "detailsPlaceholder": "Masalan: telefon raqami … ga o‘zgargan",
+    "privacy": "Iltimos, ismingiz, telefon raqamingiz yoki vaziyatingiz haqida yozmang. Ma’lumotni tuzatish uchun bular kerak emas.",
+    "submit": "Xabarni yuborish",
+    "sending": "Yuborilmoqda…",
+    "sentTitle": "Rahmat — xabaringiz yuborildi",
+    "sentBody": "U ko‘rib chiqish uchun saqlandi. Inson tekshirmaguncha sahifadagi ma’lumot o‘zgarmaydi.",
+    "done": "Tayyor",
+    "error": "Xabarni yuborib bo‘lmadi. Iltimos, qayta urinib ko‘ring.",
+    "tooMany": "Hozir juda ko‘p xabar yuborildi. Iltimos, bir soatdan keyin qayta urinib ko‘ring.",
+    "reviewNote": "Xabarlarni inson ko‘rib chiqadi; ular o‘z-o‘zidan e’lon qilinmaydi va fakt sifatida ishlatilmaydi."
+  },
+  "about": {
+    "title": "Kashshof haqida",
+    "lead": "Kashshof O‘zbekistondagi ayollar va oilalarga yordam berishi mumkin bo‘lgan tashkilot va dasturlarni topishga yordam beradi va har bir ma’lumot qayerdan olinganini ko‘rsatadi.",
+    "dataTitle": "Ma’lumotlar qayerdan olinadi",
+    "dataBody": "Biz O‘zbekistonda faoliyat yuritadigan tashkilotlar ro‘yxatidan boshlaymiz, so‘ng har birini rasmiy saytlar, davlat portallari (gov.uz, lex.uz) va ishonchli yangilik saytlaridan qidiramiz. Faqat manbada yozilgan narsani qo‘shamiz va unga havola beramiz. Manba topilmasa, taxmin qilish o‘rniga sahifada shu yoziladi.",
+    "statusTitle": "Ma’lumot qanday tekshiriladi",
+    "decideTitle": "Kashshof nimani hal qilmaydi",
+    "decideBody": "Kashshof davlat xizmati emas. U nimani ko‘rib chiqishga arzishini va nega ekanini taklif qiladi, lekin yordam olishingiz mumkinmi — buni faqat tashkilot hal qiladi.",
+    "errorsTitle": "Xato topdingizmi?",
+    "errorsBody": "Har bir tashkilot sahifasida “Xatolik haqida xabar berish” tugmasi bor. Biror narsa o‘zgarishidan oldin xabarlarni inson ko‘rib chiqadi.",
+    "errorsLink": "Tashkilotlarni ko‘rish",
+    "projectTitle": "Loyiha haqida",
+    "projectBody": "Kashshof universitet bitiruv loyihasi sifatida boshlangan va dastlabki versiya (MVP) hisoblanadi. Hisoblar, tashkilotlar paneli va ayrim sahifalar hali namunaviy bo‘lib, shunday deb belgilangan.",
+    "urgent": "Hozir xavf ostidamisiz? Shoshilinch raqamlarni ko‘ring"
   }
 }

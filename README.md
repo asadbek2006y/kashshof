@@ -5,12 +5,13 @@ situation in plain language (Uzbek, Russian or English), answers a few tappable 
 gets programs that may fit, each with the reasons why, what still needs checking, the
 documents needed, and what to do next.
 
-> **Data status.** All 23 programs now come from public sources: official websites, gov.uz,
+> **Data status.** All 23 programs come from public sources: official websites, gov.uz,
 > my.gov.uz, lex.uz and UN pages. Each has a source link, stored in
-> `apps/api/prisma/research/organizations.json`. None of them has been reviewed by a person yet,
-> so every organization is still "Not yet verified", and pages say "Collected from public
-> sources — not yet reviewed by a person". The invented sample programs from the first prototype
-> (`prisma/seed-data.ts`) are no longer seeded for any organization that has research.
+> `apps/api/prisma/research/organizations.json`. Of the 45 organizations shown, 31 have a source
+> and show *Ma'lumot tekshirilmoqda* (information being checked). The other 14 are names only
+> and show *Tasdiqlanmagan* (unverified). None has been verified by a person yet. The full audit
+> is in [`docs/data-audit.md`](docs/data-audit.md). The invented sample programs from the first
+> prototype (`prisma/seed-data.ts`) are no longer seeded for any organization that has research.
 
 ## Architecture
 
@@ -54,6 +55,20 @@ These principles come from the product brief:
   any `hamroh.*` session storage, hides the page and *replaces* the history entry; it can't erase
   earlier browser history, and the Safety page says so. Saved programs (public program data only)
   stay in `localStorage` and can be cleared from `/saved`.
+- **Verification status comes from evidence.** `apps/api/src/domain/verification.ts` derives
+  each organization's status:
+  - `VERIFIED` (*Tasdiqlangan*): a source page plus a person's dated review note
+  - `PENDING` (*Ma'lumot tekshirilmoqda*): a source page, awaiting review
+  - `UNVERIFIED` (*Tasdiqlanmagan*): no source yet
+
+  The UI shows the API's value, and a program's status follows its organization. A status is
+  about the record, never an eligibility decision and never a judgement of the organization.
+- **Wrong information can be reported.** Every organization and program page has *Xatolik haqida
+  xabar berish*. Reports go into `InfoReport` with status `NEW` for a person to review. They
+  never change the data by themselves and store nothing about the sender: no name, contact or IP
+  address. Spam limits are counted from stored reports. Reviewers use `GET/PATCH /api/v1/reports`
+  with the `x-review-token` header (`REPORTS_REVIEW_TOKEN`). Without the token those endpoints
+  return 404.
 - **Safety overrides everything.** Once the deterministic rules fire, a safety panel with urgent
   numbers stays above the conversation and results for the rest of the session, progress and the
   "What I understood" summary are hidden, and nothing animates.
@@ -88,20 +103,30 @@ until their programs are added.
 
 ## Researched data
 
-The file `apps/api/prisma/research/organizations.json` covers 18 organizations and was collected
-on 23 Sep 2026. For each organization it records:
+The file `apps/api/prisma/research/organizations.json` covers 55 organizations. 18 were collected
+on 23 Sep 2026 and 37 on 19 Oct 2026 (`checkedAt`). For each organization it records:
 - sourced contacts
 - a description in uz/ru/en
 - programs, each with a `sourceUrl` and a supporting quote (`evidenceQuote`, for reviewers only)
 - notes on what couldn't be confirmed
 
-Three organizations from the list couldn't be confirmed to exist or operate: Mehr Nuri,
-"Mehribonlik" jamg‘armasi and Gender tengligi markazi. They're flagged `hidden` and never shown
-to people. `src/programs/research-data.spec.ts` checks that every program has a source link, uses
+Organizations are flagged `hidden` and never shown to people only when there is positive
+evidence. That covers bodies that couldn't be confirmed to exist at all (Mehr Nuri,
+"Mehribonlik" jamg‘armasi, Gender tengligi markazi) and the seven found in the October audit to
+be dissolved, closed, or not working in Uzbekistan. An organization that simply couldn't be found
+online stays visible as *Tasdiqlanmagan*. The reasons are in each entry's `reviewNote` and in
+`docs/data-audit.md`. `src/programs/research-data.spec.ts` checks that every program has a source link, uses
 known vocabulary and has text in all three languages.
 
-To mark something verified, a person should open its `sourceUrl`, confirm the details with the
-organization, and then set `verification: VERIFIED` and `lastVerifiedAt`.
+To mark an organization verified, a person should:
+
+1. Open its `sourceUrl`.
+2. Confirm the details with the organization.
+3. Add a review to its entry: `"review": { "reviewedAt": "2026-11-01", "note": "what was confirmed, and how" }`.
+4. Re-run the seed.
+
+The status can't be set by hand: the seed derives it, and refuses a review that has no source,
+date or note.
 
 ## Run it
 
@@ -135,8 +160,9 @@ pnpm contract                                # regenerate OpenAPI + web client a
 | `/ask` | Privacy notice and mode choice (Private guided / AI-assisted), then the guided conversation with progress, tappable answers and inline explained results |
 | `/results` | All matches as Match cards (fit label, ✓ ? ! reasons, what to do next, official source), with filters and honest empty and error states |
 | `/explore` | Browse every program without the assistant: search, plus category, region, provider, target-group, open-only and data-status filters |
-| `/organizations` | Organization directory: search and filter by the source list's 10 sections |
-| `/programs/:id`, `/organizations/:slug` | Structured program and organization pages, each with a "Why/Who can apply" section, documents, contact details and a trust block |
+| `/organizations` | Organization directory: cards with status, area and contact links. Search ignores apostrophe variants and Uzbek Cyrillic. Filters cover the 10 sections, verification status, organization type, type of help and region |
+| `/programs/:id`, `/organizations/:slug` | Structured program and organization pages. Organization pages offer *Rasmiy saytga o‘tish* and *Bog‘lanish* only when that information exists, plus *Xatolik haqida xabar berish*. They also have services, who can apply, documents, contact details, the source with its dates, and a notice when information is incomplete |
+| `/about` | What Kashshof is, where its data comes from, what each status means, and the project background |
 | `/saved` | Saved programs (this device only) |
 | `/dashboard`, `/applications`, `/profile` | Signed-in screens, shown with the fixed demo persona "Malika" and clearly labelled |
 | `/apply/:programId` | Prepare application in four steps: requirements, document checklist, an editable statement draft, then the official place to apply. It ends with "Nothing has been submitted." |

@@ -55,9 +55,3 @@ export function DemoPersonaNotice() {
   const t = useTranslations('notices');
   return <Notice title={t('demoTitle')}>{t('demoBody')}</Notice>;
 }
-
-/** Shown on programs collected from public sources: real, sourced, but not reviewed by a person yet. */
-export function ResearchedDataNotice() {
-  const t = useTranslations('notices');
-  return <Notice title={t('researchedTitle')}>{t('researchedBody')}</Notice>;
-}

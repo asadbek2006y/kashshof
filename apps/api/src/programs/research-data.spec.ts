@@ -1,5 +1,7 @@
 import { loadResearch } from '../../prisma/research-data';
 import { organizations as sampleOrganizations } from '../../prisma/seed-data';
+import { deriveVerification, isHttpUrl } from '../domain/verification';
+import { directory } from '../../prisma/directory-data';
 import { CIRCUMSTANCES, DOCUMENTS, GENDERS, REGIONS, SUPPORT_TYPES } from '../domain/vocabulary';
 
 const research = loadResearch();
@@ -53,5 +55,26 @@ describe('researched organization data', () => {
   it('covers every organization that had invented sample programs, so none of those remain', () => {
     const researched = new Set(orgs.map((o) => o.slug));
     for (const org of sampleOrganizations) expect(researched).toContain(org.slug);
+  });
+
+  it('only verifies a record with a source page, a dated review and a note', () => {
+    for (const o of orgs.filter((o) => o.review)) {
+      expect(deriveVerification({ sourceUrl: o.sourceUrl, review: o.review })).toBe('VERIFIED');
+    }
+  });
+
+  it('uses real web links for every website and source, and a date for every check', () => {
+    for (const o of orgs) {
+      for (const url of [o.website, o.sourceUrl]) if (url) expect(isHttpUrl(url)).toBe(true);
+      if (o.checkedAt) expect(Number.isNaN(Date.parse(o.checkedAt))).toBe(false);
+    }
+  });
+
+  it('has a description wherever it names a source, and one entry per directory organization', () => {
+    for (const o of orgs.filter((o) => o.sourceUrl && !o.hidden)) expect(o.description).not.toBeNull();
+    const slugs = orgs.map((o) => o.slug);
+    expect(new Set(slugs).size).toBe(slugs.length);
+    const listed = new Set(directory.map((d) => d.slug));
+    for (const slug of slugs) expect(listed).toContain(slug);
   });
 });

@@ -1330,6 +1330,841 @@
           "statusNote": "Launched July 2026; call center was in test mode as of 28 July 2026"
         }
       ]
+    },
+    {
+      "slug": "ayollar-tadbirkorligini-qollab-quvvatlash-fondi",
+      "officialName": null,
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "No organization with this name found in web searches (Uzbek/Russian/English) on 2026-10-19. Searches returned only women's-entrepreneurship programmes run by others (UNDP WESP project with the Ministry of Economy and Finance; a 'Women's Entrepreneurship Support' department inside Xalq Bank; a company named 'Hamroh'), none of which is a fund with this name. These were seen only in search snippets and not verified. Not found in public sources on 2026-10-19; kept visible as unverified because a failed search is not proof it does not exist.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": null,
+      "evidenceQuote": null,
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "existence of a fund with this name",
+        "official name",
+        "website",
+        "contacts",
+        "description"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "baraka-ijtimoiy-xizmatlar-platformasi",
+      "officialName": "Baraka (ijtimoiy karta va ilova)",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "It's a state product (Baraka social card/app) run with the National Agency for Social Protection (IHMA), not a standalone organization. Phone 1070 is the IHMA hotline the site gives for Baraka questions; the site also lists bank lines Xalq banki 1106 and Aloqabank +998712307777. Recent evidence: news 'New Features Launched in the Baraka App' dated 03.06.2026 (https://baraka.gov.uz/en/?p=5666). Site checked 2026-10-19 and it responds.",
+      "website": "https://baraka.gov.uz/",
+      "phone": "1070",
+      "email": null,
+      "address": null,
+      "description": {
+        "uz": "Baraka — ijtimoiy nafaqalarni olish va boshqarish uchun rasmiy karta va mobil ilova. Ilova orqali davlat ijtimoiy xizmatlaridan foydalanish mumkin; kartani “Aloqabank” va “Xalq banki” chiqaradi.",
+        "ru": "Baraka — официальная карта и мобильное приложение для получения социальных пособий и управления ими. Через приложение можно пользоваться государственными социальными услугами; карту выпускают «Алокабанк» и «Халк банк».",
+        "en": "Baraka is an official card and mobile app for receiving and managing social benefits. The app gives access to state social services; the card is issued by Aloqabank and Xalq Bank."
+      },
+      "sourceUrl": "https://baraka.gov.uz/",
+      "evidenceQuote": "Ijtimoiy nafaqalaringizni olish va boshqarish uchun O‘zbekistondagi birinchi rasmiy karta va ilova.",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "email",
+        "street address",
+        "exact legal name of the operating body"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "bolalar-mahallasi-jamgarmasi",
+      "officialName": null,
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "No fund called 'Bolalar Mahallasi jamg‘armasi' found. The nearest real body is the SOS Children's Villages association. Cabinet of Ministers Resolution No. 738 of 21.11.2020 (https://lex.uz/en/acts/-5117289) names it 'SOS Oʻzbekiston bolalar mahallalari uyushmasi' and says 'bolalar mahallalari — bolalarni muqobil parvarish qilish xizmatlari'. It looks like a duplicate or mis-naming of slug sos-ozbekiston-bolalar-mahallalari. sos-kd.uz returns HTTP 200 (checked 2026-10-19), but it is a JavaScript-only page, so its content could not be read to confirm it belongs to the association. Possible duplicate of sos-ozbekiston-bolalar-mahallalari (not confirmed). Not found in public sources on 2026-10-19; kept visible as unverified because a failed search is not proof it does not exist.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": null,
+      "evidenceQuote": null,
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "existence of a body under this exact name",
+        "that sos-kd.uz is the association's official site (content not readable)",
+        "2024-2026 activity of SOS Uzbekistan (a June 2025 UNICEF press release appeared in search but the URL returned 404)"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "bolalar-va-oilalarni-qollab-quvvatlash-assotsiatsiyasi",
+      "officialName": null,
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "No organization with this name found in web searches (Uzbek/Russian/English) on 2026-10-19. A Golden Pages directory snippet for 'SOS-O'zbekiston Respublikasi Bolalar Qishloqlari Assotsiatsiyasi' describes support for children and families. That listing was not fetched, so this may be a duplicate of the SOS association, but that is unconfirmed. Not found in public sources on 2026-10-19; kept visible as unverified because a failed search is not proof it does not exist.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": null,
+      "evidenceQuote": null,
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "existence",
+        "official name",
+        "website",
+        "contacts",
+        "description",
+        "whether it duplicates sos-ozbekiston-bolalar-mahallalari"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "bolalarni-qollab-quvvatlash-jamoat-fondi",
+      "officialName": "Bolalarni qo‘llab-quvvatlash jamoat fondi",
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "Set up by the presidential resolution of 4 October 2021 (search snippets give PQ-5255). The source is the 4.10.2021 decree report. No 2024-2026 evidence of activity was found, so it is not confirmed as currently operating. The decree says the fund must have an official website, but none was found.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": {
+        "uz": "Fond og‘ir vaziyatga tushgan, ijtimoiy himoyaga muhtoj bolalarni aniqlaydi va ularga manzilli ijtimoiy va moddiy yordam ko‘rsatadi. Shuningdek, og‘ir va noyob kasalliklarga chalingan bolalarni davolashni moliyalashtiradi, ehtiyojmand va nogironligi bo‘lgan bolalarni bepul dori-darmon va protez-ortopediya buyumlari bilan ta’minlaydi.",
+        "ru": "Фонд выявляет детей, оказавшихся в трудной ситуации и нуждающихся в социальной защите, и оказывает им адресную социальную и материальную помощь. Он также финансирует лечение детей с тяжёлыми и редкими заболеваниями и бесплатно обеспечивает нуждающихся детей и детей с инвалидностью лекарствами и протезно-ортопедическими изделиями.",
+        "en": "The fund identifies children in difficult circumstances who need social protection and gives them targeted social and material aid. It also funds treatment for children with serious and rare diseases and provides free medicines and prosthetic-orthopaedic devices to needy children and children with disabilities."
+      },
+      "sourceUrl": "https://yuz.uz/uz/news/bolalarni-qollab-quvvatlash-jamoat-fondi-faoliyatini-tashkil-etish-chora-tadbirlari-togrisida",
+      "evidenceQuote": "og‘ir vaziyatga tushgan, ijtimoiy himoyaga muhtoj bolalarni aniqlash va ularga manzilli ijtimoiy va moddiy yordam",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "current operation (2024-2026)",
+        "official website",
+        "contacts"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "inklyuziv-jamiyat-fondi",
+      "officialName": null,
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "No organization with this name found in web searches (Uzbek/Russian/English) on 2026-10-19. 'Inklyuziv jamiyat' appears only as a policy concept in academic articles and news. Not found in public sources on 2026-10-19; kept visible as unverified because a failed search is not proof it does not exist.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": null,
+      "evidenceQuote": null,
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "existence",
+        "official name",
+        "website",
+        "contacts",
+        "description"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "mahalla-xayriya-jamoat-fondi",
+      "officialName": "“Mahalla” xayriya jamoat fondi",
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "The source is dated 11.11.2021. The newest item seen was a July 2023 kun.uz report (search snippet only, not fetched) about presidential decisions sending fund money into construction projects. No 2024-2026 evidence was found, and no official website.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": {
+        "uz": "“Mahalla” xayriya jamoat fondining hududiy bo‘linmalari aholining kam ta’minlangan qatlamiga moddiy yordam ko‘rsatadi.",
+        "ru": "Территориальные подразделения благотворительного общественного фонда «Махалла» оказывают материальную помощь малообеспеченным слоям населения.",
+        "en": "Local branches of the “Mahalla” charitable public fund give material aid to low-income residents."
+      },
+      "sourceUrl": "https://yuz.uz/uz/news/aholining-ehtiyojmand-qatlami-qollab-quvvatlanmoqda",
+      "evidenceQuote": "“Mahalla” xayriya jamoat fondi Gʼozgʼon shahar boʼlinmasi tomonidan aholining kam taʼminlangan",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "current operation (2024-2026)",
+        "official website",
+        "contacts"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "mehrli-qollar-markazi",
+      "officialName": null,
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "The only fetched evidence is Anhor.uz, 29.09.2020 (https://anhor.uz/ru/news/23188-2): 'В рамках проекта Mehrli qo'llar («Добрые руки») Центр проведет сбор средств для благотворительной акции Mehr («Добро»).' In that article the organiser is the 'Центр молодежи и детей с ограниченными возможностями', and Mehrli qo'llar is a project name, not a centre. A Golden Pages snippet (not fetched) lists a 'MEHRLI QOLLAR' charitable fund NNO in Tashkent with a Khanka branch. Evidence is from 2020 and there is no verifiable contact path, so hide until a reviewer confirms. Not found in public sources on 2026-10-19; kept visible as unverified because a failed search is not proof it does not exist.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": null,
+      "evidenceQuote": null,
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "that a 'Mehrli Qo‘llar markazi' exists as an organization",
+        "current operation",
+        "official name",
+        "website",
+        "contacts"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "mirabror-usmonov-xalqaro-xayriya-jamoat-fondi",
+      "officialName": null,
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "No organization with this name found in web searches (Uzbek/Russian/English) on 2026-10-19. Searches surfaced the 'Ezgu Maqsad' international charitable public fund (founded 2017), whose board chairman from June 2019 is Jahongir Usmonov, son of the late senator Mirabror Usmonov (kun.uz 29.06.2019, snippet only). That is a different name. Do not merge without a source. Not found in public sources on 2026-10-19; kept visible as unverified because a failed search is not proof it does not exist.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": null,
+      "evidenceQuote": null,
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "existence",
+        "official name",
+        "website",
+        "contacts",
+        "description"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "muruvvat-jamgarmasi",
+      "officialName": null,
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "No organization with this name found in web searches (Uzbek/Russian/English) on 2026-10-19. A Golden Pages snippet (not fetched) lists 'MURUVVAT NODAVLAT NOTIJORAT TASHKILOTI' in Qarshi with no description. It isn't clear it is the same body. Not found in public sources on 2026-10-19; kept visible as unverified because a failed search is not proof it does not exist.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": null,
+      "evidenceQuote": null,
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "existence",
+        "official name",
+        "website",
+        "contacts",
+        "description"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "nanasaid-jamoat-fondi",
+      "officialName": null,
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "No organization with this name found in web searches (Uzbek/Russian/English) on 2026-10-19. Not found in public sources on 2026-10-19; kept visible as unverified because a failed search is not proof it does not exist.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": null,
+      "evidenceQuote": null,
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "existence",
+        "official name",
+        "website",
+        "contacts",
+        "description"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "ozbekiston-karlar-jamiyati",
+      "officialName": "O‘zbekiston Karlar jamiyati (Общество глухих Узбекистана)",
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "The fetched source is old (29.06.2018). A UNDP item dated 5 Aug 2025 about a Bukhara branch of the Society launching s-access.uz appeared in search, but undp.org returned 403 and the item could not be confirmed. No official website found.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": {
+        "uz": "O‘zbekiston Karlar jamiyati qoshida kar va eshitishida nuqsoni bo‘lgan insonlar uchun madaniyat markazi faoliyat yuritadi; jamiyat hududida 100 dan ortiq ayol ishlaydigan tikuvchilik korxonasi tashkil etilgan.",
+        "ru": "При Обществе глухих Узбекистана работает Центр культуры глухих; на его территории организовано швейное предприятие, где трудоустроены более 100 женщин.",
+        "en": "The Society of the Deaf of Uzbekistan runs a culture centre for deaf people, and a sewing enterprise on its premises employs more than 100 women."
+      },
+      "sourceUrl": "https://president.uz/ru/1871",
+      "evidenceQuote": "На территории Общества глухих Узбекистана организовано швейное предприятие, в котором трудоустроены более 100 женщин.",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "2024-2026 activity (UNDP 2025 page blocked)",
+        "official website",
+        "contacts"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "ozbekiston-kozi-ojizlar-jamiyati",
+      "officialName": "O‘zbekiston Ko‘zi ojizlar jamiyati (Общество слепых Узбекистана)",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "The source is dated 11.06.2024. Statsnet and Golden Pages show many registered district branches. No official website found.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": {
+        "uz": "O‘zbekiston Ko‘zi ojizlar jamiyati 1932-yilda tashkil etilgan; uning markaziy boshqaruvi, hududiy bo‘limlari va korxonalari bor. Jamiyat dam olish uylari va sanatoriy yuritadi, Jahon va Osiyo ko‘zi ojizlar ittifoqlari a’zosi.",
+        "ru": "Общество слепых Узбекистана создано в 1932 году; у него есть центральное правление, региональные отделения и предприятия. Общество содержит дома отдыха и санаторий и входит во Всемирный и Азиатский союзы слепых.",
+        "en": "The Society of the Blind of Uzbekistan was founded in 1932. It has a central board, regional branches and its own enterprises, runs rest homes and a sanatorium, and is a member of the World Blind Union and the Asian Blind Union."
+      },
+      "sourceUrl": "https://yuz.uz/ru/news/videt-serdtsem",
+      "evidenceQuote": "Общество слепых Узбекистана создано 15 июня 1932 года.",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "official website",
+        "contacts"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "ozbekiston-maxsus-olimpiadasi",
+      "officialName": "Special Olympics Uzbekistan",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "The Special Olympics International program page (https://www.specialolympics.org/programs/europe-eurasia/uzbekistan) lists the website http://www.specialolympics.uz/, phone +998 71 232 69 79, email sgulya@mail.ru and address Islam Karimov Avenue 98A, 100027 Tashkent. On 2026-10-19 specialolympics.uz did not resolve (DNS failure), so website was left null. The phone, email and address come from the parent body's page, not the national program's own site, and look old (the fact sheet is from 2020; the email is a personal mail.ru address), so they were not put in the contact fields. A reviewer should decide whether to use them.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": {
+        "uz": "Special Olympics Uzbekistan (O‘zbekiston Maxsus Olimpiadasi) sportchilar uchun musobaqalar o‘tkazadi; uning sportchisi 2025-yilgi Turin Jahon qishki o‘yinlarida oltin medal qo‘lga kiritgan.",
+        "ru": "Special Olympics Uzbekistan (Специальная Олимпиада Узбекистана) проводит соревнования для спортсменов; её спортсменка завоевала золото на Всемирных зимних играх 2025 года в Турине.",
+        "en": "Special Olympics Uzbekistan organises competitions for its athletes; one of them won gold at the 2025 World Winter Games in Turin."
+      },
+      "sourceUrl": "https://specialolympics.org/stories/athletes/a-rising-star-uzbekistans-gold-medalist-sitora-ergashova",
+      "evidenceQuote": "competitions organised by Special Olympics Uzbekistan",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "working official website",
+        "current contacts"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "ozbekiston-musulmonlari-idorasi",
+      "officialName": "O‘zbekiston musulmonlari idorasi",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "The site responds (redirects to /oz) and its latest news is dated 19.10.2026. It carries a notice 'Сайт тест ҳолатида ишламоқда!'. The homepage gives no phone, email or address (there is a /site/contacts page, not fetched). The homepage does not describe direct help for individuals. The Vaqf charity fund (vaqf-xayriya-jamoat-fondi) operates under this Board.",
+      "website": "https://muslim.uz/",
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": {
+        "uz": "O‘zbekiston musulmonlari idorasining rasmiy sayti yangiliklar va fatvolarni, jumladan zakot bo‘limini e’lon qiladi.",
+        "ru": "Официальный сайт Управления мусульман Узбекистана публикует новости и фетвы, в том числе раздел о закяте.",
+        "en": "The Muslim Board of Uzbekistan's official site publishes news and fatwas, including a section on zakat."
+      },
+      "sourceUrl": "https://muslim.uz/oz",
+      "evidenceQuote": "© Ўзбекистон мусулмонлари идораси",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "contacts",
+        "services for individuals"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "ozbekiston-nogironlar-aravachasi-assotsiatsiyasi",
+      "officialName": null,
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "No organization with this name found in web searches (Uzbek/Russian/English) on 2026-10-19. Searches surfaced only the broader 'Association of Disabled People of Uzbekistan' (OSCE pages, snippets only). Not merged. Not found in public sources on 2026-10-19; kept visible as unverified because a failed search is not proof it does not exist.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": null,
+      "evidenceQuote": null,
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "existence",
+        "official name",
+        "website",
+        "contacts",
+        "description"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "ozbekiston-volontyorlar-assotsiatsiyasi",
+      "officialName": "O‘zbekiston Volontyorlar assotsiatsiyasi",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "Recent evidence: gov.uz 30.06.2026 (memorandum with the Youth Parliament under the Senate) and UzA 24.06.2026 (memorandum with the National Guard, signed by director Shirin Abidova; https://uza.uz/ar/posts/volontyorlar-safini-kengaytiruvchi-muhim-kelishuvga-erishildi_874862). Sources describe partnerships, not direct services for individuals. No official website found.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": {
+        "uz": "O‘zbekiston Volontyorlar assotsiatsiyasi yoshlar bilan ishlash va jamiyatda volontyorlik madaniyatini shakllantirish bo‘yicha davlat tashkilotlari bilan hamkorlik memorandumlarini imzolagan.",
+        "ru": "Ассоциация волонтёров Узбекистана подписала меморандумы о сотрудничестве с государственными органами в работе с молодёжью и формировании культуры волонтёрства.",
+        "en": "The Volunteers Association of Uzbekistan has signed cooperation memorandums with state bodies on youth work and on building a volunteering culture."
+      },
+      "sourceUrl": "https://gov.uz/oz/fvv-toshkent/news/view/186154",
+      "evidenceQuote": "Tadbir yakunida Senat huzuridagi Yoshlar parlamenti, O‘zbekiston Volontyorlar assotsiatsiyasi hamda",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "official website",
+        "contacts",
+        "services offered to individuals"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "salomatlik-jamgarmasi",
+      "officialName": null,
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "No organization with this name found in web searches (Uzbek/Russian/English) on 2026-10-19. Related names seen only in snippets: the 'Mehr-shafqat va salomatlik' public fund (kun.uz 2020; Golden Pages) and 'Salomatlik', a state order (award). Not merged. Not found in public sources on 2026-10-19; kept visible as unverified because a failed search is not proof it does not exist.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": null,
+      "evidenceQuote": null,
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "existence",
+        "official name",
+        "website",
+        "contacts",
+        "description"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "sharoit-plus",
+      "officialName": "“Sharoit Plus” (SHAROIT PLYUS Toshkent shahar nogironlar jamoat birlashmasi)",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "The source is dated 29.11.2024. The legal name in parentheses is from Golden Pages and Yellow Pages snippets (not fetched), so confirm it before use. No official website found.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": {
+        "uz": "“Sharoit Plus” nodavlat notijorat tashkiloti nogironligi bo‘lgan shaxslarni bozorda talab yuqori bo‘lgan zamonaviy kasblarga o‘rgatadi. Uning bosh ofisida nogironligi bo‘lgan ayollar uchun tikuvchilik sexi ochilgan.",
+        "ru": "ННО «Шароит Плюс» обучает людей с инвалидностью современным востребованным на рынке профессиям. В её головном офисе открыт швейный цех для женщин с инвалидностью.",
+        "en": "The NGO Sharoit Plus trains people with disabilities in modern professions that are in demand on the job market. Its head office has a sewing workshop for women with disabilities."
+      },
+      "sourceUrl": "https://anhor.uz/uzl/news/toshkentda-sharoit-plyus-nntning-bosh-ofisi-ochildi/",
+      "evidenceQuote": "Tashkilot nogironligi bo‘lgan shaxslarni bozorda talabga ega bo‘lgan zamonaviy kasblarga o‘rgatadi",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "official website",
+        "contacts",
+        "exact registered legal name"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "vaqf-xayriya-jamoat-fondi",
+      "officialName": "“Vaqf” xayriya jamoat fondi",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "The site responds (checked 2026-10-19). Contacts are from the site footer. The founding date (decree of 16 April 2018, under the Muslim Board) is from Kun.uz 08.10.2022 (https://kun.uz/news/2022/10/08/vaqf-nima-u). The list of donation categories is paraphrased from the homepage by the fetch tool, not quoted. The newest blog posts show day and month without a year (e.g. '29 Oct'), so recency is only partly confirmed.",
+      "website": "https://vaqf.uz/",
+      "phone": "+998 95 195-16-10",
+      "email": "info@vaqf.uz",
+      "address": "100071, Toshkent shahar Shayxontohur tumani, Navoiy ko'chasi 46-uy",
+      "description": {
+        "uz": "“Vaqf” xayriya jamoat fondi O‘zbekiston musulmonlari idorasi huzurida 2018-yilda tashkil etilgan. Sayt orqali zakot, yetimlar, kam ta’minlanganlar, bemorlar, talabalar va masjidlar uchun xayriya yig‘imlari olib boriladi.",
+        "ru": "Благотворительный общественный фонд «Вакф» создан в 2018 году при Управлении мусульман Узбекистана. Через сайт фонд собирает пожертвования (закят) для сирот, малообеспеченных, больных, студентов и мечетей.",
+        "en": "The “Vaqf” charitable public fund was set up in 2018 under the Muslim Board of Uzbekistan. Through its website it collects donations, including zakat, for orphans, low-income people, patients, students and mosques."
+      },
+      "sourceUrl": "https://vaqf.uz/",
+      "evidenceQuote": "“Vaqf” xayriya jamoat fondi — bu \"VAQF\" mulklarini yaratish bilan yurtimizda bir asr oldin yuqotilgan",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "year of the latest site activity"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "bolalarni-ijtimoiy-moslashtirish-respublika-markazi",
+      "officialName": "Республиканский центр социальной адаптации детей (РЦСАД) / Respublika bolalar ijtimoiy moslashuvi markazi",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "The site responds (checked 2026-10-19) and links a report titled '3299-3-квартал-2026'. Other numbers on the site: +998 71 281 59 32, +998 71 281 49 53, +998 71 281 49 54. Created by Cabinet of Ministers resolution No. 419 of 07.09.2004 (lex.uz, per search snippet). The evidence quote is a slogan the site attributes to Lola Karimova-Tillyaeva, so a reviewer may want a more neutral description from a service page. 'State institution' in the description comes from the budget-funding lex.uz acts seen in search, not from this page.",
+      "website": "https://rcsad.uz/",
+      "phone": "+998 71 281 59 31",
+      "email": null,
+      "address": "100100, г. Ташкент, ул. Абдулла Каххара, 34",
+      "description": {
+        "uz": "Respublika bolalar ijtimoiy moslashuvi markazi davlat muassasasi bo‘lib, uning maqsadi har bir bolaning oilada yashashi va maktabga borishidir.",
+        "ru": "Республиканский центр социальной адаптации детей — государственное учреждение, цель которого — чтобы каждый ребёнок жил в семье и ходил в школу.",
+        "en": "The Republican Centre for Social Adaptation of Children is a state institution whose stated aim is for every child to live in a family and attend school."
+      },
+      "sourceUrl": "https://rcsad.uz/",
+      "evidenceQuote": "Наша главная цель, чтобы каждый ребенок жил в семье, ходил в школу",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "email",
+        "detailed list of services for families"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "ozbekiston-yoshlar-ittifoqi",
+      "officialName": "O‘zbekiston Yoshlar ittifoqi (tugatilgan)",
+      "existenceConfirmed": false,
+      "hidden": true,
+      "reviewNote": "Reorganised. The Central Bank page says the Youth Union was abolished and the Youth Affairs Agency created on its base, under the decree 'O‘zbekiston Respublikasida yoshlarga oid davlat siyosatini tubdan isloh qilish…'. That title matches Presidential Decree PF-6017 of 30.06.2020 (https://www.lex.uz/docs/-4880189, effective 01.07.2020). PQ-4768 of the same date (https://lex.uz/mact/-4880129) moves Youth Union property and an institute to the Agency. The successor is the 'O‘zbekiston Respublikasi Yoshlar ishlari agentligi' (https://gov.uz/oz/yoshlar/pages/about, hotline 1093, page responds). Suggest replacing this entry with the Agency. A search snippet mentions PF-258 of 02.12.2022 creating a Ministry of Youth Policy and Sports, which may have changed the Agency's status. That is unverified and needs checking. Source checked but not shown: https://cbu.uz/uz/about/vacancies/youth-union/ — “Ushbu Farmonga muvofiq, O‘zbekiston Yoshlar ittifoqi tugatilib, uning negizida O‘zbekiston Yoshlar ishlari agentligi tashkil etildi.”",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": "https://cbu.uz/uz/about/vacancies/youth-union/",
+      "evidenceQuote": "Ushbu Farmonga muvofiq, O‘zbekiston Yoshlar ittifoqi tugatilib, uning negizida O‘zbekiston Yoshlar ishlari agentligi tashkil etildi.",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "the Agency's status after the 2022 reorganisation (PF-258)"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "action-against-hunger",
+      "officialName": "Action Against Hunger",
+      "existenceConfirmed": false,
+      "hidden": true,
+      "reviewNote": "No Uzbekistan presence found. The official 'Where we work in Asia' page (fetched 2026-10-19) lists Afghanistan, Armenia, Bangladesh, India, Myanmar, Nepal, Pakistan, Philippines; no Central Asian country. The only 'Uzbekistan' string on the homepage is in a country dropdown for donor forms. Web search found no Action Against Hunger activity in Uzbekistan. Source checked but not shown: https://www.actionagainsthunger.org/global-impact/where-we-work/asia/",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": "https://www.actionagainsthunger.org/global-impact/where-we-work/asia/",
+      "evidenceQuote": null,
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "Any Uzbekistan office or programme",
+        "Uzbekistan contact details"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "british-council-ozbekiston",
+      "officialName": "British Council Uzbekistan",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "Presence also supported by gov.uk (20 Feb 2017): 'In 2016 the British Council celebrated its 20th Anniversary in Uzbekistan.' Official site www.britishcouncil.uz appears in search results but did NOT respond from the checking environment on 2026-10-19 (WebFetch timeouts; curl connection failure; britishcouncil.org also unreachable) - likely a network/geo issue on our side, so it is left null; a reviewer should open it manually. Search snippets/directories give 107B Amir Temur Avenue, Tashkent, (+998 71) 205-06-60, info@britishcouncil.uz, but these were NOT confirmed on an official page and are omitted. Mostly English-language/exam (IELTS) services; check relevance for the directory's audience.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": {
+        "uz": "British Council O‘zbekistonda ta’lim va madaniyat sohasida hamkorlik qiladi; 2024-yilda O‘zbekistonda ingliz tilini o‘qitish dasturlarini kengaytirishga kelishib olingan.",
+        "ru": "Британский совет сотрудничает с Узбекистаном в сфере образования и культуры; в 2024 году стороны договорились расширить программы обучения английскому языку в стране.",
+        "en": "The British Council works with Uzbekistan on education and culture; in 2024 the sides agreed to expand the British Council's English language training programmes in the country."
+      },
+      "sourceUrl": "https://kun.uz/en/news/2024/08/27/british-council-ready-to-deepen-educational-and-cultural-ties-with-uzbekistan",
+      "evidenceQuote": "expand the British Council's English language training programs in our country",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "Official website responding (britishcouncil.uz unreachable from checker)",
+        "Phone",
+        "Email",
+        "Address (unofficial sources say 107B Amir Temur Ave, not confirmed)"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "care-international",
+      "officialName": "CARE International",
+      "existenceConfirmed": false,
+      "hidden": true,
+      "reviewNote": "CARE's official 'Where we work' page (fetched 2026-10-19) lists 106 countries and none of the five Central Asian states, including Uzbekistan. Searches returned no CARE programme in Uzbekistan (results about 'CAREC', a different organization, are unrelated). Source checked but not shown: https://www.care-international.org/where-we-work",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": "https://www.care-international.org/where-we-work",
+      "evidenceQuote": null,
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "Any Uzbekistan office or programme",
+        "Uzbekistan contact details"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "chegarasiz-shifokorlar",
+      "officialName": "Médecins Sans Frontières (MSF) / Doctors Without Borders",
+      "existenceConfirmed": false,
+      "hidden": true,
+      "reviewNote": "MSF's projects in Uzbekistan ended: 'In June 2025, we successfully concluded our HIV outreach project' and 'In September, we ended our long-running collaboration with the Karakalpakstan Tuberculosis Programme.' MSF says it is assessing future needs; no current programme for individuals. Page responds (HTTP 200). Recommend hiding until MSF announces new activity. Source checked but not shown: https://www.msf.org/uzbekistan — “Our two long-standing projects concluded in 2025”",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": "https://www.msf.org/uzbekistan",
+      "evidenceQuote": "Our two long-standing projects concluded in 2025",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "Any current (post-2025) programme in Uzbekistan",
+        "Uzbekistan office contact details (page lists only Geneva HQ)"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "erasmus-plus-ozbekiston",
+      "officialName": "National Erasmus+ Office in Uzbekistan (NEO)",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "Contact details from the erasmus.uz homepage footer (hours 09:00–18:00 Mon–Fri). Latest news item on site dated 01 Oct 2026. Also confirmed by gov.uz (25 Feb 2025). Note the email uses the erasmusplus.uz domain while the site is erasmus.uz. Serves higher-education students/institutions (scholarships, grants), not social support.",
+      "website": "https://erasmus.uz/",
+      "phone": "+998 71 238 99 18",
+      "email": "neo@erasmusplus.uz",
+      "address": "Amir Temur ko‘chasi, 107B, Xalqaro biznes markaz, A-blok, 7-qavat, Toshkent 100084",
+      "description": {
+        "uz": "O‘zbekistondagi Erasmus+ milliy ofisi (NEO) Erasmus+ dasturini, xususan oliy ta’lim sohasida, amalga oshirishda yordam beradi hamda hamkor-mamlakatdagi oliy ta’lim siyosatidagi o‘zgarishlarni kuzatib boradi.",
+        "ru": "Национальный офис Erasmus+ в Узбекистане (NEO) содействует реализации программы Erasmus+, в частности в сфере высшего образования, и отслеживает изменения в политике высшего образования страны.",
+        "en": "The National Erasmus+ Office in Uzbekistan (NEO) helps implement the Erasmus+ programme, particularly in higher education, and follows higher-education policy developments in the country."
+      },
+      "sourceUrl": "https://erasmus.uz/page/72-about-neo",
+      "evidenceQuote": "NEO hamkor-mamlakatdagi, xususan, oliy taʼlim sohasidagi siyosat oʻzgarishlarini yaqindan kuzatib boradi.",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [],
+      "programs": []
+    },
+    {
+      "slug": "human-appeal",
+      "officialName": "Human Appeal",
+      "existenceConfirmed": false,
+      "hidden": true,
+      "reviewNote": "Official 'our work by country' page (fetched 2026-10-19) names Somalia, Bangladesh, Pakistan, Iraq, Lebanon, Palestine, Syria, Turkey, Yemen (it says 16 countries but names nine). Uzbekistan not listed; homepage has no mention of Uzbekistan; searches found nothing. Source checked but not shown: https://humanappeal.org.uk/our-work-by-country",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": "https://humanappeal.org.uk/our-work-by-country",
+      "evidenceQuote": null,
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "Any Uzbekistan office or programme"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "iom-ozbekiston",
+      "officialName": "International Organization for Migration (IOM) – Uzbekistan",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "Phone, email and address from https://uzbekistan.iom.int/contact-us. That page also lists a second number shown as '+988 71 266 74 41' (country code looks like a typo for +998) - omitted. Theme areas are from site tags, not a descriptive sentence. Latest news Dec 2025, publications Apr 2026. Also listed on uzbekistan.un.org UN entities page.",
+      "website": "https://uzbekistan.iom.int/",
+      "phone": "+998 78 120 31 40",
+      "email": "iomtashkent@iom.int",
+      "address": "4 Lomonosov Street, Mirzo Ulughbek District, Tashkent 100077",
+      "description": {
+        "uz": "Xalqaro migratsiya tashkiloti (XMT) 2015-yildan beri O‘zbekistonda faoliyat yuritadi va Toshkentda ofisiga ega; uning yo‘nalishlari qatoriga odam savdosiga qarshi kurash, mehnat migratsiyasi hamda qaytish va reintegratsiya kiradi.",
+        "ru": "Международная организация по миграции (МОМ) работает в Узбекистане с 2015 года и имеет офис в Ташкенте; среди её направлений — противодействие торговле людьми, трудовая миграция, возвращение и реинтеграция.",
+        "en": "The International Organization for Migration has been present in Uzbekistan since 2015 with an office in Tashkent; its themes include counter-trafficking, labour migration, and return and reintegration."
+      },
+      "sourceUrl": "https://uzbekistan.iom.int/",
+      "evidenceQuote": "IOM has had a presence in Uzbekistan since 2015.",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "Second phone number (typo on official page)",
+        "Whether individuals can walk in for direct assistance"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "islamic-relief",
+      "officialName": "Islamic Relief Worldwide",
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "Official 'Where we work' page (fetched 2026-10-19) lists 28 countries; Uzbekistan and other Central Asian states are not listed (page says 'over 40 countries', so the list may be incomplete). No search result showed Islamic Relief activity in Uzbekistan. Source checked but not shown: https://islamic-relief.org/where-we-work/ Not found in public sources on 2026-10-19; kept visible as unverified because a failed search is not proof it does not exist.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": null,
+      "evidenceQuote": null,
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "Any Uzbekistan office or programme"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "jahon-oziq-ovqat-dasturi",
+      "officialName": "World Food Programme (WFP)",
+      "existenceConfirmed": true,
+      "hidden": true,
+      "reviewNote": "Presence is logistical only, serving Afghanistan; no programmes for people in Uzbekistan found. Uzbekistan is not in WFP's country list (wfp.org/countries, fetched 2026-10-19; www.wfp.org/countries/uzbekistan returns 404) and WFP is not on uzbekistan.un.org's UN entities page. Source dated 28 Feb 2023. Source checked but not shown: https://www.wfp.org/news/special-representative-president-uzbekistan-visits-wfp-warehouse — “WFP's existing Logistics Hub in Termez has served as a transshipment point for WFP's Afghanistan operations since 2021.”",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": "https://www.wfp.org/news/special-representative-president-uzbekistan-visits-wfp-warehouse",
+      "evidenceQuote": "WFP's existing Logistics Hub in Termez has served as a transshipment point for WFP's Afghanistan operations since 2021.",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "Any programme for individuals in Uzbekistan",
+        "Uzbekistan country office or contacts"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "mercy-corps-dasturlari",
+      "officialName": "Prosper Global (formerly Mercy Corps Europe)",
+      "existenceConfirmed": false,
+      "hidden": true,
+      "reviewNote": "europe.mercycorps.org/where-we-work/uzbekistan now redirects (301) to Prosper Global. Operations in Uzbekistan closed; no current programme. Note: it is unclear whether Mercy Corps (US, mercycorps.org) is the same entity after the rebrand - not checked further. Source checked but not shown: https://europe.prosperglobal.org/where-we-work/uzbekistan — “We have decided it was time to close down our operations and let our amazing local partners take the lead.”",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": "https://europe.prosperglobal.org/where-we-work/uzbekistan",
+      "evidenceQuote": "We have decided it was time to close down our operations and let our amazing local partners take the lead.",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "Exact closure date",
+        "Any remaining Mercy Corps (US) activity in Uzbekistan"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "qatar-charity-dasturlari",
+      "officialName": "Qatar Charity",
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "Only evidence is a one-off COVID-19 donation passed via the Qatari embassy (dated '24 August', Hijri URL 1442 => about 2020; old). No Qatar Charity office, programme, or way for individuals to apply in Uzbekistan was found. qcharity.org responds but its country list requires login. 2024 kun.uz news concerns Qatar Fund for Development, a different body. Source checked but not shown: https://mofa.gov.qa/en/all-mofa-news/details/1442/01/05/qatar's-embassy-provides-financial-assistance-to-republic-of-uzbekistan-to-combat-coronavirus — “financial assistance offered by Qatar Charity to Uzbekistan to help confront the spread of Coronavirus pandemic” Not found in public sources on 2026-10-19; kept visible as unverified because a failed search is not proof it does not exist.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": null,
+      "evidenceQuote": "financial assistance offered by Qatar Charity to Uzbekistan to help confront the spread of Coronavirus pandemic",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "Any current programme in Uzbekistan",
+        "Uzbekistan office or contacts"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "save-the-children",
+      "officialName": "Save the Children",
+      "existenceConfirmed": false,
+      "hidden": false,
+      "reviewNote": "Could not confirm any current Uzbekistan presence. savethechildren.net and savethechildren.org returned 403 to the checker, and centralasia.savethechildren.net did not resolve (DNS). Search results show Central Asia work in Tajikistan and Kyrgyzstan only; an old CRIN directory listing mentions a 'Save the Children UK - Uzbekistan Office' (undated, unverified by CRIN). Recommend hiding unless a reviewer finds current evidence. Not found in public sources on 2026-10-19; kept visible as unverified because a failed search is not proof it does not exist.",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": null,
+      "evidenceQuote": null,
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "Any current Uzbekistan office or programme",
+        "Official country page (blocked 403)"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "turkiya-diyanet-jamgarmasi-dasturlari",
+      "officialName": "Türkiye Diyanet Vakfı (Türkiye Diyanet Foundation, TDV)",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "Article dated 17 Feb 2026. TDV's homepage map lists Uzbekistan activities as 'Quran, Educational Support, Qurbani Aid, Ramadan Aid'. Aid is seasonal and channelled through the Turkish Embassy's religious counsellor and the Vaqf fund; no TDV office or contact in Uzbekistan and no way for individuals to apply was found - hence recommendHidden. A reviewer may prefer to list the Vaqf charity fund instead.",
+      "website": "https://tdv.org/en-EN/",
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": {
+        "uz": "Turkiya Diyanet jamg‘armasi 2026-yil Ramazon oldidan O‘zbekistondagi 900 ta muhtoj oilaga oziq-ovqat yordami ajratgan; yordam O‘zbekiston musulmonlari idorasi qoshidagi “Vaqf” xayriya jamoat fondi orqali Surxondaryo viloyatida tarqatilgan.",
+        "ru": "Фонд Диянет Турции перед Рамаданом 2026 года выделил продовольственную помощь 900 нуждающимся семьям в Узбекистане; помощь распределялась в Сурхандарьинской области через благотворительный фонд «Вакф» при Управлении мусульман Узбекистана.",
+        "en": "The Türkiye Diyanet Foundation distributed food aid to 900 needy families in Uzbekistan ahead of Ramadan 2026, delivered in Surkhandarya through the Vaqf charity fund of the Muslim Board of Uzbekistan."
+      },
+      "sourceUrl": "https://tdv.org/en-EN/the-turkiye-diyanet-foundation-provided-food-aid-to-900-families-in-uzbekistan/",
+      "evidenceQuote": "The Türkiye Diyanet Foundation (TDV) distributed food aid to 900 needy families in Uzbekistan ahead of Ramadan.",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "Uzbekistan office or contacts",
+        "How individuals can access aid directly"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "unhcr-markaziy-osiyo",
+      "officialName": "UNHCR, the UN Refugee Agency – Central Asia",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "UNHCR is listed on uzbekistan.un.org's UN entities page and met Uzbek MFA officials (gov.uz, 10 Jun 2026) about the Termez logistics hub, but no Uzbekistan office or service for individuals was confirmed. Search snippets say it is a non-resident agency covered from Almaty, but unhcr.org pages (incl. the 2025 Uzbekistan factsheet and help.unhcr.org) returned 403, so this was not confirmed. Source dated 2 Sep 2025. The UN Uzbekistan page gives https://www.unhcr.org/centralasia/ as its website (403 to checker, so not recorded). UNHCR left its Tashkent office in 2006 (historic). Source checked but not shown: https://timesca.com/after-afghan-quake-unhcr-preps-relief-supplies-at-uzbek-border/ — “UNHCR sent tents and other essential items to affected families from the agency's warehouse in Termez.”",
+      "website": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "description": null,
+      "sourceUrl": null,
+      "evidenceQuote": "UNHCR sent tents and other essential items to affected families from the agency's warehouse in Termez.",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "Official website responding (unhcr.org 403)",
+        "Non-resident status / regional office location",
+        "Any help channel for refugees or stateless people in Uzbekistan"
+      ],
+      "programs": []
+    },
+    {
+      "slug": "xalqaro-qizil-xoch-qomitasi",
+      "officialName": "International Committee of the Red Cross (ICRC) – Tashkent regional delegation",
+      "existenceConfirmed": true,
+      "hidden": false,
+      "reviewNote": "Address and phone from the official page (weekday hours per search snippet, not re-confirmed). No email shown (only a 'Write to us' form). The page describes government-facing and Red Crescent capacity work; it does not mention direct services to individuals (e.g. restoring family links) - reviewer should consider whether it fits the directory, and whether the Red Crescent Society of Uzbekistan is a better listing.",
+      "website": "https://www.icrc.org/en/where-we-work/uzbekistan",
+      "phone": "+998 71 207 52 90",
+      "email": null,
+      "address": "28 Chingiz Aytmatov Street, Tashkent 100084",
+      "description": {
+        "uz": "Xalqaro Qizil Xoch Qo‘mitasi 1992-yilda Toshkentda mintaqaviy delegatsiyasini ochgan; u mintaqa hukumatlari bilan xalqaro gumanitar huquqni joriy etish bo‘yicha ishlaydi va Markaziy Osiyodagi milliy jamiyatlar bilan favqulodda vaziyatlarga javob beradi.",
+        "ru": "Международный комитет Красного Креста открыл региональную делегацию в Ташкенте в 1992 году; он работает с правительствами региона над внедрением международного гуманитарного права и вместе с национальными обществами Центральной Азии реагирует на чрезвычайные ситуации.",
+        "en": "The ICRC opened its regional delegation in Tashkent in 1992; it works with governments in the region to integrate international humanitarian law and teams up with National Societies in Central Asia to respond to emergencies."
+      },
+      "sourceUrl": "https://www.icrc.org/en/where-we-work/uzbekistan",
+      "evidenceQuote": "The ICRC opened its regional delegation in Tashkent in 1992",
+      "checkedAt": "2026-10-19",
+      "couldNotConfirm": [
+        "Email",
+        "Direct services for individuals in Uzbekistan"
+      ],
+      "programs": []
     }
   ]
 }

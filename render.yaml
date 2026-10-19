@@ -39,3 +39,7 @@ services:
       # Entered in the Render dashboard, never committed. Leave empty to run without AI.
       - key: GEMINI_API_KEY
         sync: false
+      # Unlocks reviewing "wrong information" reports (GET/PATCH /api/v1/reports with header
+      # x-review-token). Render generates it; copy it from the dashboard when reviewing.
+      - key: REPORTS_REVIEW_TOKEN
+        generateValue: true

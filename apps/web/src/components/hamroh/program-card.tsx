@@ -50,13 +50,13 @@ export function ProgramCard({
         <MapPin className="size-4 shrink-0" aria-hidden="true" />
         {where}
       </p>
-      <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-1">
+      <div className="mt-3 flex flex-wrap items-center gap-x-5">
         <Link href={`/programs/${program.id}`} className="action">
           {t('viewDetails')}
         </Link>
-        <ProgramSource url={program.sourceUrl} />
         <SaveButton program={toSaved(program)} />
       </div>
+      <ProgramSource url={program.sourceUrl} className="text-[15px]" />
       <div className="mt-3 flex flex-wrap items-start justify-between gap-x-6 gap-y-3 border-t border-line pt-3">
         <ProgramStatus program={program} />
         <VerificationStatus status={reviewStatus(program)} />

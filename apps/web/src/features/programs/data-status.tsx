@@ -9,7 +9,19 @@ import type { ReviewStatus } from '@/lib/review-status';
  * Three separate questions, answered separately:
  * does a source exist, has a person reviewed it, and is anyone's eligibility officially confirmed.
  */
-export function DataStatus({ status, researchedAt, hasSource }: { status: ReviewStatus; researchedAt: string | null; hasSource: boolean }) {
+export function DataStatus({
+  status,
+  researchedAt,
+  hasSource,
+  orgSlug,
+  programId,
+}: {
+  status: ReviewStatus;
+  researchedAt: string | null;
+  hasSource: boolean;
+  orgSlug: string;
+  programId: string;
+}) {
   const t = useTranslations('dataStatus');
   const locale = useLocale();
   const reviewed = status === 'manually_reviewed';
@@ -33,7 +45,7 @@ export function DataStatus({ status, researchedAt, hasSource }: { status: Review
         ))}
       </dl>
       <p className="meta">{t('confirmWithOrg')}</p>
-      <ReportButton />
+      <ReportButton orgSlug={orgSlug} programId={programId} />
     </div>
   );
 }
